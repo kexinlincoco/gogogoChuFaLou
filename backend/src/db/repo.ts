@@ -175,11 +175,16 @@ export function createOrder(
  * PRD §6.3 follow-up ("怎么问是基于'已经住完'的历史订单，而不是刚下单就问") —
  * a freshly-placed real order with future dates won't surface here until its
  * checkout date has passed. The seeded demo order already has a past
- * checkout date, so it keeps working with no special-casing. */
+ * checkout date, so it keeps working with no special-casing.
+ *
+ * When several past stays are eligible at once, ask about the most recently
+ * checked-out one first (ORDER BY checkout DESC) — that stay is freshest in
+ * the user's memory, so the answer is both easier for them to give and more
+ * useful to future customers than digging up an older, half-remembered one. */
 export function findPendingFollowupOrder(userId: string): Order | null {
   const row = db
     .prepare(
-      `SELECT * FROM orders WHERE user_id = ? AND status = 'completed' AND reviewed = 0 AND checkout <= date('now') ORDER BY created_at ASC LIMIT 1`
+      `SELECT * FROM orders WHERE user_id = ? AND status = 'completed' AND reviewed = 0 AND checkout <= date('now') ORDER BY checkout DESC LIMIT 1`
     )
     .get(userId) as Order | undefined;
   return row ?? null;

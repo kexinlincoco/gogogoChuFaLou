@@ -155,23 +155,23 @@ export function FeedbackQuestion({
   }
 
   return (
-    <div
-      style={{
-        background: "var(--surface)",
-        border: "1px solid var(--border)",
-        borderRadius: 16,
-        padding: "12px 14px",
-        display: "flex",
-        flexDirection: "column",
-        gap: 10,
-      }}
-    >
-      <div style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
-        <AIAvatar size={24} />
-        <div style={{ fontSize: 13.5, lineHeight: 1.5, color: "var(--ink)", paddingTop: 2 }}>{prompt}</div>
-      </div>
+    <div style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
+      <AIAvatar size={28} />
+      <div
+        style={{
+          background: "var(--surface)",
+          border: "1px solid var(--border)",
+          borderRadius: "16px 16px 16px 4px",
+          padding: "11px 14px",
+          maxWidth: "78%",
+          display: "flex",
+          flexDirection: "column",
+          gap: 10,
+        }}
+      >
+        <div style={{ fontSize: 13.5, lineHeight: 1.55, color: "var(--ink)" }}>{prompt}</div>
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
         {choices.map((c) => (
           <button
             key={c}
@@ -236,7 +236,8 @@ export function FeedbackQuestion({
             {submitting ? "提交中…" : "提交"}
           </button>
         </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
