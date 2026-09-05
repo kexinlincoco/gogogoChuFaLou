@@ -1,0 +1,5 @@
+hotelId,hotelName,source,hotelStars,hotelAddress,overallRating,ratingLabel,subRatings,reviewsCount,reviewsInSample,ownerResponseRateInSample,recommendRate,negativeReviewsCount,topReviewerProvinces
+344983,Galaxy Hotel,trip,5,"Galaxy Macau, Cotai, Macau, Cotai, Macau, China",4.8,Amazing,Cleanliness: 4.8; Location: 4.8; Service: 4.8; Facilities: 4.8,2136,200,1.0,0.97,32,
+1286148,北京索菲特大酒店,ctrip,5,北京朝阳区建国门南大街2号,4.6,很好,Cleanliness: 4.7; Location: 4.6; Service: 4.6; Facilities: 4.5,12724,200,0.99,0.95,217,北京; 广东; 辽宁; 上海; 天津
+1352621,纽约市中心希尔顿酒店(New York Hilton Midtown),ctrip,4,1335 6th Ave纽约纽约州10019,4,,Cleanliness: 4.1; Location: 4.4; Service: 3.9; Facilities: 3.7,354,200,0.0,0.69,40,美国; 上海; 北京; 广东; 江苏
+70492076,洲至奢选杭州华夏之心酒店,ctrip,5,浙江杭州余杭区余杭塘路2499号时代天元城19幢,4.7,超棒,Cleanliness: 4.8; Location: 4.7; Service: 4.7; Facilities: 4.7,646,200,0.99,0.95,12,浙江; 上海; 江苏; 北京; 广东

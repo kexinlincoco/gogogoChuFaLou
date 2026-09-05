@@ -1,0 +1,104 @@
+[
+  {
+    "hotelId": 344983,
+    "hotelName": "Galaxy Hotel",
+    "source": "trip",
+    "hotelStars": 5,
+    "hotelAddress": "Galaxy Macau, Cotai, Macau, Cotai, Macau, China",
+    "overallRating": 4.8,
+    "ratingLabel": "Amazing",
+    "subRatings": [
+      "Cleanliness: 4.8",
+      "Location: 4.8",
+      "Service: 4.8",
+      "Facilities: 4.8"
+    ],
+    "reviewsCount": 2136,
+    "reviewsInSample": 200,
+    "ownerResponseRateInSample": 1.0,
+    "recommendRate": 0.97,
+    "negativeReviewsCount": 32,
+    "topReviewerProvinces": []
+  },
+  {
+    "hotelId": 1286148,
+    "hotelName": "北京索菲特大酒店",
+    "source": "ctrip",
+    "hotelStars": 5,
+    "hotelAddress": "北京朝阳区建国门南大街2号",
+    "overallRating": 4.6,
+    "ratingLabel": "很好",
+    "subRatings": [
+      "Cleanliness: 4.7",
+      "Location: 4.6",
+      "Service: 4.6",
+      "Facilities: 4.5"
+    ],
+    "reviewsCount": 12724,
+    "reviewsInSample": 200,
+    "ownerResponseRateInSample": 0.99,
+    "recommendRate": 0.95,
+    "negativeReviewsCount": 217,
+    "topReviewerProvinces": [
+      "北京",
+      "广东",
+      "辽宁",
+      "上海",
+      "天津"
+    ]
+  },
+  {
+    "hotelId": 1352621,
+    "hotelName": "纽约市中心希尔顿酒店(New York Hilton Midtown)",
+    "source": "ctrip",
+    "hotelStars": 4,
+    "hotelAddress": "1335 6th Ave纽约纽约州10019",
+    "overallRating": 4,
+    "ratingLabel": null,
+    "subRatings": [
+      "Cleanliness: 4.1",
+      "Location: 4.4",
+      "Service: 3.9",
+      "Facilities: 3.7"
+    ],
+    "reviewsCount": 354,
+    "reviewsInSample": 200,
+    "ownerResponseRateInSample": 0.0,
+    "recommendRate": 0.69,
+    "negativeReviewsCount": 40,
+    "topReviewerProvinces": [
+      "美国",
+      "上海",
+      "北京",
+      "广东",
+      "江苏"
+    ]
+  },
+  {
+    "hotelId": 70492076,
+    "hotelName": "洲至奢选杭州华夏之心酒店",
+    "source": "ctrip",
+    "hotelStars": 5,
+    "hotelAddress": "浙江杭州余杭区余杭塘路2499号时代天元城19幢",
+    "overallRating": 4.7,
+    "ratingLabel": "超棒",
+    "subRatings": [
+      "Cleanliness: 4.8",
+      "Location: 4.7",
+      "Service: 4.7",
+      "Facilities: 4.7"
+    ],
+    "reviewsCount": 646,
+    "reviewsInSample": 200,
+    "ownerResponseRateInSample": 0.99,
+    "recommendRate": 0.95,
+    "negativeReviewsCount": 12,
+    "topReviewerProvinces": [
+      "浙江",
+      "上海",
+      "江苏",
+      "北京",
+      "广东"
+    ]
+  }
+]

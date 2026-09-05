@@ -1,0 +1,8 @@
+{
+  "title": "Trip.com & Ctrip (携程) Hotel Reviews — Sample 2026",
+  "id": "factden/ctrip-trip-com-hotel-reviews-sample",
+  "subtitle": "800 bilingual Trip.com + Ctrip hotel reviews: sub-ratings, owner replies",
+  "description": "800 public hotel reviews captured in BOTH locales — 200 international reviews from Trip.com (Galaxy Hotel, Macau) and 600 Chinese-language reviews from Ctrip / 携程 (Sofitel Beijing, New York Hilton Midtown, and a luxury Hangzhou hotel). Each review carries per-dimension sub-ratings (cleanliness/location/service/facilities), hotel owner responses, the reviewer's Chinese province of origin (Ctrip), travel type, machine translation, and an LLM-ready markdownContent field.\n\nHighlights: the New York Hilton rows are 200 Chinese-language Ctrip reviews of a US hotel (incl. 40 posted from the USA), and it's the lowest-rated property (4.0) with a 0% owner-response rate vs ~99% for the others.\n\nFiles: reviews.csv / .json / .jsonl (800 rows, 23 fields) and hotel_summary.csv / .json (4 hotels). Collected from publicly accessible pages with the Trip.com & Ctrip Reviews Scraper on Apify (https://apify.com/factden/ctrip-trip-reviews-scraper?fpr=factden). Not affiliated with or endorsed by Trip.com Group, Ctrip, or any hotel. For research, education, and demonstration; verify downstream use against GDPR and China's PIPL. Run the actor for any hotel at any scale. More at https://factden.com",
+  "licenses": [{ "name": "other" }],
+  "keywords": ["travel", "hotels", "nlp", "sentiment analysis", "reviews", "china", "multilingual", "text"]
+}

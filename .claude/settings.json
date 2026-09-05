@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node /private/tmp/claude-501/bundled-skills/2.1.251/37548728c7eb292d33f9c36f989b26cc/design/seed-canvas.mjs --template /private/tmp/claude-501/bundled-skills/2.1.251/37548728c7eb292d33f9c36f989b26cc/design/payload.template.html --out chufalou-visual-directions.html --title 出发喽视觉方向对比 --artboard Main.dc.html --artboard DirectionB.dc.html --artboard DirectionC.dc.html --canvas canvas.json)"
+    ]
+  }
+}
