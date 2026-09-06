@@ -1,6 +1,8 @@
 import type { HotelCandidate } from "../types";
+import { highlightKeywords, matchedKeywordsFor } from "../lib/highlight";
 
-export function EvidenceModal({ candidate, onClose }: { candidate: HotelCandidate; onClose: () => void }) {
+export function EvidenceModal({ candidate, prefer, onClose }: { candidate: HotelCandidate; prefer: string[]; onClose: () => void }) {
+  const matched = matchedKeywordsFor(prefer, candidate.hotel.tags, candidate.matchedSnippets, candidate.reason);
   return (
     <div
       onClick={onClose}
@@ -42,7 +44,7 @@ export function EvidenceModal({ candidate, onClose }: { candidate: HotelCandidat
                 <div style={{ width: 22, height: 22, borderRadius: "50%", background: "var(--rock-blue)" }} />
                 <div style={{ fontSize: 12, fontWeight: 600, color: "var(--venice-blue)" }}>{s.author}</div>
               </div>
-              <div style={{ fontSize: 12, lineHeight: 1.5, color: "rgba(22,88,123,.85)" }}>{s.text}</div>
+              <div style={{ fontSize: 12, lineHeight: 1.5, color: "rgba(22,88,123,.85)" }}>{highlightKeywords(s.text, matched)}</div>
             </div>
           ))}
         </div>

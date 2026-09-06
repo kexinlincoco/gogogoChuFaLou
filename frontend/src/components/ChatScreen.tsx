@@ -37,7 +37,7 @@ export function ChatScreen({
   const [items, setItems] = useState<ChatItem[]>([]);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
-  const [evidence, setEvidence] = useState<HotelCandidate | null>(null);
+  const [evidence, setEvidence] = useState<{ candidate: HotelCandidate; prefer: string[] } | null>(null);
   // Portal target for "things the user can currently pick" (quickfills,
   // followup-question choices) — rendered anchored above the input box
   // instead of inline in the transcript, per the requested "options belong
@@ -152,7 +152,7 @@ export function ChatScreen({
             key={item.id}
             item={item}
             onOpenHotel={onOpenHotel}
-            onShowEvidence={setEvidence}
+            onShowEvidence={(candidate, prefer) => setEvidence({ candidate, prefer })}
             onFollowupDone={onFollowupDone}
             authorName={user?.phone ? "我" : "匿名住客"}
           />
@@ -232,7 +232,7 @@ export function ChatScreen({
         </button>
       </div>
 
-      {evidence && <EvidenceModal candidate={evidence} onClose={() => setEvidence(null)} />}
+      {evidence && <EvidenceModal candidate={evidence.candidate} prefer={evidence.prefer} onClose={() => setEvidence(null)} />}
     </div>
   );
 }
@@ -246,7 +246,7 @@ function ChatItemView({
 }: {
   item: ChatItem;
   onOpenHotel: (hotelId: string, prefer?: string[], source?: "ai_chat" | "manual_filter") => void;
-  onShowEvidence: (c: HotelCandidate) => void;
+  onShowEvidence: (c: HotelCandidate, prefer: string[]) => void;
   onFollowupDone: (review: import("../types").Review | undefined) => void;
   authorName: string;
 }) {
@@ -303,7 +303,12 @@ function ChatItemView({
     case "hotel-cards":
       return (
         <div style={{ paddingLeft: 36 }}>
-          <HotelWaterfall hotels={item.hotels} onOpenHotel={(hotelId) => onOpenHotel(hotelId, item.prefer, "ai_chat")} onShowEvidence={onShowEvidence} />
+          <HotelWaterfall
+            hotels={item.hotels}
+            prefer={item.prefer}
+            onOpenHotel={(hotelId) => onOpenHotel(hotelId, item.prefer, "ai_chat")}
+            onShowEvidence={(c) => onShowEvidence(c, item.prefer)}
+          />
         </div>
       );
     case "followup-question":

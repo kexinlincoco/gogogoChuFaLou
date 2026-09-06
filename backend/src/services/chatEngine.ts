@@ -16,6 +16,13 @@ interface Session {
   history: ChatMessage[];
   slots: Slots;
   userName?: string;
+  // Index into `history` where the current, not-yet-answered ask begins —
+  // moved to the end of history once a recommendation is actually shown
+  // (see handleTurn). extractSlots uses history[slotsResetIndex:] as the
+  // ONLY source for prefer/avoid, so a preference from an ask that already
+  // got its cards doesn't keep silently steering a later, different ask;
+  // sticky fields (city/checkin/budget/...) still see the full history.
+  slotsResetIndex: number;
 }
 
 const sessions = new Map<string, Session>();
@@ -23,7 +30,7 @@ const sessions = new Map<string, Session>();
 function getSession(sessionId: string): Session {
   let s = sessions.get(sessionId);
   if (!s) {
-    s = { history: [], slots: { ...EMPTY_SLOTS } };
+    s = { history: [], slots: { ...EMPTY_SLOTS }, slotsResetIndex: 0 };
     sessions.set(sessionId, s);
   }
   return s;
@@ -114,7 +121,8 @@ export async function handleTurn(sessionId: string, userText: string, userName?:
   session.history.push({ role: "user", text: userText });
 
   try {
-    const extracted = await extractSlots(session.history, session.slots);
+    const recentHistory = session.history.slice(session.slotsResetIndex);
+    const extracted = await extractSlots(session.history, recentHistory, session.slots);
     session.slots = fillDerivedFields(extracted);
 
     const missing = missingRequired(session.slots);
@@ -142,6 +150,9 @@ export async function handleTurn(sessionId: string, userText: string, userName?:
     }));
 
     session.history.push({ role: "assistant", text: intro });
+    // This ask is answered — the next user message starts a fresh one, so
+    // its prefer/avoid must come only from what's said after this point.
+    session.slotsResetIndex = session.history.length;
     return { type: "recommend", reply: intro, slots: session.slots, hotels };
   } catch (err) {
     console.error("[chatEngine] turn failed", err);

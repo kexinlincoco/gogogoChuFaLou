@@ -42,16 +42,29 @@ export const EMPTY_SLOTS: Slots = {
 };
 
 const SLOT_EXTRACT_SYSTEM = `你是"出发喽"App里的酒店预订助手的信息提取模块。
-你的任务：读取到目前为止的对话，把用户表达过的、和订酒店有关的结构化信息合并进已知的slots里。
+你的任务：结合完整对话理解这一趟行程的硬性信息，并只结合"本轮最新对话片段"提取用户当下的软性偏好，合并进已知的slots里。
 规则：
 - 只提取用户明确表达或能合理推断的信息，不要编造。
-- 已经确定过的字段，除非用户明确修改/推翻，否则保留原值（用之前的slots作为基础）。
+- city/checkin/checkout/nights/budget_max/guests 是"这一趟行程"的硬性信息，一旦确定，除非用户明确修改/推翻，否则保留原值（用之前的slots作为基础，可以参考完整对话记录）。
+- prefer/avoid 例外，不能像上面那样一直保留：这两个字段只能反映"本轮最新对话片段"（单独给出，见下）里提到的软性偏好——那是用户在拿到上一次推荐结果之后开口的新一轮，不能引用更早、已经出过推荐结果的那一轮里提到的旧偏好。如果这段最新片段没有提到任何偏好/排除项，就输出为空数组 []，即使更早的片段里提到过。
 - 日期尽量转换为 YYYY-MM-DD；如果用户说"这周末"、"下周"这类相对时间，按当前对话发生的语境合理推断一个具体日期；实在无法确定就留空。
 - prefer/avoid 是关键词数组，不要写整句话，每个词尽量简短（如"安静""海景""亲子""性价比""泳池""近地铁""不要靠马路"可以拆成 avoid:["靠马路"]）。
 - guests 没提到时不要瞎猜，返回 null（前端会展示默认值，但不要把默认值当作用户说过的话写回来）。`;
 
-export async function extractSlots(history: ChatMessage[], currentSlots: Slots): Promise<Slots> {
-  const transcript = history.map((m) => `${m.role === "user" ? "用户" : "助手"}：${m.text}`).join("\n");
+/** `fullHistory` gives the model context for sticky trip logistics
+ * (city/checkin/budget/...); `recentHistory` is just the slice since the
+ * last time a recommendation was actually shown (see chatEngine's
+ * slotsResetIndex) — the ONLY source prefer/avoid may draw from, so a
+ * preference from an already-answered ask can't quietly keep steering a
+ * new, unrelated one. Sub-turn slot-filling (e.g. the assistant asking for
+ * a missing checkin date) stays inside one "ask", so recentHistory still
+ * spans the whole thing and preferences stated earlier in it are kept. */
+export async function extractSlots(fullHistory: ChatMessage[], recentHistory: ChatMessage[], currentSlots: Slots): Promise<Slots> {
+  const toTranscript = (h: ChatMessage[]) => h.map((m) => `${m.role === "user" ? "用户" : "助手"}：${m.text}`).join("\n");
+  // prefer/avoid are reset before every call — they're per-ask, not sticky
+  // like city/checkin/budget, so the model is never handed an old
+  // preference to simply carry forward (see SLOT_EXTRACT_SYSTEM above).
+  const baseSlots: Slots = { ...currentSlots, prefer: [], avoid: [] };
   const response = await client.chat.completions.parse({
     model: MODEL,
     reasoning_effort: "low", // simple extraction task — full reasoning is unnecessary latency
@@ -59,7 +72,7 @@ export async function extractSlots(history: ChatMessage[], currentSlots: Slots):
       { role: "system", content: SLOT_EXTRACT_SYSTEM },
       {
         role: "user",
-        content: `已知slots（JSON）：\n${JSON.stringify(currentSlots)}\n\n对话记录：\n${transcript}\n\n请输出合并更新后的完整slots。`,
+        content: `已知slots（JSON，prefer/avoid 已重置为空——这两个字段只能从下面的"本轮最新对话片段"里提取）：\n${JSON.stringify(baseSlots)}\n\n完整对话记录（用于理解城市/日期/预算等硬性信息的上下文）：\n${toTranscript(fullHistory)}\n\n本轮最新对话片段（prefer/avoid 只能来自这里，不能引用更早、已经出过推荐结果的那一轮里的偏好）：\n${toTranscript(recentHistory)}\n\n请输出合并更新后的完整slots。`,
       },
     ],
     response_format: zodResponseFormat(SlotsSchema, "slots"),

@@ -11,6 +11,13 @@
   --tag-bg: rgba(132, 179, 206, 0.28);
   --quote-bg: rgba(132, 179, 206, 0.18);
 
+  /* Warm accent (vs. the palette's cool blues) for "this is what matched
+     your need" — the inline <mark> text highlight and the matched-tag /
+     matched-keyword chips all key off these two. */
+  --highlight-bg: #ffd873;
+  --highlight-chip-bg: #ffb951;
+  --highlight-chip-border: #f2994a;
+
   --font-display: "Yeseva One", Georgia, serif;
   --font-body: "Quicksand", "Trebuchet MS", sans-serif;
 }

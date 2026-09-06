@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { HotelCandidate } from "../types";
+import { highlightKeywords, matchedKeywordsFor } from "../lib/highlight";
 
 function HeartIcon({ filled }: { filled: boolean }) {
   return (
@@ -41,18 +42,27 @@ function HotelImage({ src, alt, height }: { src: string; alt: string; height: nu
 
 export function HotelCard({
   candidate,
-  likeBase,
+  prefer,
   onOpen,
   onShowEvidence,
 }: {
   candidate: HotelCandidate;
-  likeBase: number;
+  prefer: string[];
   onOpen: () => void;
   onShowEvidence: () => void;
 }) {
   const [liked, setLiked] = useState(false);
   const { hotel, reason } = candidate;
   const imgHeight = 130 + (hotel.base_price % 60);
+  // Which of the user's stated preferences THIS card's real evidence backs
+  // up — drives which tag chip gets the ✓ highlight and which words get
+  // marked inline in the reason below, so the highlight is never decorative.
+  const matched = matchedKeywordsFor(prefer, hotel.tags, candidate.matchedSnippets, reason);
+  // A matched need that isn't already one of the hotel's own tags (e.g. the
+  // hotel only carries "商务出行" but the user said "出差") still deserves a
+  // visible chip — appended rather than silently only shown in the reason
+  // text, so every hit shows up in one place instead of two.
+  const displayTags = [...hotel.tags, ...matched.filter((k) => !hotel.tags.includes(k))];
 
   return (
     <div
@@ -102,11 +112,26 @@ export function HotelCard({
           <span style={{ fontSize: 10, fontWeight: 500, color: "var(--ink-faint)" }}>/晚</span>
         </div>
         <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
-          {hotel.tags.map((t) => (
-            <span key={t} style={{ fontSize: 10, padding: "2px 7px", borderRadius: 999, background: "var(--tag-bg)", color: "var(--venice-blue)" }}>
-              {t}
-            </span>
-          ))}
+          {displayTags.map((t) => {
+            const isMatch = matched.includes(t);
+            return (
+              <span
+                key={t}
+                style={{
+                  fontSize: 10,
+                  padding: "2px 7px",
+                  borderRadius: 999,
+                  background: isMatch ? "var(--highlight-chip-bg)" : "var(--tag-bg)",
+                  color: isMatch ? "var(--venice-press)" : "var(--venice-blue)",
+                  fontWeight: isMatch ? 700 : 400,
+                  border: isMatch ? "1px solid var(--highlight-chip-border)" : "1px solid transparent",
+                }}
+              >
+                {isMatch ? "✓ " : ""}
+                {t}
+              </span>
+            );
+          })}
         </div>
         <button
           onClick={(e) => {
@@ -126,12 +151,11 @@ export function HotelCard({
           }}
         >
           <div style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--rock-blue)", lineHeight: 0.6, flexShrink: 0 }}>&rdquo;</div>
-          <p style={{ fontSize: 10.5, lineHeight: 1.45, color: "rgba(22,88,123,.8)", margin: 0 }}>{reason}</p>
+          <p style={{ fontSize: 10.5, lineHeight: 1.45, color: "rgba(22,88,123,.8)", margin: 0 }}>{highlightKeywords(reason, matched)}</p>
         </button>
         <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
           <div style={{ width: 16, height: 16, borderRadius: "50%", background: "var(--rock-blue)", flexShrink: 0 }} />
           <div style={{ fontSize: 10, color: "var(--ink-soft)", flex: 1 }}>来自真实住客评论</div>
-          <div style={{ fontSize: 10.5, color: "var(--venice-blue)", fontWeight: 700 }}>{likeBase + (liked ? 1 : 0)} 人觉得有用</div>
         </div>
       </div>
     </div>
