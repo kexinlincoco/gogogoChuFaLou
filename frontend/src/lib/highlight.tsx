@@ -15,6 +15,20 @@ function keywordMatchesTag(keyword: string, tag: string): boolean {
   return tag.includes(keyword) || keyword.includes(tag);
 }
 
+/** A few derived tag names are a real keyword plus a cosmetic "好" suffix
+ * added for the tag pill's wording — e.g. seed.ts's
+ * APIFY_TEXT_KEYWORD_TO_TAG matches literal "早餐"/"位置"/"服务好"'s "服务"
+ * /"设施" in review text but labels the resulting tag "早餐好"/"位置好"/
+ * "服务好"/"设施好". Real review text almost never contains that exact
+ * 3-character tag name verbatim (people write "早餐人太多", not "早餐好"),
+ * so searching for the tag name alone silently finds nothing even when the
+ * review is genuinely about it. This adds the 2-character root as a second,
+ * real thing to search for — never removes the original, only supplements
+ * it, so a text that does contain the full tag name still matches on that. */
+function withSuffixStripped(term: string): string[] {
+  return term.length > 2 && term.endsWith("好") ? [term, term.slice(0, -1)] : [term];
+}
+
 /**
  * For each of the user's stated preferences, the real word worth searching
  * for in evidence text: the hotel's own matching tag when the preference is
@@ -52,7 +66,8 @@ export function matchedKeywordsFor(prefer: string[], hotelTags: string[], snippe
   const seen = new Set<string>();
   const out: string[] = [];
   for (const term of resolveHighlightTerms(prefer, hotelTags)) {
-    if (term && haystack.includes(term) && !seen.has(term)) {
+    const hit = term && withSuffixStripped(term).some((variant) => haystack.includes(variant));
+    if (hit && !seen.has(term)) {
       seen.add(term);
       out.push(term);
     }
@@ -66,7 +81,7 @@ export function matchedKeywordsFor(prefer: string[], hotelTags: string[], snippe
  * keyword first so a longer match isn't shadowed by a shorter one nested
  * inside it. */
 export function highlightKeywords(text: string, keywords: string[]): ReactNode {
-  const kws = [...new Set(keywords.map((k) => k.trim()).filter(Boolean))].sort((a, b) => b.length - a.length);
+  const kws = [...new Set(keywords.map((k) => k.trim()).filter(Boolean).flatMap(withSuffixStripped))].sort((a, b) => b.length - a.length);
   if (kws.length === 0) return text;
   const re = new RegExp(`(${kws.map(escapeRegExp).join("|")})`, "g");
   const parts = text.split(re);
