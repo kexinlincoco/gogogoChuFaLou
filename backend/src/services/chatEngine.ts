@@ -2,6 +2,7 @@ import type { ChatMessage } from "../types.js";
 import type { Hotel } from "../types.js";
 import { listCities, listHotels } from "../db/repo.js";
 import { retrieveEvidence } from "./retrieval.js";
+import { keywordMatchesTag } from "../lib/textMatch.js";
 import {
   EMPTY_SLOTS,
   Slots,
@@ -60,7 +61,7 @@ function missingRequired(slots: Slots): string[] {
 export interface HotelCandidate {
   hotel: Hotel;
   reason: string;
-  matchedSnippets: { author: string; text: string }[];
+  matchedSnippets: { author: string; text: string; created_at: string }[];
   matchRatioPct: number;
 }
 
@@ -70,8 +71,14 @@ export type ChatTurnResult =
   | { type: "error"; reply: string };
 
 function scoreHotel(hotel: Hotel, slots: Slots): number {
-  const preferHits = slots.prefer.filter((p) => hotel.tags.includes(p)).length;
-  const avoidHits = slots.avoid.filter((a) => hotel.tags.some((t) => t.includes(a) || a.includes(t))).length;
+  // Bidirectional containment, not exact equality — the AI extracts the
+  // user's own wording ("靠近四合院"), which rarely equals the fixed tag
+  // vocabulary word-for-word ("四合院"); requiring an exact match meant this
+  // score literally never counted a hit for descriptive phrasing like that,
+  // silently reducing matchHotels to a pure budget-closeness sort. See
+  // lib/textMatch.ts.
+  const preferHits = slots.prefer.filter((p) => hotel.tags.some((t) => keywordMatchesTag(p, t))).length;
+  const avoidHits = slots.avoid.filter((a) => hotel.tags.some((t) => keywordMatchesTag(a, t))).length;
   const budgetPenalty = slots.budget_max ? Math.abs(hotel.base_price - slots.budget_max) / 100 : 0;
   return preferHits * 10 - avoidHits * 20 - budgetPenalty;
 }
@@ -145,7 +152,7 @@ export async function handleTurn(sessionId: string, userText: string, userName?:
     const hotels: HotelCandidate[] = evidenceByHotel.map(({ hotel, evidence }) => ({
       hotel,
       reason: reasons[hotel.id] ?? "这家酒店的真实住客评价也还不错。",
-      matchedSnippets: evidence.matched.map((r) => ({ author: r.author, text: r.text })),
+      matchedSnippets: evidence.matched.map((r) => ({ author: r.author, text: r.text, created_at: r.created_at })),
       matchRatioPct: Math.round(evidence.matchRatio * 100),
     }));
 

@@ -8,6 +8,7 @@
  */
 import { getReviewsForHotel } from "../db/repo.js";
 import type { Review } from "../types.js";
+import { keywordMatchesTag } from "../lib/textMatch.js";
 
 export interface RetrievedEvidence {
   hotelId: string;
@@ -24,7 +25,7 @@ export function retrieveEvidence(hotelId: string, preferKeywords: string[]): Ret
   if (keywords.length === 0) {
     matched = all.slice(0, 2);
   } else {
-    matched = all.filter((r) => r.topics.some((t) => keywords.includes(t)) || keywords.some((k) => r.text.includes(k)));
+    matched = all.filter((r) => r.topics.some((t) => keywords.some((k) => keywordMatchesTag(k, t))) || keywords.some((k) => r.text.includes(k)));
     if (matched.length === 0) matched = all.slice(0, 2);
   }
 

@@ -1,6 +1,10 @@
 import type { HotelCandidate } from "../types";
 import { highlightKeywords, matchedKeywordsFor } from "../lib/highlight";
 
+function reviewDate(createdAt: string): string {
+  return createdAt.slice(0, 10);
+}
+
 export function EvidenceModal({ candidate, prefer, onClose }: { candidate: HotelCandidate; prefer: string[]; onClose: () => void }) {
   const matched = matchedKeywordsFor(prefer, candidate.hotel.tags, candidate.matchedSnippets, candidate.reason);
   return (
@@ -43,6 +47,7 @@ export function EvidenceModal({ candidate, prefer, onClose }: { candidate: Hotel
               <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
                 <div style={{ width: 22, height: 22, borderRadius: "50%", background: "var(--rock-blue)" }} />
                 <div style={{ fontSize: 12, fontWeight: 600, color: "var(--venice-blue)" }}>{s.author}</div>
+                <div style={{ fontSize: 10, color: "var(--ink-faint)", marginLeft: "auto" }}>{reviewDate(s.created_at)}</div>
               </div>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: "rgba(22,88,123,.85)" }}>{highlightKeywords(s.text, matched)}</div>
             </div>

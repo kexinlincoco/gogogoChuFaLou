@@ -2,6 +2,14 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { api } from "../api/client";
 import type { Hotel, Order, Review, ReviewHighlight } from "../types";
 import { FeedbackQuestion } from "./FeedbackQuestion";
+import { highlightKeywords, resolveHighlightTerms } from "../lib/highlight";
+
+/** created_at is an ISO timestamp (e.g. "2026-09-03T20:57:43") — take the
+ * date portion as plain text rather than routing through `Date`, so it can't
+ * shift a day under a reader's local timezone. */
+function reviewDate(createdAt: string): string {
+  return createdAt.slice(0, 10);
+}
 
 function todayPlus(days: number): string {
   const d = new Date();
@@ -30,7 +38,7 @@ export function BookingSheet({
 }) {
   const [hotel, setHotel] = useState<Hotel | null>(null);
   const [reviews, setReviews] = useState<Review[]>([]);
-  const [reviewHighlight, setReviewHighlight] = useState<ReviewHighlight | null>(null);
+  const [reviewHighlights, setReviewHighlights] = useState<ReviewHighlight[]>([]);
   const [checkin, setCheckin] = useState(todayPlus(3));
   const [checkout, setCheckout] = useState(todayPlus(5));
   const [guests, setGuests] = useState(2);
@@ -47,7 +55,7 @@ export function BookingSheet({
     api.getHotel(hotelId, checkin, checkout, prefer).then((r) => {
       setHotel(r.hotel);
       setReviews(r.reviews);
-      setReviewHighlight(r.reviewHighlight);
+      setReviewHighlights(r.reviewHighlights);
       setPrice(r.price);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -84,6 +92,10 @@ export function BookingSheet({
     }
   }
 
+  // Real review text uses the hotel's own tag word ("四合院"), not the user's
+  // chat phrasing ("靠近四合院") — resolve to whichever one actually gets
+  // searched for, same rule the recommendation cards use (see lib/highlight).
+  const highlightTerms = resolveHighlightTerms(prefer ?? [], hotel?.tags ?? []);
 
   return (
     <div style={{ position: "fixed", inset: 0, background: "rgba(15,40,55,.42)", zIndex: 30, display: "flex", alignItems: "flex-end", justifyContent: "center" }} onClick={onClose}>
@@ -163,12 +175,16 @@ export function BookingSheet({
               </div>
 
               <div style={sectionTitle}>真实住客评论</div>
-              {reviewHighlight && (
-                <div style={{ display: "flex", alignItems: "center", gap: 6, background: "var(--quote-bg)", borderRadius: 10, padding: "8px 10px", marginBottom: 8, fontSize: 11.5, color: "var(--venice-blue)" }}>
-                  <span style={{ fontWeight: 700 }}>住客高频提到：{reviewHighlight.topic}</span>
-                  <span style={{ color: "var(--ink-soft)" }}>
-                    （{reviewHighlight.pct}%的评论，共{reviewHighlight.count}/{reviewHighlight.total}条提到）
-                  </span>
+              {reviewHighlights.length > 0 && (
+                <div style={{ display: "flex", flexDirection: "column", gap: 4, marginBottom: 8 }}>
+                  {reviewHighlights.slice(0, 3).map((h) => (
+                    <div key={h.topic} style={{ display: "flex", alignItems: "center", gap: 6, background: "var(--quote-bg)", borderRadius: 10, padding: "8px 10px", fontSize: 11.5, color: "var(--venice-blue)" }}>
+                      <span style={{ fontWeight: 700 }}>住客高频提到：{h.topic}</span>
+                      <span style={{ color: "var(--ink-soft)" }}>
+                        （{h.pct}%的评论，共{h.count}/{h.total}条提到）
+                      </span>
+                    </div>
+                  ))}
                 </div>
               )}
               {prefer && prefer.length > 0 && (
@@ -185,7 +201,8 @@ export function BookingSheet({
                         </span>
                       )}
                     </div>
-                    <div style={{ fontSize: 12, color: "rgba(22,88,123,.85)", lineHeight: 1.5 }}>{r.text}</div>
+                    <div style={{ fontSize: 12, color: "rgba(22,88,123,.85)", lineHeight: 1.5 }}>{highlightKeywords(r.text, highlightTerms)}</div>
+                    <div style={{ fontSize: 10, color: "var(--ink-faint)", marginTop: 4 }}>{reviewDate(r.created_at)}</div>
                   </div>
                 ))}
               </div>

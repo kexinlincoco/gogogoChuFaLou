@@ -57,7 +57,7 @@ export interface MetricsSummary {
 export interface HotelCandidate {
   hotel: Hotel;
   reason: string;
-  matchedSnippets: { author: string; text: string }[];
+  matchedSnippets: { author: string; text: string; created_at: string }[];
   matchRatioPct: number;
 }
 

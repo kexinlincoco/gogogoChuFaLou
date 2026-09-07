@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 import { db } from "./client.js";
 import { buildImageUrl } from "../services/images.js";
+import { keywordMatchesTag } from "../lib/textMatch.js";
 import type { Hotel, HotelRow, Review, ReviewRow, Order, OrderFeedback, BookingFunnelEvent, User } from "../types.js";
 
 function rowToHotel(row: HotelRow): Hotel {
@@ -103,19 +104,47 @@ export interface ReviewHighlight {
   pct: number;
 }
 
-/** The single most-mentioned topic across all of a hotel's reviews (not
- * limited to whatever the user happened to ask for) — a "at a glance" trust
- * signal that works even when there's no chat context to prioritize by. */
-export function topReviewTopic(hotelId: string): ReviewHighlight | null {
+/** A review really "mentions" a keyword if it either carries that exact
+ * derived topic tag, or the keyword literally occurs in the review text —
+ * same two-way check retrieveEvidence uses, so a soft need with no fixed
+ * topic tag (e.g. "安静", which isn't in any topic vocabulary, see seed.ts)
+ * still counts as a real hit whenever it's actually written in a review. */
+function mentionCount(reviews: Review[], keyword: string): number {
+  return reviews.filter((r) => r.topics.some((t) => keywordMatchesTag(keyword, t)) || r.text.includes(keyword)).length;
+}
+
+/**
+ * Real per-hotel "住客高频提到" stats. When the caller passed the user's
+ * actual prefer keywords, ranks THOSE keywords by how many reviews really
+ * back them (highest first) — so a hotel matching more than one soft need
+ * (e.g. 安静 + 亲子友好) shows every one that has real support, in the order
+ * that reflects how strongly each is actually backed, instead of a single
+ * badge picked independently of what was asked. Falls back to the single
+ * most-mentioned topic overall when there's no prefer context (manual-filter
+ * entry has none) or none of the prefer keywords have any real support —
+ * still a real stat, just not tied to a specific ask.
+ */
+export function topReviewTopics(hotelId: string, preferKeywords: string[] = []): ReviewHighlight[] {
   const reviews = getReviewsForHotel(hotelId);
-  if (reviews.length === 0) return null;
+  if (reviews.length === 0) return [];
+
+  const keywords = [...new Set(preferKeywords.map((k) => k.trim()).filter(Boolean))];
+  if (keywords.length > 0) {
+    const stats = keywords
+      .map((topic) => ({ topic, count: mentionCount(reviews, topic) }))
+      .filter((s) => s.count > 0)
+      .sort((a, b) => b.count - a.count)
+      .map((s) => ({ ...s, total: reviews.length, pct: Math.round((s.count / reviews.length) * 100) }));
+    if (stats.length > 0) return stats;
+  }
+
   const counts = new Map<string, number>();
   for (const r of reviews) {
     for (const t of r.topics) counts.set(t, (counts.get(t) ?? 0) + 1);
   }
-  if (counts.size === 0) return null;
+  if (counts.size === 0) return [];
   const [topic, count] = [...counts.entries()].sort((a, b) => b[1] - a[1])[0];
-  return { topic, count, total: reviews.length, pct: Math.round((count / reviews.length) * 100) };
+  return [{ topic, count, total: reviews.length, pct: Math.round((count / reviews.length) * 100) }];
 }
 
 export function insertAiCollectedReview(review: Omit<Review, "id" | "created_at">): Review {

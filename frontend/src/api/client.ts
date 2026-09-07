@@ -55,7 +55,7 @@ export const api = {
       hotel: Hotel;
       reviews: Review[];
       price: { nightly: number; total: number; nights: number } | null;
-      reviewHighlight: ReviewHighlight | null;
+      reviewHighlights: ReviewHighlight[];
     }>(`/hotels/${id}?${qs.toString()}`);
   },
 

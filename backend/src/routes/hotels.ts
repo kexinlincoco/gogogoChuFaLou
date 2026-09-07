@@ -1,6 +1,7 @@
 import { Router } from "express";
-import { listCities, listTags, listHotels, getHotel, getReviewsForHotel, topReviewTopic } from "../db/repo.js";
+import { listCities, listTags, listHotels, getHotel, getReviewsForHotel, topReviewTopics } from "../db/repo.js";
 import { nightlyPrice, totalPrice } from "../services/pricing.js";
+import { keywordMatchesTag } from "../lib/textMatch.js";
 
 export const hotelsRouter = Router();
 
@@ -56,16 +57,17 @@ hotelsRouter.get("/:id", (req, res) => {
 
   // When the caller knows what the user actually asked for (passed down from
   // the chat recommendation that led here), surface matching reviews first —
-  // stable sort, so relevance re-orders without scrambling recency within
-  // each group. Manual-filter entry has no such context, so this is a no-op
-  // there and the highlight below is the only signal shown.
+  // ranked by HOW MANY of the prefer keywords each review really backs (topic
+  // tag OR literal text match, same two-way check as retrieveEvidence — a
+  // topic-less need like "安静" still counts if it's actually written), not
+  // just a binary match/no-match. Stable sort, so relevance re-orders without
+  // scrambling recency within each same-score group. Manual-filter entry has
+  // no such context, so this is a no-op there and the highlight below is the
+  // only signal shown.
   const preferList = parseList(prefer);
   if (preferList && preferList.length > 0) {
-    reviews = [...reviews].sort((a, b) => {
-      const aMatch = a.topics.some((t) => preferList.includes(t)) ? 1 : 0;
-      const bMatch = b.topics.some((t) => preferList.includes(t)) ? 1 : 0;
-      return bMatch - aMatch;
-    });
+    const matchCount = (r: (typeof reviews)[number]) => preferList.filter((p) => r.topics.some((t) => keywordMatchesTag(p, t)) || r.text.includes(p)).length;
+    reviews = [...reviews].sort((a, b) => matchCount(b) - matchCount(a));
   }
 
   let price: { nightly: number; total: number; nights: number } | null = null;
@@ -78,5 +80,5 @@ hotelsRouter.get("/:id", (req, res) => {
     };
   }
 
-  res.json({ hotel, reviews, price, reviewHighlight: topReviewTopic(hotel.id) });
+  res.json({ hotel, reviews, price, reviewHighlights: topReviewTopics(hotel.id, preferList ?? []) });
 });

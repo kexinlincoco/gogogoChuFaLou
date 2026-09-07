@@ -6,6 +6,40 @@ function escapeRegExp(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+/** Same bidirectional-containment rule as backend/src/lib/textMatch.ts
+ * (kept as a small duplicate here rather than a cross-package import,
+ * frontend and backend are separate npm projects) — a descriptive phrase
+ * built around a real tag ("靠近四合院" ~ "四合院") counts as the same need,
+ * not just an exact string match. */
+function keywordMatchesTag(keyword: string, tag: string): boolean {
+  return tag.includes(keyword) || keyword.includes(tag);
+}
+
+/**
+ * For each of the user's stated preferences, the real word worth searching
+ * for in evidence text: the hotel's own matching tag when the preference is
+ * a descriptive phrase built around it (e.g. "靠近四合院" ~ the real tag
+ * "四合院"), otherwise the raw preference itself. Real review/reason text is
+ * written by whoever wrote the review, not by whoever phrased the chat
+ * preference — searching for the tag word finds real occurrences ("这家四
+ * 合院很有味道") that searching for the user's exact phrase almost never
+ * will.
+ */
+export function resolveHighlightTerms(prefer: string[], hotelTags: string[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const raw of prefer) {
+    const k = raw.trim();
+    if (!k) continue;
+    const term = hotelTags.find((t) => keywordMatchesTag(k, t)) ?? k;
+    if (!seen.has(term)) {
+      seen.add(term);
+      out.push(term);
+    }
+  }
+  return out;
+}
+
 /**
  * Which of the user's stated preferences (slots.prefer) this ONE hotel's
  * actual evidence supports — checked against real text (tags/snippets/
@@ -17,11 +51,10 @@ export function matchedKeywordsFor(prefer: string[], hotelTags: string[], snippe
   const haystack = [...hotelTags, ...snippets.map((s) => s.text), reason].join("\n");
   const seen = new Set<string>();
   const out: string[] = [];
-  for (const raw of prefer) {
-    const k = raw.trim();
-    if (k && haystack.includes(k) && !seen.has(k)) {
-      seen.add(k);
-      out.push(k);
+  for (const term of resolveHighlightTerms(prefer, hotelTags)) {
+    if (term && haystack.includes(term) && !seen.has(term)) {
+      seen.add(term);
+      out.push(term);
     }
   }
   return out;
