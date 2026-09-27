@@ -6,3 +6,7 @@ dist/
 # backend runtime data / secrets
 backend/data/
 backend/.env
+
+# 本地导出产物
+output/
+tmp/
