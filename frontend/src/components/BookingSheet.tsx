@@ -216,17 +216,17 @@ export function BookingSheet({
           {step === "review" && price && (
             <>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10, fontSize: 13, color: "var(--ink-soft)" }}>
-                <span>总价（{price.nights}晚）</span>
+                <span>模拟总价（{price.nights}晚）</span>
                 <b style={{ color: "var(--venice-blue)", fontSize: 16 }}>¥{price.total}</b>
               </div>
               <button onClick={handlePay} style={payBtn}>
-                确认预订并支付
+                创建演示订单（不扣款）
               </button>
             </>
           )}
           {step === "paying" && (
             <button disabled style={{ ...payBtn, opacity: 0.7 }}>
-              支付中…
+              正在创建演示订单…
             </button>
           )}
           {step === "success" && order && hotel && (
@@ -236,8 +236,8 @@ export function BookingSheet({
                   <path d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 17, color: "var(--venice-blue)" }}>预订成功！</div>
-              <div style={{ fontSize: 12.5, color: "var(--ink-soft)", marginTop: 4, marginBottom: 14 }}>祝你在{hotel.name}玩得开心～</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 17, color: "var(--venice-blue)" }}>演示订单已创建</div>
+              <div style={{ fontSize: 12.5, color: "var(--ink-soft)", marginTop: 4, marginBottom: 14 }}>{hotel.name} · 未向酒店订房，不可作为入住凭证</div>
 
               <div style={{ marginBottom: 14, textAlign: "left" }}>
                 {satisfactionDone ? (
@@ -245,7 +245,7 @@ export function BookingSheet({
                 ) : (
                   <FeedbackQuestion
                     kind="satisfaction"
-                    prompt={source === "ai_chat" ? "这次AI帮你推荐的酒店，你满意吗？" : "这次预订的选择，你满意吗？"}
+                    prompt={source === "ai_chat" ? "这次查评论的体验，你满意吗？" : "这次筛选浏览的体验，你满意吗？"}
                     orderId={order.id}
                     hotelId={hotelId}
                     authorName={authorName}

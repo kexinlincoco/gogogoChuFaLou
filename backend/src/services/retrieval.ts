@@ -23,10 +23,9 @@ export function retrieveEvidence(hotelId: string, preferKeywords: string[]): Ret
 
   let matched: Review[];
   if (keywords.length === 0) {
-    matched = all.slice(0, 2);
+    matched = [];
   } else {
     matched = all.filter((r) => r.topics.some((t) => keywords.some((k) => keywordMatchesTag(k, t))) || keywords.some((k) => r.text.includes(k)));
-    if (matched.length === 0) matched = all.slice(0, 2);
   }
 
   return {

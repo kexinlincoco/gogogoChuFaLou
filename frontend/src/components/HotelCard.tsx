@@ -109,7 +109,7 @@ export function HotelCard({
         <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, color: "var(--venice-blue)", lineHeight: 1.3 }}>{hotel.name}</div>
         <div style={{ fontSize: 14, fontWeight: 700, color: "var(--venice-blue)" }}>
           ¥{hotel.samplePrice ?? hotel.base_price}
-          <span style={{ fontSize: 10, fontWeight: 500, color: "var(--ink-faint)" }}>/晚</span>
+          <span style={{ fontSize: 10, fontWeight: 500, color: "var(--ink-faint)" }}>/晚 · 模拟价</span>
         </div>
         <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
           {displayTags.map((t) => {
@@ -155,7 +155,7 @@ export function HotelCard({
         </button>
         <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
           <div style={{ width: 16, height: 16, borderRadius: "50%", background: "var(--rock-blue)", flexShrink: 0 }} />
-          <div style={{ fontSize: 10, color: "var(--ink-soft)", flex: 1 }}>来自真实住客评论</div>
+          <div style={{ fontSize: 10, color: "var(--ink-soft)", flex: 1 }}>样本评论摘要 · 请核对原文</div>
         </div>
       </div>
     </div>

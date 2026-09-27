@@ -54,7 +54,7 @@ export function ChatScreen({
       {
         kind: "ai-text",
         id: uid("ai"),
-        text: userName ? `嗨，${userName}～这次想去哪儿玩呀？和我聊聊目的地、预算和心情，我来帮你挑酒店。` : "嗨～这次想去哪儿玩呀？和我聊聊目的地、预算和心情，我来帮你挑酒店。",
+        text: userName ? `嗨，${userName}～这次想去哪儿玩呀？告诉我目的地和在意的体验，我帮你查样本酒店中的相关评论。` : "嗨～这次想去哪儿玩呀？告诉我目的地和在意的体验，我帮你查样本酒店中的相关评论。",
       },
       { kind: "quickfills", id: uid("qf"), prompts: QUICKFILLS },
     ]);

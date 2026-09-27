@@ -117,7 +117,7 @@ export function TopBar({
               transition: "background .2s, color .2s",
             }}
           >
-            {m === "chat" ? "AI推荐" : "手动筛选"}
+            {m === "chat" ? "AI查评论" : "手动筛选"}
           </button>
         ))}
       </div>

@@ -37,10 +37,10 @@ export function EvidenceModal({ candidate, prefer, onClose }: { candidate: Hotel
         <div style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--venice-blue)", marginBottom: 4 }}>
           {candidate.hotel.name}
         </div>
-        <div style={{ fontSize: 12, color: "var(--ink-soft)", marginBottom: 14 }}>推荐理由依据的真实评论片段</div>
+        <div style={{ fontSize: 12, color: "var(--ink-soft)", marginBottom: 14 }}>样本评论原文；提到某个词不代表认可，也不保证当前体验</div>
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {candidate.matchedSnippets.length === 0 && (
-            <div style={{ fontSize: 12, color: "var(--ink-faint)" }}>暂无强相关评论片段，理由基于整体评价氛围。</div>
+            <div style={{ fontSize: 12, color: "var(--ink-faint)" }}>暂无相关评论证据，无法判断是否符合你的偏好。</div>
           )}
           {candidate.matchedSnippets.map((s, i) => (
             <div key={i} style={{ background: "var(--surface)", borderRadius: 12, padding: "11px 12px", display: "flex", flexDirection: "column", gap: 6 }}>

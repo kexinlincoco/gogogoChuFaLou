@@ -119,6 +119,10 @@ export default function App() {
     >
       <TopBar mode={mode} onModeChange={setMode} user={user} onAvatarClick={() => setShowLogin(true)} onLogout={logout} />
 
+      <div style={{ margin: "8px 16px 0", padding: "10px 12px", borderRadius: 10, background: "var(--surface)", color: "var(--ink-soft)", fontSize: 12, lineHeight: 1.5 }}>
+        酒店评论辅助浏览原型：仅覆盖有限样本，评论供参考。价格与订单均为模拟，无法真实订房。
+      </div>
+
       {backendWarning && (
         <div style={{ margin: "8px 16px 0", padding: "8px 12px", borderRadius: 10, background: "rgba(179,70,44,.12)", color: "#b3462c", fontSize: 11.5 }}>
           {backendWarning}

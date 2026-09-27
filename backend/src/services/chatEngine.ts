@@ -147,11 +147,11 @@ export async function handleTurn(sessionId: string, userText: string, userName?:
     ]);
     const intro =
       introRaw ??
-      `我们的酒店库目前只覆盖${listCities().join("、")}这几个城市，还没有${session.slots.city}的数据——先给你看看其他城市里口碑不错的酒店，你也可以换一个城市试试～`;
+      `我们的酒店库目前只覆盖${listCities().join("、")}这几个城市，还没有${session.slots.city}的数据——以下仅展示其他城市的样本，不符合你的目的地条件，你也可以换一个城市试试～`;
 
     const hotels: HotelCandidate[] = evidenceByHotel.map(({ hotel, evidence }) => ({
       hotel,
-      reason: reasons[hotel.id] ?? "这家酒店的真实住客评价也还不错。",
+      reason: reasons[hotel.id] ?? "暂无可用评论摘要，请查看原文。",
       matchedSnippets: evidence.matched.map((r) => ({ author: r.author, text: r.text, created_at: r.created_at })),
       matchRatioPct: Math.round(evidence.matchRatio * 100),
     }));

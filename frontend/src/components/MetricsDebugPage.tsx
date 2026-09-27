@@ -5,7 +5,7 @@ import type { MetricsSummary } from "../types";
 // Internal-only view, reached via /?debug=metrics — not linked from the
 // normal nav (PRD §10). Shows the three metrics that are actually
 // measurable right now regardless of the hotel dataset being small:
-// AI推荐采纳率, 下单前平均对话轮次, AI推荐/入住体验满意度分布.
+// AI入口演示订单占比, 下单前平均对话轮次, AI推荐/入住体验满意度分布.
 export function MetricsDebugPage() {
   const [data, setData] = useState<MetricsSummary | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -17,28 +17,28 @@ export function MetricsDebugPage() {
   return (
     <div style={{ maxWidth: 480, margin: "0 auto", minHeight: "100vh", padding: "24px 20px", fontFamily: "system-ui, sans-serif", color: "#16587b", background: "#F5EEDD" }}>
       <h1 style={{ fontSize: 18, marginBottom: 4 }}>指标调试页</h1>
-      <p style={{ fontSize: 12, color: "#7a95a3", marginBottom: 20 }}>内部调试用，未接入主导航；数据随订单/追问真实产生而变化。</p>
+      <p style={{ fontSize: 12, color: "#7a95a3", marginBottom: 20 }}>内部调试用，未接入主导航；仅记录演示操作，可能包含种子数据和重复事件。</p>
 
       {error && <div style={{ color: "#b3462c", fontSize: 13 }}>{error}</div>}
       {!data && !error && <div style={{ fontSize: 13 }}>加载中…</div>}
 
       {data && (
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-          <Card title="转化漏斗（打开预订弹层 → 确认 → 完成支付）">
+          <Card title="演示事件计数（打开详情 → 确认 → 创建订单）">
             <Funnel
               stages={[
-                { label: "打开预订弹层", n: data.funnel.sheetOpened },
-                { label: "点击确认预订", n: data.funnel.confirmClicked },
-                { label: "完成支付", n: data.funnel.paymentCompleted },
+                { label: "打开详情", n: data.funnel.sheetOpened },
+                { label: "点击演示确认", n: data.funnel.confirmClicked },
+                { label: "创建演示订单", n: data.funnel.paymentCompleted },
               ]}
             />
-            <div style={metaStyle}>付款页点了就一定成功，所以"确认支付"这一步没有流失；"打开→确认"这一段的差额是真实的浏览未下单人数</div>
+            <div style={metaStyle}>按事件次数统计，未按用户或完整会话去重，阶段差额不能直接视为流失人数。没有真实支付。</div>
           </Card>
 
-          <Card title="AI推荐采纳率">
+          <Card title="AI入口演示订单占比">
             <BigNumber value={data.adoptionRatePct === null ? "—" : `${data.adoptionRatePct}%`} />
             <div style={metaStyle}>
-              全部订单 {data.totalOrders} 单，其中通过AI聊天下单 {data.aiChatOrders} 单，手动筛选下单 {data.manualOrders} 单
+              全部演示订单 {data.totalOrders} 单，其中通过AI聊天下单 {data.aiChatOrders} 单，手动筛选下单 {data.manualOrders} 单
             </div>
           </Card>
 
@@ -47,7 +47,7 @@ export function MetricsDebugPage() {
             <div style={metaStyle}>基于{data.aiChatOrders}单AI聊天订单，下单那一刻该会话已发送的用户消息数取平均</div>
           </Card>
 
-          <Card title="AI推荐满意度（下单后追问，仅问AI聊天订单）">
+          <Card title="AI入口体验反馈（仅统计AI入口演示订单）">
             <Distribution
               rows={[
                 { label: "满意", n: data.satisfaction.satisfied },
@@ -59,7 +59,7 @@ export function MetricsDebugPage() {
             <div style={metaStyle}>共{data.satisfaction.totalAnswered + data.satisfaction.skipped}次追问</div>
           </Card>
 
-          <Card title="入住体验满意度（下单后追问，所有订单）">
+          <Card title="入住追问演示反馈（未经真实入住核验）">
             <Distribution
               rows={[
                 { label: "很干净", n: data.stayExperience.clean },

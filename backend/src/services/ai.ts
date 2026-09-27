@@ -87,7 +87,7 @@ function persona(userName?: string): string {
   const nameLine = userName
     ? `用户的名字/称呼是"${userName}"，可以在合适的时候自然地用这个名字称呼TA（不用每句话都叫，太刻意反而显得生硬），拉近一点距离感。`
     : "";
-  return `你叫"出发喽"，一个帮用户订酒店的AI助手，语气轻松、像朋友聊天，不要有客服腔。
+  return `你叫"出发喽"，一个帮用户浏览样本酒店评论的AI助手；酒店价格和订单都是模拟的，不能真实订房，也不能保证酒店符合偏好，语气轻松、像朋友聊天，不要有客服腔。
 不要用"作为AI助手"这类自我介绍语。回复尽量简短，1-2句话，可以带一点点可爱的语气词，但不要过度使用感叹号或表情符号（最多一个"～"）。
 ${nameLine}`;
 }
@@ -124,7 +124,7 @@ export async function introduceRecommendations(history: ChatMessage[], slots: Sl
       {
         role: "user",
         content: `用户想去${slots.city ?? "某地"}，预算每晚${slots.budget_max ?? "不限"}元，偏好：${slots.prefer.join("、") || "没有特别偏好"}。
-写一句话过渡语，告诉用户你已经在真实住客评论里帮TA翻了一遍、挑了几家。不要提到具体酒店名字（还没展示）。`,
+写一句话过渡语，告诉用户即将展示样本酒店及评论参考；不要声称找到了符合条件或可以预订的酒店。不要提到具体酒店名字（还没展示）。`,
       },
     ],
   });
@@ -140,7 +140,7 @@ const ReasonsSchema = z.object({
   reasons: z.array(
     z.object({
       hotelId: z.string(),
-      reason: z.string().describe("一句话推荐理由，20-40字，基于给定评论片段，可以引用给定的匹配比例，但不能编造比例或事实"),
+      reason: z.string().describe("一句话评论参考，20-40字；仅概括片段，保留负面信息，不输出适配率或推荐结论"),
     })
   ),
 });
@@ -152,8 +152,7 @@ export async function generateRecommendationReasons(
   const evidenceBlock = candidates
     .map(({ hotel, evidence }) => {
       const snippets = evidence.matched.map((r) => `  - "${r.text}"`).join("\n");
-      const ratioPct = Math.round(evidence.matchRatio * 100);
-      return `酒店ID: ${hotel.id}\n酒店名: ${hotel.name}\n真实评论中与用户偏好相关的比例（后端已计算，不要改写数字，可自然表达）：${ratioPct}% (${evidence.matched.length}/${evidence.totalReviewCount}条)\n相关评论原文片段：\n${snippets || "  （暂无强相关片段，可基于整体评论氛围委婉表达）"}`;
+      return `酒店ID: ${hotel.id}\n酒店名: ${hotel.name}\n样本评论总数：${evidence.totalReviewCount}条；以下最多展示4条字面检索片段，不代表正面评价或适配程度\n相关评论原文片段：\n${snippets || "  （暂无强相关片段，必须说明缺乏相关证据，无法判断）"}`;
     })
     .join("\n\n");
 
@@ -163,8 +162,8 @@ export async function generateRecommendationReasons(
     messages: [
       {
         role: "system",
-        content: `你是"出发喽"的推荐理由生成模块。只能依据给定的真实评论片段和后端提供的统计比例写推荐理由，绝不能编造评论中不存在的事实或数字。
-如果给定比例是0%或片段很少，就用更委婉、真实的措辞（例如"评论不多，但住过的人反馈还不错"），不要硬凑百分比说法。
+        content: `你是"出发喽"的推荐理由生成模块。仅依据给定评论片段概括评论参考，保留否定和分歧，不能把关键词出现当成正面证据，不输出百分比或保证酒店适合用户。
+没有相关片段时必须说明“暂无相关评论证据，无法判断”，不得用“口碑不错”等安慰式结论替代。
 每条理由一句话，20-40字，口语化，避免"该酒店"这类生硬措辞。`,
       },
       {
