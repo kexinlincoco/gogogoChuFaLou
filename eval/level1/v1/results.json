@@ -1,0 +1,3456 @@
+{
+  "need": "干净",
+  "model": "gpt-5-mini",
+  "rows": [
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2089946211",
+      "retrieved": true,
+      "via": "text",
+      "text": "這家小院真的選對了，西二環西安門大街地理位置絕佳，地鐵公交都很近。鬧中取靜，外面是市井衚衕，院內安安靜靜。硬件維護到位，床品舒適。逛完景點回來在院中坐坐，卸下旅途疲憊，整體性價比很不錯。\n阿姨打掃衞生特別用心，弄的很乾凈，而且阿姨跟前台的小姐姐人都非常好，溝通起來很暢快，住得很舒服的體驗，天台特別漂亮",
+      "label": "positive",
+      "quote": "阿姨打掃衞生特別用心，弄的很乾凈，而且阿姨跟前台的小姐姐人都非常好，溝通起來很暢快，住得很舒服的體驗，天台特別漂亮",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2089923707",
+      "retrieved": true,
+      "via": "text",
+      "text": "來北京旅行入住的小院，就在西安門大街，位置好找，周邊吃飯選擇多。四合院格局很有特色，院子乾淨清爽。服務周到，溝通順暢，房間居住舒適度高。距離各大核心景區不遠，不管是休閑還是觀光，都是很不錯的選擇。",
+      "label": "positive",
+      "quote": "院子乾淨清爽。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2084934013",
+      "retrieved": true,
+      "via": "text",
+      "text": "一行五人訂了兩個房！位置特別好，臨近故宮、恭王府，周邊吃飯逛街都很方便。小院鬧中取靜，環境雅緻，露台坐着喝茶十分愜意。工作人員熱情細心，房間乾淨舒適，睡得很安穩，沉浸式體驗老北京胡同氛圍，來北京旅行很值得選擇 。",
+      "label": "positive",
+      "quote": "房間乾淨舒適，睡得很安穩，沉浸式體驗老北京胡同氛圍，來北京旅行很值得選擇 。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2083324317",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間很乾凈 服務很好",
+      "label": "positive",
+      "quote": "房間很乾凈 服務很好",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2082808197",
+      "retrieved": true,
+      "via": "text",
+      "text": "挖到二環裏寶藏四合院！交通便利，去各大景點都很方便。院落古雅安靜，房間乾淨舒適，夜晚睡得格外踏實。露台喝茶氛圍感拉滿，周邊京味美食豐富，老闆待人親切，住客相處融洽，來北京體驗衚衕生活首選。",
+      "label": "positive",
+      "quote": "房間乾淨舒適，夜晚睡得格外踏實。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2075971649",
+      "retrieved": true,
+      "via": "text",
+      "text": "位置特別好，衚衕裏面鬧中取靜，到故宮走路就能到。院子很有老北京的氛圍感，房間乾淨整潔，設施齊全。帶孩子親子出遊住這裏很合適，管家響應及時，出行遊玩都很省心，整體入住體驗很不錯。",
+      "label": "positive",
+      "quote": "房間乾淨整潔，設施齊全。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2071043547",
+      "retrieved": true,
+      "via": "text",
+      "text": "帶孩子親子出遊選擇了隱世四合院，體驗特別棒。古色古香的小院氛圍感十足，孩子很喜歡在院內玩耍。房間乾淨整潔，管家服務貼心周到，位置出行便利，感受老北京胡同韻味，非常推薦家庭出行入住。",
+      "label": "positive",
+      "quote": "房間乾淨整潔，管家服務貼心周到，位置出行便利，感受老北京胡同韻味，非常推薦家庭出行入住。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2068278615",
+      "retrieved": true,
+      "via": "text",
+      "text": "第一次來這裏旅遊，隱世四合院有着地道老北京胡同韻味，小院安靜雅緻。位置優越出行便捷，房間乾淨舒適。管家服務細心周到，入住體驗很棒，非常推薦，下次來北京還會選擇這裏 。",
+      "label": "positive",
+      "quote": "房間乾淨舒適。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2058376627",
+      "retrieved": true,
+      "via": "text",
+      "text": "隱世四合院位置絕佳，出行交通十分便利。院內裝修雅緻好看，房間打掃得乾淨衞生。工作人員熱情貼心，小院鬧中取靜，夜裡格外安靜，睡眠體驗很好，沉浸式感受老北京胡同氛圍，非常推薦！",
+      "label": "positive",
+      "quote": "房間打掃得乾淨衞生。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2057752051",
+      "retrieved": true,
+      "via": "text",
+      "text": "這次入住體驗超出預期！小院顏值很高，環境整潔乾淨。地理位置方便，出行輕鬆。工作人員待人熱情周到，院落隔音很棒，十分安靜，忙碌遊玩後能好好休息，是來北京旅行優選的住處。",
+      "label": "positive",
+      "quote": "環境整潔乾淨。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2022259301",
+      "retrieved": true,
+      "via": "text",
+      "text": "前台很有禮貌耐心，環境雅緻，乾淨",
+      "label": "positive",
+      "quote": "環境雅緻，乾淨",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1999320059",
+      "retrieved": true,
+      "via": "text",
+      "text": "入住體驗超出預期！出行交通十分方便，周邊美食景點密集。全屋乾淨整潔，採光通風都很好。管家熱情又耐心，有任何問題都會細緻解答，清幽小院治癒疲憊，強烈推薦給來京遊客！",
+      "label": "positive",
+      "quote": "全屋乾淨整潔，採光通風都很好。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1998453251",
+      "retrieved": true,
+      "via": "text",
+      "text": "這個酒店位置很好 交通也方便 公共交通方便 整體的體驗感很不錯的 環境很贊呀 早餐好好好吃  完美的一次旅遊！ 衞生乾淨",
+      "label": "positive",
+      "quote": "衞生乾淨",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1998044601",
+      "retrieved": true,
+      "via": "text",
+      "text": "滿分推薦這家隱世四合院民宿！位置絕佳，步行可達故宮、人民大會堂與北海公園，周邊遍地地道京味美食。客房乾淨整潔，居住舒適度拉滿，店內工作人員淳樸熱情，服務細緻周到，出行遊玩吃飯都特別省心。",
+      "label": "positive",
+      "quote": "客房乾淨整潔，居住舒適度拉滿，店內工作人員淳樸熱情，服務細緻周到，出行遊玩吃飯都特別省心。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1990243601",
+      "retrieved": true,
+      "via": "text",
+      "text": "早餐營養豐盛 很好吃。感覺這幾天酒店這家性價比最高了 衞生乾淨 潔癖媽媽都沒話説 這次出遊對北京的這家酒店老滿意 點個贊",
+      "label": "positive",
+      "quote": "衞生乾淨 潔癖媽媽都沒話説 這次出遊對北京的這家酒店老滿意 點個贊",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1986077237",
+      "retrieved": true,
+      "via": "text",
+      "text": "距離景區它是非常近的，交通很方便。北京的話，感覺這個價格其實很划算，衞生很乾凈。酒店還蠻多外國人的。感覺很中式風格。下次來還會再入住。服務態度我是非常滿意的。。到北京比較晚。酒店提前把空調都幫我開好了。不錯",
+      "label": "positive",
+      "quote": "衞生很乾凈。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1984527319",
+      "retrieved": true,
+      "via": "text",
+      "text": "五星好評不摻水！小院設計典雅好看，拍照特別出片。客房打掃得乾乾淨淨，家電衞浴設施齊全，管家服務隨叫隨到，地段優越，步行可達各大景區。",
+      "label": "positive",
+      "quote": "客房打掃得乾乾淨淨，家電衞浴設施齊全，管家服務隨叫隨到，地段優越，步行可達各大景區。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1965734857",
+      "retrieved": true,
+      "via": "text",
+      "text": "一切都非常好，居住環境舒適，距離周圍景點也特別近。\n店裡有自助咖啡等等一切茶水，服務很周到貼心～\n那幾天行程緊張，得虧店裡設施一切都很棒，回到旅店都能得到不錯的休息。\n\n\n設施：有乾洗機，一切都不錯\n衞生：整潔乾淨\n\n服務：前台小哥小姐姐們服務態度都很好",
+      "label": "positive",
+      "quote": "衞生：整潔乾淨",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1964883731",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間挺乾淨，服務人員很熱情",
+      "label": "positive",
+      "quote": "房間挺乾淨，服務人員很熱情",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1962530383",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間寬敞乾淨，可做家庭房，而且帶洗衣機和烘乾機。周圍交通便利，遊玩出行非常方便。房間帶露台，非常有分圍感，温馨又浪漫！",
+      "label": "positive",
+      "quote": "房間寬敞乾淨，可做家庭房，而且帶洗衣機和烘乾機。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1960782545",
+      "retrieved": true,
+      "via": "text",
+      "text": "乾淨，衞生，服務好！習慣好評，但也習慣\n對好的認可好評！",
+      "label": "positive",
+      "quote": "乾淨，衞生，服務好！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1960780573",
+      "retrieved": true,
+      "via": "text",
+      "text": "推薦推薦，衞生乾淨。",
+      "label": "positive",
+      "quote": "推薦推薦，衞生乾淨。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1960778789",
+      "retrieved": true,
+      "via": "text",
+      "text": "入住很快，房間乾淨整潔，價格不貴，出差首選。",
+      "label": "positive",
+      "quote": "房間乾淨整潔，價格不貴，出差首選。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1955785787",
+      "retrieved": true,
+      "via": "text",
+      "text": "給家人預訂了2間房，想感受一下老北京胡同，特意挑了這一家，家人都很滿意，距離故宮和北海公園非常近，房間很乾凈，很有性價比，店家很熱情，服務很滿意，還有免費的咖啡，下午茶，水果，非常開心的一次家庭出遊。",
+      "label": "positive",
+      "quote": "房間很乾淨，很有性價比，店家很熱情，服務很滿意，還有免費的咖啡，下午茶，水果，非常開心的一次家庭出遊。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1955650101",
+      "retrieved": true,
+      "via": "text",
+      "text": "環境：很好離周邊景點都很近交通方便\n衞生：不錯挺乾淨的\n環境：院子不太大但打理的挺好看有花花草草",
+      "label": "positive",
+      "quote": "衞生：不錯挺乾淨的",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1949843205",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨整潔，有露台適合晚上吹風，地理位置十分優越，位於主城區離地鐵站很近，服務態度很好，非常有北京地理特色，價格優勢大，下次旅途還會選擇入住。",
+      "label": "positive",
+      "quote": "房間乾淨整潔，有露台適合晚上吹風，地理位置十分優越，位於主城區離地鐵站很近，服務態度很好，非常有北京地理特色，價格優勢大，下次旅途還會選擇入住。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1939574791",
+      "retrieved": true,
+      "via": "text",
+      "text": "老闆人很好，房間很乾凈，孩子很喜歡",
+      "label": "positive",
+      "quote": "房間很乾凈，孩子很喜歡",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1935378051",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間很乾凈，服務也很貼心，前台小姐姐非常熱情，價格合理，出行便利，點贊推薦！",
+      "label": "positive",
+      "quote": "房間很乾凈，服務也很貼心，前台小姐姐非常熱情，價格合理，出行便利，點贊推薦！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1878876073",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨衞生，交通便利，鬧中取靜。樓上是個小露台，可以休憩喝茶看星星。",
+      "label": "positive",
+      "quote": "房間乾淨衞生，交通便利，鬧中取靜。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1874540083",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間設施設備配備齊全，去的時候夜深啦，老闆還等着，幫忙拿了行李，房間很乾凈，也很暖和，馬桶是智能的，熱水也很充足。房間也很安靜。外面走廊很適合拍照，附近交通很方便，緊挨着去地鐵站。下次還會住的。",
+      "label": "positive",
+      "quote": "房間很乾凈，也很暖和，馬桶是智能的，熱水也很充足。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1869727411",
+      "retrieved": true,
+      "via": "text",
+      "text": "設施：完善公正\n衞生：乾淨整潔\n環境：環境優雅舒適宜人\n服務：到位",
+      "label": "positive",
+      "quote": "衞生：乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1868362791",
+      "retrieved": true,
+      "via": "text",
+      "text": "房東姐姐服務態度很好，衞生也很好乾凈 離景點都比較近",
+      "label": "positive",
+      "quote": "衞生也很好乾凈",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1866245547",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨整潔，離地鐵市區都特別近，服務好，還帶露台",
+      "label": "positive",
+      "quote": "房間乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1854494629",
+      "retrieved": true,
+      "via": "text",
+      "text": "位置好，乾淨整潔",
+      "label": "positive",
+      "quote": "乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1852575433",
+      "retrieved": true,
+      "via": "text",
+      "text": "一般，不太乾淨，吹風機還是壞的，房間很小",
+      "label": "negative",
+      "quote": "不太乾淨",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1841989153",
+      "retrieved": true,
+      "via": "text",
+      "text": "入住的這家民宿是這次旅遊正確的決定，\n房間陽光很好，冬日進門就有温茶遞上。\n房間裏備着加濕器，不用怕乾燥了。\n房間無一點異味，衞生做得很乾凈，老闆會分享古城小眾巷弄，特別實用！",
+      "label": "positive",
+      "quote": "房間無一點異味，衞生做得很乾淨",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1839406055",
+      "retrieved": true,
+      "via": "text",
+      "text": "乾淨衞生，小院很好找，位置也不錯",
+      "label": "positive",
+      "quote": "乾淨衞生",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1838056551",
+      "retrieved": true,
+      "via": "text",
+      "text": "住在這裏才算真正體驗到老北京的慢生活，小院温馨質樸，房間乾淨整潔，老闆和員工都超熱情，像家人一樣。離各種景區都近，逛吃出行方便，這趟北京之行住得超滿意。",
+      "label": "positive",
+      "quote": "房間乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1837565649",
+      "retrieved": true,
+      "via": "text",
+      "text": "北海公園旁的中式小院，步行幾分鐘就能逛北海，推窗就是老北京的衚衕風情，超有韻味。房間簡約雅緻，擦得乾乾淨淨，床品軟和睡得香，地暖燒得暖乎乎，冬天來住也超舒服。",
+      "label": "positive",
+      "quote": "擦得乾乾淨淨",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1837563433",
+      "retrieved": true,
+      "via": "text",
+      "text": "離地鐵口不遠，出行超順，去天安門、故宮也方便。房間簡約乾淨，地板擦得發亮，床的軟硬度剛好，衞生做得超到位，沒有一點灰塵。衚衕口就有紫光園和銅鍋涮肉，吃老北京特色超方便。",
+      "label": "positive",
+      "quote": "衞生做得超到位，沒有一點灰塵。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1837552119",
+      "retrieved": true,
+      "via": "text",
+      "text": "性價比超高的衚衕客棧，房間寬敞明亮，採光超棒，衞生做得超細緻，連角落都擦得乾淨。24 小時前台服務，有啥需求都能及時解決，自駕也有合作的停車場，超省心。",
+      "label": "positive",
+      "quote": "衞生做得超細緻，連角落都擦得乾淨。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1835752793",
+      "retrieved": true,
+      "via": "text",
+      "text": "這次在北京入住這家民宿體驗非常滿意。位置在衚衕裏，環境安靜，既有老北京的生活氣息，又不影響休息，整體很舒適。\n🍜 周邊美食非常豐富\n早餐推薦衚衕口右轉到西四大街的「九味香烤鴨店」和「西四包子鋪」，出餐快、味道正宗。\n正餐選擇也很多：馬路對面步行約100米就是「紫光園」（北京烤鴨），附近還有「京滿涮肉」銅鍋涮肉、靈境衚衕的「百年鹵煮」和炸醬麪。出衚衕口左轉步行約600米可到「護國寺小吃」和「慶豐包子鋪」，一路吃過去很方便。\n🗺️ 出行和景點便利\n距離地鐵站不遠，前往故宮、天安門、北海公園、景山公園、恭王府、南鑼鼓巷、後海等景點都很順路。去西單大悦城等商場也比較方便，吃喝購物都能兼顧。\n💊帶母親去的協和西院，也很近\n🏡 住宿體驗\n房間乾淨整潔，設施齊全，採光和通風都不錯。房東服務態度很好，入住指引清楚，整體體驗省心、舒適。\n性價比高，適合來北京旅遊或短住，整體體驗超出預期，下次還會選擇這裏。",
+      "label": "positive",
+      "quote": "房間乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1762404429",
+      "retrieved": true,
+      "via": "text",
+      "text": "地理位置絕佳，環境乾淨衞生整潔，周邊吃的玩的非常多，步行或者騎共享單車都可到達，是品嚐本地小吃和風土人情的好地方",
+      "label": "positive",
+      "quote": "環境乾淨衞生整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1756090703",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨，還有個天台，老闆也很熱情！而且很貼心的附帶攻略，周邊吃的，逛的都很詳細！離天安門打車也十多分鐘，看升旗還是很方便的！",
+      "label": "positive",
+      "quote": "房間乾淨",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1748016269",
+      "retrieved": true,
+      "via": "text",
+      "text": "首先客棧在衚衕內，很安靜，出了衚衕就是鬧市區，旁邊飯店，超市一應俱全，交通十分便捷，離北海公園很近，房間內十分乾淨，設備齊全，房間不小，能住四個人了，關鍵還帶了露台，很是愜意，就這個價位在二環內估計找不到第二家了👍🏻",
+      "label": "positive",
+      "quote": "房間內十分乾淨",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1738405881",
+      "retrieved": true,
+      "via": "text",
+      "text": "位置居於城中交通便利，不論房間和公共區都很乾凈。和寶寶天黑到達，工作人員很耐心地講解房間設施使用安全事項，很感謝他。隔音乾燥，露台絕美。可以閉眼沖啦。",
+      "label": "positive",
+      "quote": "房間和公共區都很乾凈。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1723127141",
+      "retrieved": true,
+      "via": "text",
+      "text": "地理位置好，也挺好找的。去景點都挺方便的。服務挺好的。就是衞生不是太乾淨。",
+      "label": "negative",
+      "quote": "就是衞生不是太乾淨。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1714387857",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間很乾凈，也有設計感，關鍵是清凈，真的是大隱隱於市的感覺。去北海公園、什剎海、景山公園都不遠，附近吃的老字號也特別多。真心推薦給來北京旅遊的朋友們！",
+      "label": "positive",
+      "quote": "房間很乾凈，也有設計感，關鍵是清凈，真的是大隱隱於市的感覺。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1684525869",
+      "retrieved": true,
+      "via": "text",
+      "text": "酒店地理位置優越，交通便捷，周圍環境優美。房間設施齊全，衞生乾淨整潔，床鋪很舒服～ 酒店服務周到，老闆熱情友好，服務態度很好，價格實惠！是一家性價比很高的酒店",
+      "label": "positive",
+      "quote": "房間設施齊全，衞生乾淨整潔，床鋪很舒服～",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1677727485",
+      "retrieved": true,
+      "via": "text",
+      "text": "環境乾淨整潔",
+      "label": "positive",
+      "quote": "環境乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1668559473",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨，露台不錯",
+      "label": "positive",
+      "quote": "房間乾淨，露台不錯",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1647838187",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨整潔。服務態度特別好  位置特別好 去哪都特別方便。環境很漂亮",
+      "label": "positive",
+      "quote": "房間乾淨整潔。服務態度特別好 位置特別好 去哪都特別方便。環境很漂亮",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1608932305",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨整潔",
+      "label": "positive",
+      "quote": "房間乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1590060927",
+      "retrieved": true,
+      "via": "text",
+      "text": "環境：房間很乾凈 老闆一看就是愛乾淨人\n老闆很熱情 幫忙拿行李  小院住着很有感覺 感受到了北京四合院的熱情  下次來玩會繼續入住的👍👍",
+      "label": "positive",
+      "quote": "房間很乾凈 老闆一看就是愛乾淨人",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1571519137",
+      "retrieved": true,
+      "via": "text",
+      "text": "設施：設施齊全，洗衣機，烘乾機都有。\n衞生：衞生乾淨整潔\n環境：環境優美\n服務：服務熱情\n推薦推薦",
+      "label": "positive",
+      "quote": "衞生：衞生乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1568542633",
+      "retrieved": true,
+      "via": "text",
+      "text": "進到房間很驚喜，整個房間乾淨整潔，接待小哥温柔又細心，房間內各細節做得很到位，非常開心的一次住宿體驗。",
+      "label": "positive",
+      "quote": "進到房間很驚喜，整個房間乾淨整潔，接待小哥温柔又細心，房間內各細節做得很到位，非常開心的一次住宿體驗。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1558337269",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨，服務態度很好，地理位置不錯",
+      "label": "positive",
+      "quote": "房間乾淨，服務態度很好，地理位置不錯",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1545438937",
+      "retrieved": true,
+      "via": "text",
+      "text": "很乾凈 房間陽光充足",
+      "label": "positive",
+      "quote": "很乾凈 房間陽光充足",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1543597357",
+      "retrieved": true,
+      "via": "text",
+      "text": "住了一晚真不錯！位置好找，就在西四地鐵站的邊上，出門買吃的、逛街都方便，去景點也不遠。屋裡收拾得乾乾淨淨，也沒異味，住着踏實。老闆特熱情，提前就打電話加微信就告訴咱路線了，辦完入住還主動幫忙拿行李，有啥問題都及時解決。屋裡設施齊全，啥都有，一樓還有冰箱和微波爐，熱個飯啥的，跟在家一樣方便，下次來北京還來這住！",
+      "label": "positive",
+      "quote": "屋裡收拾得乾乾淨淨，也沒異味，住着踏實。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1542145045",
+      "retrieved": true,
+      "via": "text",
+      "text": "距離西四地鐵站200米，十分方便，門口附近西四包子鋪也很好吃，房間乾淨舒適簡約，奶油風設計非常非常安逸",
+      "label": "positive",
+      "quote": "房間乾淨舒適簡約，奶油風設計非常非常安逸",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1539491421",
+      "retrieved": true,
+      "via": "text",
+      "text": "北京二環西四地鐵站衚衕裏的寶藏酒店，出行巨方便，周邊景點、美食步行可達。房間乾淨舒適，老闆和 staff 超熱情，提前微信指路、幫忙拎行李，像住朋友家～設施齊全，空調、熱水器、Wi-Fi 俱全，還有冰箱、微波爐，體驗感拉滿，推薦來北京的遊客快沖！",
+      "label": "positive",
+      "quote": "房間乾淨舒適",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1538324639",
+      "retrieved": true,
+      "via": "text",
+      "text": "這次訂的酒店真的超滿意！位置特別好找，離地鐵站走路3分鐘就到，周邊吃飯逛街都方便。老闆熱情，房間打掃的很乾凈，房間設施齊全，空調製冷快還沒噪音，晚上睡得特別踏實。",
+      "label": "positive",
+      "quote": "房間打掃的很乾凈",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1537654257",
+      "retrieved": true,
+      "via": "text",
+      "text": "被庭院環境圈粉了！房間還有露台，晚上坐在露台喝茶超愜意🌙 ，拍照超出片～ ，位置也很好，距離地鐵站步行三兩分鐘就到，去哪都特別方便，房間衞生乾淨整潔。老闆服務超好，幫忙拎行李，介紹周邊吃的地方，不會踩雷。 必須推薦！！！！",
+      "label": "positive",
+      "quote": "房間衞生乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1533252763",
+      "retrieved": true,
+      "via": "text",
+      "text": "這次住的酒店真的挺不錯的！一進房間就覺得乾淨整潔，床鋪軟乎乎的，睡了一晚上渾身都舒服。前台服務態度特別好，辦理入住的時候還主動告知WiFi密碼。位置也方便，離地鐵站走路幾分鐘就到了，周邊吃飯的地方也多。價格在同地段算實惠的，下次來這邊還會選這家！",
+      "label": "positive",
+      "quote": "一進房間就覺得乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1533128057",
+      "retrieved": true,
+      "via": "text",
+      "text": "位置特別方便，距離商圈和景點都不遠，像我這種懶得折騰交通的人，出門逛街、打卡景點直接步行就能到，簡直太合心意了！房間衞生做得特別細緻，床單被罩潔白又平整，一看就知道打掃得很乾凈，住起來特別安心。工作人員服務特別熱情貼心，辦理入住前就提前打電話告訴我路線，還詳細介紹了周邊好吃的店鋪，哪家火鍋好吃，都説得清清楚楚。我有問題找他們，每次都很快回應，服務真的沒話説！酒店的設施也很齊全，洗衣機、烘乾機都有，再也不用帶着臟衣服回家了。房間裏的智能馬桶、大尺寸電視用着都很舒服，連吹風機都是品牌的，細節做得特別好。這次入住體驗真的滿分，下次來這邊還會選擇這家酒店！",
+      "label": "positive",
+      "quote": "房間衞生做得特別細緻，床單被罩潔白又平整，一看就知道打掃得很乾凈",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1533011975",
+      "retrieved": true,
+      "via": "text",
+      "text": "哇塞！這家酒店真的絕絕子啊！位置簡直神仙了好不好！就在商圈和景點旁邊，我這種懶人出門逛吃逛喝全靠走，連地鐵公交都不用擠，簡直是為我量身定做的福音啊！\n \n房間衞生搞得那叫一個細緻！床單被罩白得發光，鋪得平平整整的，一看就賊乾淨，住進去瞬間安全感拉滿！最讓我感動的是工作人員，熱情得像自家親戚似的！辦入住前就打電話給我指路，生怕我找不着，還掰着手指頭給我列周邊好吃的店，哪家火鍋必點、哪家奶茶不踩雷都説得明明白白！我半夜問Wi-Fi密碼都秒回我，這服務態度直接給我整破防了！\n \n而且他們家設施太全乎了！洗衣機烘乾機一應俱全，懶癌晚期患者再也不用扛臟衣服回家了！房間裏的智能馬桶會自動沖水，大電視看電影跟在影院似的，連吹風機都是小米的，細節控當場被拿捏！這次住得我簡直想給五星好評+瘋狂安利，下次來這兒必須還住這兒，鎖死了！",
+      "label": "positive",
+      "quote": "房間衞生搞得那叫一個細緻！床單被罩白得發光，鋪得平平整整的，一看就賊乾淨",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1532204799",
+      "retrieved": true,
+      "via": "text",
+      "text": "藏在衚衕裏的治癒小天地✨\n \n在北京誤了歸程，臨時選擇民宿，沒想到邂逅了一處寶藏！藏在衚衕深處，位置雖偏卻充滿探尋的趣味。推開院門的瞬間，彷彿打開了新世界的大門，二樓的空間別有洞天，環境乾淨整潔，每一處細節都透着用心。\n \n房間所需物品一應俱全，從洗漱用品到生活小物，都能感受到老闆的貼心。老闆更是熱情好客，擔心我天黑找不到路，還發詳細地址，服務太細緻了。\n \n最驚喜的是樓頂露台！第二天清晨，陽光撒房間，打開房頂天窗，順着房間樓梯爬上屋頂。拿着麪包上樓吃早飯、喝着茶，微風輕拂，陽光被巧妙遮擋，在這樣愜意的氛圍中享用早餐，聽風聲低語，看天空澄澈，這一刻，時間都慢了下來。\n下次來北京 還來住～😁",
+      "label": "positive",
+      "quote": "環境乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1529879561",
+      "retrieved": true,
+      "via": "text",
+      "text": "推薦推薦！這家酒店在北京二環裏西四地鐵站附近的衚衕裏，出行特別方便，不管是去周邊景點還是找地方吃飯，對遊客來説太友好了。屋裡收拾得乾乾淨淨的，住起來特別舒服。老闆和工作人員態度特別熱情，不僅提前打電話加微信告訴位置，還主動幫忙拎行李，感覺像住在朋友家一樣。設施也很齊全，空調、熱水器、Wi - Fi這些都有，還有冰箱和微波爐，想熱個剩飯或者冰個飲料都沒問題。總之，來這兒住體驗感挺好的，推薦給大家！",
+      "label": "positive",
+      "quote": "屋裡收拾得乾乾淨淨的",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1529215679",
+      "retrieved": true,
+      "via": "text",
+      "text": "乾淨整潔，寬敞舒適，服務態度好",
+      "label": "positive",
+      "quote": "乾淨整潔，寬敞舒適，服務態度好",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2093009349",
+      "retrieved": false,
+      "via": "probe",
+      "text": "來北京公務出行選的這家小院，位置十分佔優勢，西城區出行辦事通勤很方便。雖然是四合院民宿，但客房整潔利落，基礎設施齊全，網絡穩定，能夠滿足辦公需求。鬧中取靜，忙完工作回到院落裏可以稍作放鬆，服務響應及時，商務短期入住體驗很不錯。",
+      "label": "positive",
+      "quote": "客房整潔利落",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-2071691555",
+      "retrieved": false,
+      "via": "probe",
+      "text": "來北京旅行選擇這家四合院很驚喜，小院氛圍感十足，鬧中取靜。屋內衞生到位，設施齊全。工作人員熱情耐心，還會給到遊玩建議。衚衕煙火氣滿滿，出行便捷，整體入住十分舒心。",
+      "label": "positive",
+      "quote": "屋內衞生到位",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1999764921",
+      "retrieved": false,
+      "via": "probe",
+      "text": "酒店在衚衕裏，上下兩層，房間不多，但小而精\n想要感受北京胡同文化的請不要錯過哦！\n早餐豐盛，有洗衣房，房間門口有晾衣架，於我而言樂於手洗的，簡直太方便了；\n地理位置優越，出門就是生活區，紫光園、各類羊蠍子 燒烤等小館子店特別多；\n到天安門、 故宮非常之便利（任何景點都請提前預約）。\n五星好評，服務周到、出行便利、早餐豐盛、衞生無死角！",
+      "label": "positive",
+      "quote": "衞生無死角！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1997493465",
+      "retrieved": false,
+      "via": "probe",
+      "text": "全五星好評！隱在衚衕裏的寶藏四合院，交通便利，距離故宮、北海、什剎海幾步路。客房整潔無異味，工作人員温柔熱情，服務細緻到位。周邊老字號美食雲集，整體氛圍樸素自然，沒有過度商業化，很適合來京短途旅居。",
+      "label": "positive",
+      "quote": "客房整潔無異味",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1982083121",
+      "retrieved": false,
+      "via": "probe",
+      "text": "服務態度很好，住宿體驗不錯，小院很有味道，晚上特別安靜。設施齊全衞生到位，店家待人實在，出行也省事，值得一來。",
+      "label": "positive",
+      "quote": "設施齊全衞生到位",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1942219977",
+      "retrieved": false,
+      "via": "probe",
+      "text": "西四，鬧中取靜。前台非常友善，有衚衕生活的活氣兒。衞生不錯，位置好，頂樓天台吃個早餐喝個茶都不錯，我們住的時候其他住客也不太用的樣子，我們自己也就吃個早餐用一下，就挺舒服。帶露台的房型應該都是一樣的，在二樓。前台還有冰箱，下館子剩菜不多的話還可以問前台冷藏一下。\n沒照照片，略。",
+      "label": "positive",
+      "quote": "衞生不錯",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1920457237",
+      "retrieved": false,
+      "via": "probe",
+      "text": "出行在外多年，第一次體驗感這麼差。工作人員服務態度不好，門也沒鎖。被子裏面一股臭味，感覺好久不洗了，被子根本不能蓋。廁所衞生也不行，總之沒一個好的。失敗中的失敗。另外，什麼歡迎咖啡飲品等完全沒有。",
+      "label": "negative",
+      "quote": "被子裏面一股臭味，感覺好久不洗了，被子根本不能蓋。廁所衞生也不行，總之沒一個好的。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1892342183",
+      "retrieved": false,
+      "via": "probe",
+      "text": "設施：好 露台最好\n衞生：好\n環境：好\n服務：很好\n養生茶與手沖咖啡歡迎水果:沒問題",
+      "label": "positive",
+      "quote": "衞生：好",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1840723457",
+      "retrieved": false,
+      "via": "probe",
+      "text": "小院的禪意氛圍超棒，院內綠植石景超雅緻，午後曬着太陽喝茶，聽衚衕裏的閑話，太有老北京慢生活那味了。房間採光超棒，寬敞明亮，無一點異味，床品軟和睡得香！",
+      "label": "positive",
+      "quote": "無一點異味，床品軟和睡得香！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1840704153",
+      "retrieved": false,
+      "via": "probe",
+      "text": "鬧市區裏的安靜小院，遠離喧囂，晚上睡得超香，衚衕裏的鴿哨聲超有味道。房間中式簡約風，木質傢俱擦得發亮，衞生細節拉滿，連樓梯扶手都一塵不染，住得超舒心！",
+      "label": "positive",
+      "quote": "衞生細節拉滿，連樓梯扶手都一塵不染",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1837833943",
+      "retrieved": false,
+      "via": "probe",
+      "text": "這鬧市區裏的隱世小院，周邊安靜不吵，晚上能睡得超香。房間設施齊全，無線網超快，衞生做得超細緻，連樓梯扶手都擦得鋥亮。老闆會推薦老北京的遊玩路線，避開網紅打卡點，超適合深度遊哦。",
+      "label": "positive",
+      "quote": "衞生做得超細緻，連樓梯扶手都擦得鋥亮。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1837819147",
+      "retrieved": false,
+      "via": "probe",
+      "text": "這個小院的氛圍感絕了，院內的綠植和石景超有禪意，房間採光超棒，寬敞通透，沒有一點異味。附近吃早餐有老北京的豆汁焦圈和包子，超地道，離南鑼鼓巷、什剎海也近，逛吃超方便些。",
+      "label": "positive",
+      "quote": "沒有一點異味。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1837685479",
+      "retrieved": false,
+      "via": "probe",
+      "text": "北海公園旁的寶藏客棧，房間中式復古風，木質傢俱擦得發亮，衞生細節拉滿，連杯具都擺得整整齊齊。前台服務周到，能免費寄存行李，辦理入離超快，出差或遊玩住這都超合適。",
+      "label": "positive",
+      "quote": "衞生細節拉滿，連杯具都擺得整整齊齊。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1837564495",
+      "retrieved": false,
+      "via": "probe",
+      "text": "客棧的小院超適合喝茶聊天，午後曬着太陽，聽着衚衕裏的鴿哨，太有老北京的味道了。房間設施新，智能電視和空調都超好用，衞生做得細，連洗漱台的水漬都擦凈，住得超舒心。",
+      "label": "positive",
+      "quote": "衞生做得細，連洗漱台的水漬都擦凈，住得超舒心。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1837562657",
+      "retrieved": false,
+      "via": "probe",
+      "text": "北海公園遊玩的首選客棧，步行幾分鐘就到景區門口，不用擠車。房間收拾得清清爽爽，沒有異味，床品親膚，晚上能聽着衚衕的安靜入眠。老闆會講老北京的故事，超有氛圍感。",
+      "label": "positive",
+      "quote": "房間收拾得清清爽爽，沒有異味，床品親膚，晚上能聽着衚衕的安靜入眠。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1765430115",
+      "retrieved": false,
+      "via": "probe",
+      "text": "衞生：還算可以吧\n設施:也還行很普遍\n\n環境：可以的和宣傳的差不多吧\n服務：可以訂完酒店就有人聯繫打電話還給發酒店位置了\n其他的還好",
+      "label": "positive",
+      "quote": "衞生：還算可以吧",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1750217529",
+      "retrieved": false,
+      "via": "probe",
+      "text": "房間超大，地理位置非常棒，衞生也很好，適合親子游或者朋友集體出遊",
+      "label": "positive",
+      "quote": "衞生也很好",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1598115443",
+      "retrieved": false,
+      "via": "probe",
+      "text": "不要再信小紅書了，朋友介紹這間看了照片都覺得不錯就入住，要不是當晚太夜太累入住，一定會當晚撤離！根本不值1300大元！！！本來是住2晚，一入住就果斷除消了第2晚！\n\n1. 房間出奇地小，3個行李箱不能全開，半開也就檔了9成的路，門一打開就是床，也就是第一個行李箱的地方\n\n2. 網頁說是5人房，有一張梳化床，結果就是挨住廁所的一張鐵床，放了一幅畫就當隔開了。而且網頁還有一間茶室照片，令人誤以為房間很大，根本就是圖一，一眼看完！房間門打開了就洗不到手刷不到牙，4個人左閃右避才可以在房間閃身通過\n\n3. 第一次到北京就是想體驗一下4合院，結果從大路進去要經過一排放滿垃圾筒的巷子，網頁上的漂亮照片就是酒店內公眾的一條巷，你又不是睡到巷子去，睜大眼很清楚房間的真實照片吧！\n\n4.房間小，浴室更小，拉簾後洗澡黑得很小孩都怕了，廁所小得連放廁紙的地方都波有，衣服掛鈎更不用說了，每個人洗完澡都要別人幫手毛巾衣服逐樣遞進去，而且我不明白為什麼是透明板， 這個是五人房間，無論是家人和朋友都不適宜把對方洗澡大便的時候看得一清二楚吧？！那個透明板遮了個寂寞！！！每次幫人遞衣服毛巾還要檸開面！！\n\n5. 在枕上和枕頭上都有頭髮，衛生情況實在不太好\n\n總而言之這是個很差的住宿體驗，以後都不會再信網上的照騙！！！",
+      "label": "negative",
+      "quote": "在枕上和枕頭上都有頭髮，衛生情況實在不太好",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1539187659",
+      "retrieved": false,
+      "via": "probe",
+      "text": "來北京住的這家民宿簡直是藏在煙火裏的詩意角落！最大的驚喜是自帶露台，傍晚坐在露台上上吹着晚風看夕陽，氛圍感直接拉滿～老闆就像住在隔壁的熱心鄰居，而且還提前打電話發路線，熱情得讓人心裏暖暖的～房間衞生更是挑不出毛病，被褥帶着陽光曬過的清香，吹風機、熱水壺這些設施都是嶄新的，連角落的綠植都打理得生機勃勃。晚上和朋友小聚聊天，完全就是理想中的度假模樣～來這兒住過一次，就想推薦給所有愛旅行的朋友！",
+      "label": "positive",
+      "quote": "房間衞生更是挑不出毛病，被褥帶着陽光曬過的清香",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1531079225",
+      "retrieved": false,
+      "via": "probe",
+      "text": "位置超讚，就在二環裏西四地鐵站不遠，出門逛景點、找美食都超方便，完全不用為交通發愁～房間裏衞生做得特別細緻，地板、床鋪都一塵不染，連角落都清清爽爽的，住起來超安心！老闆簡直熱情到像家人一樣，不僅提前耐心給我指路，還推薦了好多好吃的店，有求必應的態度太暖了～而且設施超齊全，空調、熱水、智能家電樣樣都有，連吹風機都是小米的，細節控真的會愛！這次入住體驗滿分，下次來還想住這兒～",
+      "label": "positive",
+      "quote": "房間裏衞生做得特別細緻，地板、床鋪都一塵不染，連角落都清清爽爽的",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "皇城根胡同四合院国际酒店",
+      "id": "apify-1530867731",
+      "retrieved": false,
+      "via": "probe",
+      "text": "這家酒店真的太讓人驚喜啦！位置超方便，不管是去商圈逛街還是打卡景點，步行就能到，對於我這種懶得折騰交通的人來説簡直是福音～   房間衞生做得超細緻，床單被罩潔白平整，住起來特別安心。工作人員服務熱情又貼心，辦理入住前會提前打電話告知路線，還詳細介紹周邊好吃的店，有問題找他們總是秒迴應，體驗感拉滿！酒店設施也很齊全，洗衣機，烘乾機該有的都有，房間裏的智能馬桶、大尺寸電視用着超舒服，細節控表示被狠狠戳中～這次入住體驗滿分，下次來這邊還會選這家！",
+      "label": "positive",
+      "quote": "房間衞生做得超細緻，床單被罩潔白平整",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2091596951",
+      "retrieved": true,
+      "via": "text",
+      "text": "酒店緊鄰天橋地鐵站，天橋劇場交通方便，酒店房間乾淨整潔，前台服務熱情周到細緻，服務人員響應及時效率很高，推薦差旅入住。",
+      "label": "positive",
+      "quote": "酒店房間乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2090688313",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間很乾凈，設施齊全，阿姨打掃衞生很及時，前台工作人員服務很周到很有耐心，早餐也不錯。酒店距離天壇西門、北京古建築博物館特別的近。",
+      "label": "positive",
+      "quote": "房間很乾凈",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2088320533",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨，服務熱情",
+      "label": "positive",
+      "quote": "房間乾淨",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2087601475",
+      "retrieved": true,
+      "via": "text",
+      "text": "環境很好，很乾凈很整潔，早餐也好吃，前台小哥哥小姐姐也很好",
+      "label": "positive",
+      "quote": "很乾凈很整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2086303457",
+      "retrieved": true,
+      "via": "text",
+      "text": "衞生：很整潔乾淨。\n設施：交通方便，出門不遠就有地鐵走路8分鐘到地鐵口，臨近天壇走路10分鐘",
+      "label": "positive",
+      "quote": "衞生：很整潔乾淨。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2085910125",
+      "retrieved": true,
+      "via": "text",
+      "text": "裝修風格簡約時尚，乾淨，整潔，服務好，早餐豐富好吃．價格實惠．",
+      "label": "positive",
+      "quote": "乾淨，整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2072529777",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨衞生，前台服務態度很好",
+      "label": "positive",
+      "quote": "房間乾淨衞生",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2069808981",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨無異味。辦理入住也方便。",
+      "label": "positive",
+      "quote": "房間乾淨無異味。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2066737633",
+      "retrieved": true,
+      "via": "text",
+      "text": "去年開業的，設施很新，乾淨。體驗不錯",
+      "label": "positive",
+      "quote": "乾淨。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2066033155",
+      "retrieved": true,
+      "via": "text",
+      "text": "挺乾淨也挺安靜的，推薦",
+      "label": "positive",
+      "quote": "挺乾淨也挺安靜的，推薦",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2064185693",
+      "retrieved": true,
+      "via": "text",
+      "text": "環境挺不錯的，衞生也搞得很乾凈。",
+      "label": "positive",
+      "quote": "衞生也搞得很乾凈。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2063702149",
+      "retrieved": true,
+      "via": "text",
+      "text": "酒店地理位置特別優越，離地鐵站很近，出行去天安門、天壇等景點都很方便，逛完景點回酒店十分省事。\n房間乾淨整潔，衞生做得很到位，床鋪床墊睡起來很舒服，記憶枕軟硬適中，休息質量很好。整體環境安靜，不會嘈雜吵鬧。前台服務態度熱情有禮貌，辦理入住退房效率很高，有問題響應及時。客房設施齊全完好，日常使用都很順手。\n酒店周邊有很多好吃的，出行遊玩非常省心。整體性價比很不錯，來北京旅遊住這裏很合適，下次來北京還會優先選擇這家，也推薦給來京出遊的朋友",
+      "label": "positive",
+      "quote": "房間乾淨整潔，衞生做得很到位",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2055345955",
+      "retrieved": true,
+      "via": "text",
+      "text": "服務好，酒店乾淨，早餐不錯。",
+      "label": "positive",
+      "quote": "酒店乾淨",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2045673929",
+      "retrieved": true,
+      "via": "text",
+      "text": "和夫人去了友誼醫院，等檢查報告期間，訂間鐘點房休息用，房間大小合適，離友誼醫院不遠，附近該有公交站和地鐵，交通便利，房間設施齊全，乾淨整潔，休息很方便，很滿意。",
+      "label": "positive",
+      "quote": "乾淨整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2043000699",
+      "retrieved": true,
+      "via": "text",
+      "text": "乾淨整潔，就是房間有點小",
+      "label": "positive",
+      "quote": "乾淨整潔，就是房間有點小",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2041337315",
+      "retrieved": true,
+      "via": "text",
+      "text": "乾淨衞生服務",
+      "label": "positive",
+      "quote": "乾淨衞生服務",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2039797661",
+      "retrieved": true,
+      "via": "text",
+      "text": "乾淨整潔，離地鐵口近",
+      "label": "positive",
+      "quote": "乾淨整潔，離地鐵口近",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2036619573",
+      "retrieved": true,
+      "via": "text",
+      "text": "酒店很新，又乾淨，重點他家的茉莉花茶很好喝！",
+      "label": "positive",
+      "quote": "酒店很新，又乾淨，重點他家的茉莉花茶很好喝！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2032209703",
+      "retrieved": true,
+      "via": "text",
+      "text": "設施和衞生都很乾凈整潔。",
+      "label": "positive",
+      "quote": "設施和衞生都很乾凈整潔。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2030825903",
+      "retrieved": true,
+      "via": "text",
+      "text": "酒店位置很好，距離地鐵站很近，而且環境也很乾凈衞生！",
+      "label": "positive",
+      "quote": "而且環境也很乾凈衞生！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2029387477",
+      "retrieved": true,
+      "via": "text",
+      "text": "衞生：乾淨，清掃服務熱心",
+      "label": "positive",
+      "quote": "衞生：乾淨，清掃服務熱心",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2028056213",
+      "retrieved": true,
+      "via": "text",
+      "text": "房子設施齊全，乾淨整潔，服務周到，推薦入住👍👍👍",
+      "label": "positive",
+      "quote": "房子設施齊全，乾淨整潔，服務周到，推薦入住👍👍👍",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2027291341",
+      "retrieved": true,
+      "via": "text",
+      "text": "衞生很乾凈，服務好，工作人員認真負責",
+      "label": "positive",
+      "quote": "衞生很乾凈，服務好，工作人員認真負責",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2021035767",
+      "retrieved": true,
+      "via": "text",
+      "text": "服務態度好，乾淨衞生，性價比高",
+      "label": "positive",
+      "quote": "服務態度好，乾淨衞生，性價比高",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2017963503",
+      "retrieved": true,
+      "via": "text",
+      "text": "酒店位置挺好，離地鐵口走路7-8分鐘，很近，去前門大街，王府井，什剎海都很方便，早餐種類還挺多的，衞生很乾凈，睡覺也挺安靜的",
+      "label": "positive",
+      "quote": "衞生很乾凈，睡覺也挺安靜的",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2017402155",
+      "retrieved": true,
+      "via": "text",
+      "text": "乾淨衞生，交通方便",
+      "label": "positive",
+      "quote": "乾淨衞生，交通方便",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2015897501",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨整潔，設施齊全，隔音效果不錯。前台服務熱情周到，辦理入住高效快捷，位置出行方便，整體體驗很好，下次還會選擇入住。",
+      "label": "positive",
+      "quote": "房間乾淨整潔，設施齊全，隔音效果不錯。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2014849193",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨，服務人員態度非常好。",
+      "label": "positive",
+      "quote": "房間乾淨，服務人員態度非常好。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2011623281",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨整潔，配套很好，服務貼心",
+      "label": "positive",
+      "quote": "房間乾淨整潔，配套很好，服務貼心",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2007555613",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間非常乾淨整潔，必須贊。早飯也非常好。",
+      "label": "positive",
+      "quote": "房間非常乾淨整潔，必須贊。早飯也非常好。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2006916161",
+      "retrieved": true,
+      "via": "text",
+      "text": "看中國歌劇舞劇院的演出住的地方，離天橋劇場特別近，很方便。衞生：乾淨整潔。環境：很好\n服務：周到",
+      "label": "positive",
+      "quote": "衞生：乾淨整潔。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2006903665",
+      "retrieved": true,
+      "via": "text",
+      "text": "出行方便，附近有地鐵站，出口就是天壇公園，房間不大但很乾凈，隔音也好，房間沒有煙味，一樓有洗衣房，早餐也可以，配得上這個價格。",
+      "label": "positive",
+      "quote": "房間不大但很乾凈，隔音也好，房間沒有煙味，",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2002823635",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間挺乾淨的，過道也整潔乾淨，離地鐵口很近，對旅遊的人來説去哪都很方便",
+      "label": "positive",
+      "quote": "房間挺乾淨的，過道也整潔乾淨，",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2002075673",
+      "retrieved": true,
+      "via": "text",
+      "text": "酒店設備非常乾淨衛生，前台服務員服務態度非常親切，晚上手機充電線不夠用，借了充電線給我們，非常感謝",
+      "label": "positive",
+      "quote": "酒店設備非常乾淨衛生，",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2001473721",
+      "retrieved": true,
+      "via": "text",
+      "text": "酒店離天橋地鐵站步行五分鐘左右，到景點都很方便，房間整潔乾淨，前台小姐姐也很熱情。\n還有自助洗衣也很方便，可以每天換洗。",
+      "label": "positive",
+      "quote": "房間整潔乾淨，",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-1996847329",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨衞生，服務熱情周到。",
+      "label": "positive",
+      "quote": "房間乾淨衞生，",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-1992992781",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間乾淨，衞生好，服務態度好",
+      "label": "positive",
+      "quote": "房間乾淨，衞生好，",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-1991686775",
+      "retrieved": true,
+      "via": "text",
+      "text": "非常棒，乾淨，安靜，服務貼心。",
+      "label": "positive",
+      "quote": "非常棒，乾淨，安靜，服務貼心。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-1990539257",
+      "retrieved": true,
+      "via": "text",
+      "text": "非常滿意的一次入住！位置便利，房間乾淨舒適，床品超讚睡得很香。服務熱情周到，有求必應。早餐豐盛美味，性價比超高。下次來還會選擇這裏，強烈推薦！",
+      "label": "positive",
+      "quote": "房間乾淨舒適，",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-1989363543",
+      "retrieved": true,
+      "via": "text",
+      "text": "裝修很新，服務很好，位置離8號地鐵站比較近，衞生很乾凈，洗澡水流很大。附近吃東西也很方便，連住六天，感覺很好。再去北京，還會選擇這裏",
+      "label": "positive",
+      "quote": "衞生很乾凈，",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-1986099087",
+      "retrieved": true,
+      "via": "text",
+      "text": "入住體驗滿分！全屋打掃乾淨，床品衞浴舒適；前台和保潔人員態度温和有耐心，有需求響應很快。酒店步行幾分鐘直達地鐵站，不管逛街還是出行都很便利，強烈推薦。",
+      "label": "positive",
+      "quote": "全屋打掃乾淨，床品衞浴舒適；",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-1985951103",
+      "retrieved": true,
+      "via": "text",
+      "text": "非常滿意，乾淨衞生",
+      "label": "positive",
+      "quote": "非常滿意，乾淨衞生",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-1983409101",
+      "retrieved": true,
+      "via": "text",
+      "text": "房間挺乾淨的，都有窗户，離景點也近",
+      "label": "positive",
+      "quote": "房間挺乾淨的，",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2080707379",
+      "retrieved": false,
+      "via": "probe",
+      "text": "衞生、服務都挺好的。",
+      "label": "positive",
+      "quote": "衞生、服務都挺好的。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2060036783",
+      "retrieved": false,
+      "via": "probe",
+      "text": "這次入住體驗很好，酒店位置方便，房間整潔安靜。特別表揚前台的工作人員，小哥哥待人親切，耐心解答出行、遊玩相關問題，辦事高效。服務貼心細緻，整體很滿意，值得推薦。",
+      "label": "positive",
+      "quote": "房間整潔安靜。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2049713047",
+      "retrieved": false,
+      "via": "probe",
+      "text": "服務挺滿意 環境優美整潔 前台服務人員還熱情得幫助我打印了一份文件 謝謝",
+      "label": "positive",
+      "quote": "環境優美整潔",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2043037913",
+      "retrieved": false,
+      "via": "probe",
+      "text": "房間挺小的，房間鑰匙一天一刷，出門還要到前台刷房卡，衹能説真的很麻煩。而且服務態度真的不行啊。倆個人服務一個人，而且我這邊要刷房卡就跟沒聽見似的，而且大堂還開着門熱的要死，説得挺好咖啡免費，還要有會員才能免費，取冰更費勁，去了幾回都沒有冰，這不就是擺設嗎？大夏天的房間的被子太厚了，想要個毯子都沒有，最後沒有辦法衹能用床單跟浴巾。衞生間一股尿騷味。擦了也有味道，還好我們是晚上回去住，要是一天呆屋子裡味道真心受不了，水壺裡麪都是水垢。這衞生環境衹能説，一言難盡啊。想帶孩子住這個位置的還是不建議不太方便，有的地方地鐵要轉3-4趟，出去2個小時坐車。",
+      "label": "negative",
+      "quote": "衞生間一股尿騷味。擦了也有味道，還好我們是晚上回去住，要是一天呆屋子裡味道真心受不了，水壺裡麪都是水垢。這衞生環境衹能説，一言難盡啊。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2036536259",
+      "retrieved": false,
+      "via": "probe",
+      "text": "設施：看着是新開的，設施還是比較新的\n衞生：還可以，沒什麼問題\n環境：還可以\n服務：還是不錯的，有求必應^_^\n位置距離地鐵站比較近，步行就三五分鐘，挺方便",
+      "label": "positive",
+      "quote": "衞生：還可以，沒什麼問題",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2032239555",
+      "retrieved": false,
+      "via": "probe",
+      "text": "地理位置好，去天壇，自然博物館步行都能到，很方便，房間小是小了點但用孩子的話來説五臟俱全，哈哈",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2013592043",
+      "retrieved": false,
+      "via": "probe",
+      "text": "房間設備都是新的，服務貼心，有咖啡機器人送外賣！ 6樓1.8大床睡着很舒服，床單被罩都是潔白如新，空調是中央空調？單獨控制，睡眠很好，訂的商務大床也有窗户！總之非常感謝漢庭。還送了早餐！早餐品種多。味道不錯！下次來了還住這！",
+      "label": "positive",
+      "quote": "床單被罩都是潔白如新",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2009934883",
+      "retrieved": false,
+      "via": "probe",
+      "text": "房間很整潔，服務很周到",
+      "label": "positive",
+      "quote": "房間很整潔，服務很周到",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-2003993681",
+      "retrieved": false,
+      "via": "probe",
+      "text": "房間整潔，服務熱情周到，周邊交通便利。",
+      "label": "positive",
+      "quote": "房間整潔，服務熱情周到，周邊交通便利。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-1999862121",
+      "retrieved": false,
+      "via": "probe",
+      "text": "服務：服務很差，幾個員工和經理價格不統一，專門等人晚上十點回來坐地起價\n衞生：更差，房間有頭髮，有蚊子更離譜的是水池裡跑出來蜘蛛！！一開始直接訂的兩晚，中間打掃衞生 不換垃圾袋 ，浴室不做衞生 死不承認！！\n設施：房間小 隔音差！\n環境：不算便宜 但是一樓喝水的地方蒼蠅蚊子亂飛，看小紅書推薦來的，真是踩了雷了，酒店外面沒有飯店，衝著離地鐵口近來的，並沒有很近 ，建議大家住8號線沿線離地鐵站近酒店就好 8號線去景點很方便 。這家漢庭是我住過華住會裡最差的一家",
+      "label": "negative",
+      "quote": "衞生：更差，房間有頭髮，有蚊子更離譜的是水池裡跑出來蜘蛛！！一開始直接訂的兩晚，中間打掃衞生 不換垃圾袋 ，浴室不做衞生 死不承認！！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-1991778283",
+      "retrieved": false,
+      "via": "probe",
+      "text": "酒店的環境和衞生比我的所想的要好，前台服務的效率很高",
+      "label": "positive",
+      "quote": "酒店的環境和衞生比我的所想的要好",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "汉庭酒店(前门店)",
+      "id": "apify-1985643747",
+      "retrieved": false,
+      "via": "probe",
+      "text": "酒店環境衞生整潔，前台小姐姐很熱心，很愉快的住宿！",
+      "label": "positive",
+      "quote": "酒店環境衞生整潔，前台小姐姐很熱心，很愉快的住宿！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1991741241",
+      "retrieved": true,
+      "via": "topic",
+      "text": "本次入住体验超满意，客房干净住着舒心！总机Golden耐心周到，Dream细心贴心，Julia温柔有礼，JoJo热情周到，Zagiri处事稳妥，Luna和善亲切，Rachel专业高效，全员服务暖心到位，入住倍感舒心，一定会再来！",
+      "label": "positive",
+      "quote": "客房干净住着舒心！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1989893179",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台员工Destin服务真的超赞！抵达酒店时帮忙拎行李，讲解酒店配套设施，入住手续办理流畅不拖沓，说话温和有耐心，遇到小问题第一时间帮忙解决，待人真诚，凭借优质服务让这次住宿体验大大加分。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1987248454",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台小梁Rebecca服务专业又友善，不仅办理手续效率高，还主动告知酒店设施、早餐时间等细节，考虑得十分周全，服务水准值得点赞。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1984833611",
+      "retrieved": true,
+      "via": "topic",
+      "text": "非常不错，酒店在北京的核心区域 去国贸 王府井都很方便 离各个景点也不远 \n酒店的浴缸非常有特色 圆形的 躺着很舒服\n吃早餐的时候把眼镜盒落在餐厅里了，一回房间就有工作人员联系我，非常及时",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1984825831",
+      "retrieved": true,
+      "via": "topic",
+      "text": "房间一如既往干净，前台小姐姐也非常热情。总之就是非常心水的酒店啦。周边好吃的也很多，交通也非常便利。",
+      "label": "positive",
+      "quote": "房間一如既往干净，前台小姐姐也非常熱情。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1984771145",
+      "retrieved": true,
+      "via": "topic",
+      "text": "非常好，这次升级1705房间，17楼两位主管，服务员非常热情，孩子早上流鼻血弄到床上，服务员大姐热情换新的床单，很好下次还住",
+      "label": "positive",
+      "quote": "孩子早上流鼻血弄到床上，服务员大姐热情换新的床单，很好下次还住",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1980427019",
+      "retrieved": true,
+      "via": "topic",
+      "text": "完美的体验，特此感谢前厅部leo经理的精心安排，一家人住的很好，玩完回来每天都睡得很香，太舒服了，还有接线员小姑娘的帮忙很及时，礼宾小伙子也很好，帮我们寄快递 还发我快递单号，真的很热情，下次一定还来",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1979557431",
+      "retrieved": true,
+      "via": "topic",
+      "text": "尽赏落日余晖 | 晚间欢乐时光@1层行政酒廊:一楼大堂吧和酒廊是在一起的，有简单的晚餐供应。\n索菲特俱乐部 Club Millesime | 咖啡/茶/软饮畅饮@乐廊大堂吧 Le Bistro:大堂吧可以用。\n服务：主管马闯，陈爱，服务员小王，小庆很耐心周到。前台李琳琳经理体贴温柔！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1978756891",
+      "retrieved": true,
+      "via": "topic",
+      "text": "晚间返回酒店询问周边夜宵及休闲去处，Destin耐心解答并给出实用建议，解答问题细致周全，态度亲和友善，周到服务让人倍感温暖。孩子升级早餐非常感谢！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1978518641",
+      "retrieved": true,
+      "via": "topic",
+      "text": "张先生，麻烦您啦，文案和三张酒店图片发给您啦，下午两点之后，携程上订单做个五分好评，谢谢！！！！！！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1977753879",
+      "retrieved": true,
+      "via": "topic",
+      "text": "满意加惊喜，前厅部工作人员服务热情又专业。Sunny办理入住、退房手续效率很高，态度亲切耐心，主动讲解酒店设施与周边出行，房间采光很好，隔音也很好！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1976964641",
+      "retrieved": true,
+      "via": "topic",
+      "text": "第一次来京，选酒店选的眼花缭乱的，最后定的索菲特，服务体验必须给满分，不止是五星级的服务，全程都是ella小姐姐帮我，像我的管家，喜欢这样的服务",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1976128059",
+      "retrieved": true,
+      "via": "topic",
+      "text": "到北京出差住过几次的酒店，这次入驻前台Aria康雪给升级了下房间，酒店位置佳，出行比较方便，房间硬件完善，床品很合适",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1976107629",
+      "retrieved": true,
+      "via": "topic",
+      "text": "之前就住过这个酒店，这次前台Aria康雪还帮我升级了房型，服务特别热情，酒店特色就是房间大，我喜欢他的大浴缸，来北京还会选择。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1975989755",
+      "retrieved": true,
+      "via": "topic",
+      "text": "11楼的服务员态度挺好的，我早上起不来的时候还会和我奶奶聊天，老人家觉少，早上起来得早，每天打扫卫生的那个人帮奶奶拿了不少东西的，体验不错。啊，泡澡也挺舒服的。",
+      "label": "positive",
+      "quote": "每天打扫卫生的那个人帮奶奶拿了不少东西的，体验不错。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1975952049",
+      "retrieved": true,
+      "via": "topic",
+      "text": "初次入住就被圈粉，整体环境静谧宜人，房间收拾得一尘不染。服务人员彬彬有礼，前台leah抱办理入住很快，推荐，响应及时。硬件设施完善，居住感受极佳，值得反复打卡。",
+      "label": "positive",
+      "quote": "房间收拾得一尘不染。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1975081853",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这个酒店的服务简直太好啦，到店了是Ella经理给我办的入住，房间也选的好，实在是太nice的小姐姐啦，房间视野超级棒，看着心情都变好啦，有机会在回去住一下",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1971248997",
+      "retrieved": true,
+      "via": "topic",
+      "text": "外出不慎遗失随身小件物品，返回酒店求助Destin，他耐心协助调取查找，全程积极帮忙联络，处事认真负责，待人真诚热忱，暖心服务化解了我的焦虑，整趟住宿体验格外舒心。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1968602873",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店整体服务没什么问题，第一天晚上突然没有热水，第二天栗经理联系我们并真诚道歉 还升级了房间，气消了一大半，希望硬件能够有所提升吧，位置挺好的 离地铁近，到哪里都方便，房间也够大，早餐也是该有的都有，性价比还是很高的，下次选择酒店还会选择这家索菲特。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1966487999",
+      "retrieved": true,
+      "via": "topic",
+      "text": "继承自W的风格，保持了W一贯的调调，变色灯和浴缸很有特点～",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1966322957",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住体验非常好！房间非常干净和整齐，很通透采光也很棒！床品很高级睡得很舒服，工作人员Leah Rebecca服务非常热情周到，有问题很快响应。地理位置也很不错、出行非常便利，性价比拉满！下次来北京还要住这里！！😆",
+      "label": "positive",
+      "quote": "房间非常干净和整齐",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1965774579",
+      "retrieved": true,
+      "via": "topic",
+      "text": "房间采光好，干净无异味，配套齐全。员工ELI服务周到，遇到疑问都会耐心解答，处理问题积极高效。全程体验轻松舒适，服务超出预期，强烈推荐给大家。",
+      "label": "positive",
+      "quote": "干净无异味",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1965679231",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店位置便利，出行方便，房间整洁无异味。非常感谢ELI提供的优质服务，响应迅速，待人真诚，能主动关注客人需求。服务专业有温度，整体氛围温馨舒适，住得很放松。无论是商务出行还是休闲住宿都很合适，真心推荐。",
+      "label": "positive",
+      "quote": "房间整洁无异味",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1965502687",
+      "retrieved": true,
+      "via": "topic",
+      "text": "房间舒适，优雅大气，面积很大，床品太软和啦，喜欢这家酒店沐浴露的味道，下次还得来，Ella小姐姐很nice，北京之旅圆满结束啦，回去搬砖再来",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1965067829",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住体验十分满意，设施齐全且保养得很好，卫浴热水充足。环境卫生做得细致，工作人员leah  态度亲和。性价比在线，环境安静不嘈杂，是出行住宿的好选择。",
+      "label": "positive",
+      "quote": "环境卫生做得细致",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1965062761",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店整体环境雅致大气，房间空间宽敞，洗漱用品品质不错。夜间十分安静，睡了一个好觉，入住体验很好。服务人员leah roc 礼貌友善，办事高效，各方面都很满意，值得再次入住！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1964467339",
+      "retrieved": true,
+      "via": "topic",
+      "text": "到店时满身疲惫，前台Linda一眼看出，迅速办完了入住，全程微笑回应所有问题，服务超到位，酒店住的很舒服。礼宾王栋做事周到，满分服务，下次还来这家",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1961529155",
+      "retrieved": true,
+      "via": "topic",
+      "text": "我来北京应该会一直预定索菲特大酒店 一是这里工作人员态度很好 二是位置很不错 当天入住已经很晚了 前台帮我办理入住 给了一个高层的房间 ，还帮忙送了行李，到了房间发现 房间有点烟味后Leah帮我们换了新房间 也赠送了水果态度也很好 退房时候前台经理也来送别 整体体验感很不错 下次还会来入住。",
+      "label": "mixed",
+      "quote": "到了房间发现 房间有点烟味后Leah帮我们换了新房间",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1961384671",
+      "retrieved": true,
+      "via": "topic",
+      "text": "位置很好找，出门逛街吃饭都方便。房间干净整洁，床睡着很舒服，Miya 服务也热情，退房后有遗留物品Miya 帮忙邮寄，整体体验不错，下次还会来。",
+      "label": "positive",
+      "quote": "房间干净整洁",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1959770417",
+      "retrieved": true,
+      "via": "topic",
+      "text": "满意的 服务迅捷收到 给我们延长到了下午三点 早饭好吃。🚘到了之后礼宾周到 帮忙拿行李啥的。谢谢总机小金 这个打电话说延迟退房帮我们办了\n\n如果工作人员能知道酒店哪里方便出片就更好\n\n总体来说很好 很浪漫",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1958813907",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台sunny服务非常好，非常耐心温柔，来北京就住这绝对不踩坑🥰",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1958264871",
+      "retrieved": true,
+      "via": "topic",
+      "text": "必须夸一下前台Destin，待人友善靠谱、事事贴心周到，整体体验特别满意，一定会再次光顾，也会推荐给朋友。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1956806791",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次来北京入住索菲特整体体验超棒，地理位置便利，房间干净，前台工作人员待人亲切友善，Miya服务细致贴心，响应及时。居住安静舒适，休息质量很好，入住体验感极佳，出行住宿首选，强烈推荐入住^_^",
+      "label": "positive",
+      "quote": "房间干净",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1956782387",
+      "retrieved": true,
+      "via": "topic",
+      "text": "两天的行程，第二晚选择了市区索菲特，第一晚在环球住的，索菲特房间很大，但是没有环球新，不过整体还挺好的，离地铁站也近，附近也有吃的，一开始遇到问题，栗经理积极处理帮我们换了房间，还送了水果，整体服务意识很强，下次的话还会选择这里。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1956606695",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台Leah 与礼宾服务特别贴心，办理入住高效快捷，态度温和有礼。出行帮忙指引路线，行李搬运周到细致，待人热情周到，入住体验舒心又惬意，十分满意。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1956574079",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台小梁Rebecca接待十分专业，态度亲和大方，办理流程简单顺畅，处处尽显贴心服务，整体体验感绝佳，强烈推荐入住。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1954444815",
+      "retrieved": true,
+      "via": "topic",
+      "text": ".房间宽敞明亮无异味，洗漱用品齐全好用。Miya 服务细致贴心，安静不嘈杂，周边出行购物都方便，住宿体验极佳，值得再次入住",
+      "label": "positive",
+      "quote": "房间宽敞明亮无异味，洗漱用品齐全好用。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1954232949",
+      "retrieved": true,
+      "via": "topic",
+      "text": "每年都来北京去一趟环球，前年偶然住到了索菲特，因为遇到问题添加了leo的微信，这两年过来都会提前联系他帮我们安排，今年也一样安排的很好，已经是北京必选，房间够大，一家人住不拥挤，唯一问题就是没有投屏不是很方便，其他都很好，地铁几分钟走路就能到！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1951759877",
+      "retrieved": true,
+      "via": "topic",
+      "text": "跨越十七年，服务暖如初——致索菲特酒店的深情致谢\n \n时光匆匆，岁月流转，有些美好遇见，即便时隔多年，依旧会在心底熠熠生辉；有些品牌温度，即便跨越漫长光阴，依旧能坚守初心、温暖如初。于我而言，索菲特这三个字，便是藏在岁月里、刻在记忆中，跨越十七年从未褪色的温柔与惊艳。\n \n我是一名山西省省级机关的公务员，平日里工作严谨务实，出差履职亦是常态。可2009年11月的海南博鳌之行，入住博鳌索菲特酒店的那段经历，却成了我十几年人生里，最难以忘怀的旅居美好，至今回想起来，依旧满心温暖与赞叹。\n \n彼时因公出差，我被安排入住海南博鳌索菲特酒店，踏入酒店的那一刻，便被极致的质感深深折服。酒店整体装潢富丽堂皇、大气恢弘，处处透着高端雅致的格调，各类硬件设施先进完备、贴心周全，尽显五星级酒店的不凡品质。酒店内部楼宇布局精巧，一条环形廊道蜿蜒舒展，我初到之时，沿着廊道慢慢踱步欣赏，竟足足走了二十分钟，都没能找到自己的房间，足见酒店规模之阔、布局之精致，也让我初次见识到它的大气与不凡。\n \n酒店的绝佳区位，更是让人流连忘返。我的客房距离海边不过百余米，推窗便能望见无垠蓝海，入夜之后，枕着轻柔海风、伴着阵阵涛声入眠，白日工作的疲惫尽数消散，只剩满心的惬意与安然。酒店后方还坐拥三四十口特色药疗温泉池，每一眼温泉都以中药材命名，黄芪、枸杞、人参等滋养药材融入温泉水中，温润养身。结束一天的工作与餐食后，置身暖意融融的中药温泉里，看椰风海韵、享身心舒缓，那份闲适与治愈，是寻常旅居从未有过的体验。\n \n最让我动容的，是酒店刻入骨子里的极致服务。入住期间，我无意间看到客房内的应急拉绳，便抱着试探的心态轻轻拉动，本以为只是应急摆设，没想到短短不到5分钟，酒店工作人员便迅速赶到，态度谦和、应答专业，全程耐心细致、毫无怨言。这一次小小的试探，让我真切感受到，索菲特的优质从不是表面排场，而是落实在每一处细节、每一秒响应里的责任与担当。\n \n彼时的博鳌索菲特，无论是奢适的居住环境、得天独厚的区位优势，还是贴心入微的暖心服务，都完美契合了高端旅居的所有想象，也把“索菲特”三个字，深深烙进了我的记忆深处。可遗憾的是，后来这家承载我美好回忆的酒店，正式更名为博鳌亚洲论坛大酒店，再也不见“索菲特”的名号，那段极致美好的旅居体验，也成了我心底一段无法复刻的旧时光，每每想起，都满是惋惜。\n \n本以为，这份十七年前的美好，终究只能留在回忆里。没想到，十七年之后，缘分竟再次悄然降临。\n \n2026年，我带着家人一同前往北京游玩，面对市面上众多五星级酒店，我一时纠结难选。在众多品牌中，索菲特三个字蓦然映入眼帘，瞬间勾起了我深埋十七年的温暖记忆。心底既有怀念，也有期许：时隔十七年，当年的那份极致美好，还能复刻吗？抱着这份忐忑与期待，我毅然选择了北京索菲特酒店。\n \n而事实证明，我的选择没有错，索菲特也从未辜负我的信任。\n \n办理入住时，酒店话务员Luna贴心又热忱，得知我们是全家出行，主动为我们免费将普通房型升级为宽敞舒适的家庭套房，极大提升了全家的入住体验；考虑到我们携娃出行、行程不便，又特意为我们申请了退房时间顺延，免去了匆忙收拾、赶点退房的局促。没有刻意的客套，没有繁琐的流程，只是设身处地为客人着想，用实实在在的贴心举措，让我感受到了扑面而来的善意与暖意。\n \n十七年光阴，足以改变很多事物，足以让很多记忆慢慢淡去，可索菲特的品牌匠心与服务初心，却从未有过半分改变。十七年前，博鳌海边，它用极致环境与迅捷服务，给我留下毕生难忘的出差回忆；十七年后，北京京城，它用贴心升级与暖心便利，让我重温了当年的那份感动与认可。\n \n从海南博鳌到北京都城，从2009到2026，跨越十七载风雨，变的是时空距离、是旅居场景，不变的是索菲特始终如一的品牌品质、是镌刻在服务骨子里的真诚与专业。它不只是一家酒店品牌，更是一种值得信赖的品质承诺，是一份跨越时光依旧温暖的匠心坚守。\n \n十七年岁月如梭，初心未改；十七载山海相隔，温暖依旧。感谢索菲特，在我因公履职的时光里，留下一段极致美好的滨海回忆；感谢索菲特，在我陪伴家人的旅途上，送上一份贴心入微的暖心礼遇。这段跨越十七年的双向奔赴，这份历经时光淬炼的品质坚守，早已成为我人生旅途里，一抹温柔又闪亮的亮色。\n \n往后余生，但凡出行，索菲特依旧是我心底最笃定、最安心的选择。致敬这份跨越时光的美好，感恩这份始终如一的温暖",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1951334855",
+      "retrieved": true,
+      "via": "topic",
+      "text": "非常好\n下次还会入住",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1950791445",
+      "retrieved": true,
+      "via": "topic",
+      "text": "不错的法国连锁酒店，给我升级了行政套房，差旅不错的选择，可以看到几个海外电台。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1950613903",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次来北京旅游入住了索菲特大酒店，整个行程住得安心又舒服。Miya入住退房效率很高，沟通顺畅待人热情有礼貌，房间很舒适，下次来北京还会过来",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1950089003",
+      "retrieved": true,
+      "via": "topic",
+      "text": "来北京出差入住索菲特酒店，房间很舒适，大堂也很华丽，前台工作人员服务很好，前台Miya有问必答，积极响应，下次还来入住",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1949447807",
+      "retrieved": true,
+      "via": "topic",
+      "text": "很不错，每次回北京都来这里住，很满意",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1947496967",
+      "retrieved": true,
+      "via": "topic",
+      "text": "我们是凌晨2:00 多到的，前台Aria 康雪仍然热情接待，专业耐心",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1947456695",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台工作人员Miya 服务超贴心，待人礼貌友善，服务特别到位，酒店房间干净整洁，住的很舒适，入住体验非常舒心满意！",
+      "label": "positive",
+      "quote": "酒店房间干净整洁，住的很舒适，入住体验非常舒心满意！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1946956505",
+      "retrieved": true,
+      "via": "topic",
+      "text": "Destin的服务品质满分，人特别温柔体贴、办事高效。全程用心服务，让人感觉被重视、住得特别舒心。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1946190675",
+      "retrieved": true,
+      "via": "topic",
+      "text": "房间非常大，环境好，非常干净，服务人员服务及时周到，而且地理位置绝佳，非常适合家庭旅行或者商务出差，下次来北京还会再来",
+      "label": "positive",
+      "quote": "房间非常大，环境好，非常干净，服务人员服务及时周到，",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1943322323",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店的位置不错，去哪里都挺方便。早餐可选的种类较多。入住时还给升级了房型，房间十分宽敞，设施也挺新。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1942465943",
+      "retrieved": true,
+      "via": "topic",
+      "text": "雅高旗下索菲特不愧五星品质，Aria服务专业贴心，房间干净整洁，出行住宿首选，强烈推荐，入住体验满分，地理位置优越，服务温柔有礼，细节尽显高端奢华，入住超满意！",
+      "label": "positive",
+      "quote": "房间干净整洁，出行住宿首选，强烈推荐，入住体验满分！",
+      "quoteVerified": false
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1941437725",
+      "retrieved": true,
+      "via": "topic",
+      "text": "北京的酒店千千万，选了这家没踩雷，真好，房间的床品啥的都好软和呀，我喜欢软一点的，躺的舒服，Ella经理很贴心，退房记录了我的喜好，下次还去",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1937178731",
+      "retrieved": true,
+      "via": "topic",
+      "text": "春假带娃出游提前预定了酒店，位置特别好在市中心的位置，出行去哪里都方便，老酒店但是整体还不错，性价比算高的",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1936396077",
+      "retrieved": true,
+      "via": "topic",
+      "text": "我觉得值得很舒服，客房服务都很好，打扫及时，没有网友们说的很老啊什么的，床头的也没有掉漆皮啊，原本看到**说的要吓死😦去了发现完全没有的事，特别多的镜子，适合情侣来hhh，就是唯一美中不足没有洗衣房🥹要花钱洗衣服",
+      "label": "positive",
+      "quote": "打扫及时",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1935026641",
+      "retrieved": true,
+      "via": "topic",
+      "text": "房间宽敞明亮，交通便利，步行五分钟可到明城墙公园，二十分钟可到国贸。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1933449629",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店位子很方便，办理入住Sunny人很好，帮我们安排了早餐，该有的一一告诉我们，酒店打扫卫生的阿姨和服务人员都很好，夸夸5.1号晚上的帮我做咖啡那个小哥和Sunny应该多加奖",
+      "label": "positive",
+      "quote": "酒店打扫卫生的阿姨和服务人员都很好",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1933309221",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店位置很好，服务设施也很棒，20楼的服务员很贴心，整体感觉很舒服，不错的一次旅行，地铁交通和附近的吃的都很方便！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1929391156",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店整体环境干净整洁，氛围温馨舒适。房间布局合理，设施新且好用，洗漱用品质量不错。服务人员态度友好，特别是餐厅的Candy。住得很安心，值得推荐。",
+      "label": "positive",
+      "quote": "酒店整体环境干净整洁",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1929386639",
+      "retrieved": true,
+      "via": "topic",
+      "text": "索菲特你就宠我吧啊啊啊啊啊又给我升到大套房了我亲亲亲亲💋晚上踩着行政酒廊关闭的点去急头白脸吃了一顿快哉快哉，诡秘们这个上午的窗景真的特别好看，我住的是2105朋友说这个客厅的窗户能看到一个挺有名的楼（我忘了），p1那个烧麦特别好吃你们都去吃，🦐很新鲜\n下次还会来的！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1928500911",
+      "retrieved": true,
+      "via": "topic",
+      "text": "非常棒的一次旅行 员工leah  提前加了微信 细致周到地提供了服务. 无论是游玩还是办事都特别方便。环境干净安静，让人住得安心又舒心，前台leah 服务热情，安排周到，下次继续回来",
+      "label": "positive",
+      "quote": "环境干净安静",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1924955487",
+      "retrieved": true,
+      "via": "topic",
+      "text": "订的含双人晚餐的套餐。套房很大，视野也很好。感谢Destin赵云入住期间的贴心帮助，下次出差还会选择索菲特！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1924090593",
+      "retrieved": true,
+      "via": "topic",
+      "text": "去年住过一次索菲特，今年再次选择的原因是上次体验很好，提前微信了栗经理，一切都会安排妥当，帮我们升级到了高楼层，安静的房间，能够看到中国尊，附近地铁站走路原来只要五分钟不到，上次都没发现 每天打车二环特别堵，后面就是紫光园和赛特，周围配套还算ok，房间唯一需要的就是升级一下智能设备了 其他都蛮好！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1921426099",
+      "retrieved": true,
+      "via": "topic",
+      "text": "整体体验超棒！房间打扫得很干净，设施齐全，采光和视野都很好。酒店位置方便酒店前台LEAH  服务很专业，办理手续也很快，安排的房间也可以",
+      "label": "positive",
+      "quote": "房间打扫得很干净",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1921364165",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台LEAH   服务热情又贴心，办理入住快，有问题都耐心解答。有需求都及时帮忙解决，态度特别好。房间干净舒适，整体体验感超棒，住得很安心，每次出差都会选择这个酒店，必须给满分好评！",
+      "label": "positive",
+      "quote": "房间干净舒适",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1921362655",
+      "retrieved": true,
+      "via": "topic",
+      "text": "房间很出片 很宽敞 还可以环境 夜景很好看 布置一下更有氛围感",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1920944903",
+      "retrieved": true,
+      "via": "topic",
+      "text": "挺好的，房间很大很安静",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1919871283",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次在北京的旅程，北京索菲特大酒店给我留下了美好的回忆。无论是舒适的房间、美味的食物，还是美丽的风景，都让人难以忘怀。下次再来北京，我一定会再次选择这里！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1917385603",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次订索菲特真的是太对了，十分满足我的住店需求，大大的房间，大大的浴缸，干净的环境，舒服的大床，还能看到美美的日落，好开心。\n清洁阿姨看到我们带了茶叶，还非常贴心的每天帮我们备多几支水",
+      "label": "positive",
+      "quote": "干净的环境，舒服的大床，还能看到美美的日落，好开心。 清洁阿姨看到我们带了茶叶，还非常贴心的每天帮我们备多几支水",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1915981545",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台员工beira 服务挺好的，很专业，安排的房间入住后有一些小问题，反馈后，也在即使的跟进，觉得服务还是在线的。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1915953605",
+      "retrieved": true,
+      "via": "topic",
+      "text": "临时来北京出差，到店都晚上了，员工beira 帮忙办理时入住喜好，按照我的需求安排房间，整体都很好，就是大堂都是柳絮，让人感觉不是很舒服，不过也是一些不可控因素，还是可以理解的",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1915395267",
+      "retrieved": true,
+      "via": "topic",
+      "text": "不是第一次来北京，但是第一次住这个位置，二环开车是堵的，还是选择地铁比较合适，ella经理非常贴心，每次帮我录入停车优惠券，点个赞，房间也很好，床品很软",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1913908715",
+      "retrieved": true,
+      "via": "topic",
+      "text": "对这家酒店印象很好，入住前Miya 提前联系我帮我安排房间，住店期间有问题他都会及时的帮我解决，房间帮我安排的也很好，住的很舒服，推荐给大家[强]",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1912810171",
+      "retrieved": true,
+      "via": "topic",
+      "text": "时隔一年再次回到索菲特，感觉一切还是那么亲切，上次添加了前台栗经理的微信，这次提前帮我们一家做好的所有安排，升级到了高楼层，特别感谢，酒店整体有求必应，前台小妹妹都特温柔，大家都很满意，下次来北京环球还选择索菲特。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1912425267",
+      "retrieved": true,
+      "via": "topic",
+      "text": "办入住是Miya接待的，帮忙准备好了房间，房间很大住的很舒适，酒店离地铁站还是蛮近的，周边还有紫光园，整体还是非常有性价比的，推荐",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1911154883",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店环境超棒，装修简约大气，房间宽敞明亮，设施齐全且很新。服务细致贴心，保洁到位，热水稳定，Wi-Fi流畅，整体体验非常满意，强烈推荐。退房后的leah 问了入住感受，推荐",
+      "label": "positive",
+      "quote": "保洁到位，热水稳定，Wi-Fi流畅，整体体验非常满意，强烈推荐。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1910804985",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店住的很多了，各有特点，总结来看我还是愿意为服务买单，这家是服务很好，尤其是Ella经理，硬件有些缺陷了，我看开业时间比较长了，整体来看算维护的不错的了。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1909611323",
+      "retrieved": true,
+      "via": "topic",
+      "text": "去北京好多次了，第一次住这家，服务比别家好，房间也开阔，ella小姐姐很耐心解答我的问题，优秀的很，点了外卖有机器人送，高峰期排队才能到，这没办法了，总体打满分。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1909530557",
+      "retrieved": true,
+      "via": "topic",
+      "text": "大堂看着很亮堂，不过房间有些地方旧旧的，迷你吧是第一轮免费的，住店期间耳机丢了一只，ella经理马上去房间帮我看了，结果掉在床垫缝了，可以说找的很细致了，服务真心不错，房间也很好，大大的落地窗",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1906085067",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店新建 设施非常完善 离地铁7号线步行10分钟左右 到环球影城早晚有直通车 酒店离梨园很近 很多特产都能外卖配送到房间🍰酒店装修很有艺术感 周边没有噪音 床品很舒服 早餐丰富 服务人员热情 周到 各种需求都会尽力协商解决 入住体验感很好٩(•̤̀ᵕ•̤́๑)ᵒᵏᵎᵎᵎᵎ",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1900709755",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店位置很好，二环线上，离北京站很方便。房间很大，景色很美，出行地铁也很方便，酒店早餐很满意，种类不算太多，但是质量很有保障，谢谢sunny管家赠送儿童早餐。泳池虽小，但维护得很干净。",
+      "label": "positive",
+      "quote": "泳池虽小，但维护得很干净。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1899626479",
+      "retrieved": true,
+      "via": "topic",
+      "text": "优秀的酒店，顶级的服务，首先酒店位置好，房间面积好，朝向也好，还有特点. 前台LEAH  热情贴心，办事效率高，位置出行方便，性价比超高，整体体验非常满意，强烈推荐！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1896899769",
+      "retrieved": true,
+      "via": "topic",
+      "text": "房间很大，很干净，交通方便，景观很好，视野很棒。前台热心的小姐姐听说小朋友第一次来北京，特意给了精英会员楼层。",
+      "label": "positive",
+      "quote": "房间很大，很干净，交通方便，景观很好，视野很棒。前台热心的小姐姐听说小朋友第一次来北京，特意给了精英会员楼层。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1892019913",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住索菲特酒店Sunny特别暖心，办理入住耐心细致，有问题都主动帮忙解决，温柔又周到。硬件虽一般，但服务真的很加分，住得很安心。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1891147597",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店房间设施都不错 感谢前台Linda热情服务，提前打电话安排房间，入住非常顺利，住的很舒适。遇到问题耐心解答 入住体验拉满  必须夸夸 下次来北京玩还会入住",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1890999121",
+      "retrieved": true,
+      "via": "topic",
+      "text": "一定要给索菲特大大的好评，入住过程非常完美，提前打电话询问了需求，leo加了我的微信 到店前就安排好了一切，酒店房间很大 这点其他酒店真没法比，浴缸有特色 虽然没有体验，每天2万步回屋只想躺，房间设施有些使用痕迹 不过卫生还可以，没有智能马桶这些高科技的东西 ，蛮好的 下次来北京还会提前联系leo安排的。",
+      "label": "positive",
+      "quote": "房间设施有些使用痕迹 不过卫生还可以，没有智能马桶这些高科技的东西 ，蛮好的 下次来北京还会提前联系leo安排的。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1890806823",
+      "retrieved": true,
+      "via": "topic",
+      "text": "今年来北京又回到了索菲特，上次栗经理安排的特别好，这次自然就又选择了他们家，整体体验蛮好，就是去年说会逐步升级维护这些，今年依然没有投屏和usb口这些，希望酒店能尽快升级一下吧，这些300多的酒店都有的东西，其他都蛮好了，房间够大 主要是这个浴缸孩子们很喜欢，明年回来还会选择的。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1889410863",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店服务挺好的，特别是 beira 入住时询问入住喜好和要求合理的帮我安排房间，介绍的也很详细，入住期间沟通起来很方便下次还会选择。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1889083369",
+      "retrieved": true,
+      "via": "topic",
+      "text": "索菲特酒店大堂Sunny服务特别贴心，态度热情周到，办理入住高效快捷，全程耐心解答疑问。虽然房间有些旧，Sunny的服务特别棒，还是让整体体验感非常好，出行入住首选这家",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1888525593",
+      "retrieved": true,
+      "via": "topic",
+      "text": "超级惊艳的一次北京之旅，心心念念了很久的环球也是如愿以偿去了，这次来北京选择了索菲特大酒店，听说之前是W酒店 风格偏暗黑，很适合年轻人 拍照出片，房间背景墙能变色 很有趣，入住期间遇到空调问题LEO经理积极协助，添加微信后也是有求必应，外卖有机器人送很方便，就是高峰期可能要排队等一会，美中不足就是没有空调不能调节温度 这个现在应该是标配才对，总之还是很有性价比的。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1888495069",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住感受还不错，员工leah 提前联系我 为我安排了房间，入住时办理的也很迅速办理手续快速顺畅，一站式服务，热情周到，添加了sunny微信有问必答，听说孩子不舒服还主动给予了帮助",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1888460341",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台服务规范有序，工作人员leah  很好  有问必答，办事麻利不拖沓，让人感觉很踏实。住了这么多酒店，这家的前台服务绝对算得上是数一数二的，推荐",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1886598283",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店房间设施都不错 感谢前台Destin的热情服务 还有服务中心的golden 遇到问题耐心解答 入住体验拉满 非常满意 必须夸夸 下次来北京玩还会入住",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1884666665",
+      "retrieved": true,
+      "via": "topic",
+      "text": "地理位置很好\n房间环境很好\n空间很大.灯还会变色很有情趣\n酒店服务也很人性化很优秀\n价格也很亲民\n来北京很适合体验",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1884116325",
+      "retrieved": true,
+      "via": "topic",
+      "text": "因为到店时间比较晚，前台员工beira 办理的很快，安排的房间也还可以，就是有一些物品没有补齐，不是很理解，但是可以忽略不计，整体还是不错的",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1883494505",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这家酒店体验远超预期！前台那位小姑娘不仅人长得漂亮，笑起来眼睛弯弯的特别甜，而且态度极好，办入住时耐心又温柔，让人如沐春风。整个酒店服务都非常在线，响应及时。重点是卫生状况令人安心，房间每个角落都一尘不染。非常满意，下次来北京还会选择这里！",
+      "label": "positive",
+      "quote": "重点是卫生状况令人安心，房间每个角落都一尘不染。非常满意，下次来北京还会选择这里！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1883482301",
+      "retrieved": true,
+      "via": "topic",
+      "text": "卫生干净，环境优雅，前台小姐姐非常Nice,服务热情，地段很是优越。",
+      "label": "positive",
+      "quote": "卫生干净，环境优雅，前台小姐姐非常Nice,服务热情，地段很是优越。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1883420821",
+      "retrieved": true,
+      "via": "topic",
+      "text": "时隔几个月再回北京 依然选择索菲特 栗经理很好 提前做好了一切安排 微信秒回 对于特别挑剔的我女朋友都是赞不绝口 安排的太好了，二环的夜晚 车水马龙 很有feel，酒店很时尚 暗黑风格，符合年轻人审美，唯一的问题就是没有usb的插口 智能设备差点，其他无可挑剔 以后就是来北京的首选地点了！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1882542569",
+      "retrieved": true,
+      "via": "topic",
+      "text": "17层的服务员姓孙跟姓王，主管姓卢和姓刘的两位都非常好，前台给升级了套房，住的很好",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1879249409",
+      "retrieved": true,
+      "via": "topic",
+      "text": "非常棒的一次旅行 员工Sunny提前加了微信 细致周到地提供了服务，知道小朋友生日特意安排了生日蛋糕，升级了私家套房 提供了行政礼遇 还包括了咖啡软饮不限量，商务晚餐而且两个孩子全部免费 。15楼的客房服务张凤伟在入住期间随叫随到，服务细致 床品质量好，泳池孩子很喜欢。1000多的房价享受了3000多的待遇 非常超值。酒店位置特别优越 打车去天安门，军事博物馆 王府井都10几分钟 。每一位员工都让客人如沐春风。下次去北京认准索菲特了。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1879126321",
+      "retrieved": true,
+      "via": "topic",
+      "text": "很棒的酒店，建国门周边交通饮食都方便，春节清明之间超淡季主动给升级了套房，因为室温才21不够暖，阿姨给拎了一台电暖上来有被感动到，入住还送果盘。儿童装备齐全，能够微信预先安排，亲子之光属于是。房间也有比更新欠周的硬伤，比如插电面板没mini usb接口、坐便不是智能的，比广州的网红酒店落后点但胜在设备还新。最具创意的行政礼遇口味很西式，味道也赞，度假出差一站式解决方案了，不出酒店满足三顿。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1878608971",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住感受很好，酒店员工都很专业，素质也很高，前台员工beira 办理入住手续非常迅速，介绍设施非常详细，联系他也都及时回复 下次还会选择",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1876922243",
+      "retrieved": true,
+      "via": "topic",
+      "text": "服务态度热情周到，前台leah roc 办理入住高效快捷，有需求都能及时回应。性价比很高，是一次非常愉快的住宿体验，下次一定会再来，强烈推荐！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1876423013",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住Sofitel 前台Miya 服务特别热情周到，办理入住又快又顺畅，态度温柔有耐心，提前安排好了房间，房间住得舒心又安心，强烈推荐！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1873268873",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店位置极佳，环境非常好，前台美丽姐姐升级了套房，房间超级nice，布局很好，两整面落地窗，采光绝绝子，圆形浴缸超级大，床头的氛围灯竟然还可以变色，清晨醒来，有种很幸福的感觉～哈哈哈～下次来还住～",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1869732511",
+      "retrieved": true,
+      "via": "topic",
+      "text": "体验非常好，还免费升级了巨大的 100 平米套房，住得太爽了！\n巨大浴缸超赞，城景很好",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1869205159",
+      "retrieved": true,
+      "via": "topic",
+      "text": "非常好，上次住了一回索菲特添加了前厅部的栗经理微信，本次回来提前联系了一下，果然秒回信息，帮我安排妥当 安排到了高楼层的房间，景观特好，在这个时代有这种全方位的服务，这个价格在北京不上2000是不可能有的，这价格性价比很高了，如果能接受他家硬件差点意思的情况下可以无脑上，最后还是建议多少更新下设备吧，没有USB口 ，又借不到充电插头，还是很不方便的",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1868414101",
+      "retrieved": true,
+      "via": "topic",
+      "text": "索菲特老粉，到哪都索菲特，服务，环境都一如既往的好",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1865637167",
+      "retrieved": true,
+      "via": "topic",
+      "text": "对这家的服务还是认可的，员工beira 提前联系我安排房间，询问入住时间，进入酒店办理入住，手续办理的也非常迅速，有问题联系他们也都及时的解决，非常好",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1862314811",
+      "retrieved": true,
+      "via": "topic",
+      "text": "非常好的一次住宿体验！双床房床很大，适合带还孩子来！交通也非常方便出门走两步就是地铁！服务也非常棒！值得推荐！下次来北京首选！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1862249707",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台服务太棒了！尤其LEAH   服务响应速度快，解决问题能力强酒店位置非常便利，步行几分钟就到地铁站，地理位置很不错推荐，下次还会来咨询问题都细致解答，全程体验感特别好，暖心的服务让旅途更舒心，必须五星好评！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1861131279",
+      "retrieved": true,
+      "via": "topic",
+      "text": "在北京最满意的一次酒店住宿，夜景非常非常漂亮，房间干净整洁，毛巾浴巾洗漱用品齐全，床品舒适，浴缸也很舒服，工作人员服务态度极好，整体非常非常满意，体验感极好。已经推荐给身边朋友了，真的是非常非常满意的一次出行。",
+      "label": "positive",
+      "quote": "房间干净整洁，毛巾浴巾洗漱用品齐全",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1858770709",
+      "retrieved": true,
+      "via": "topic",
+      "text": "第一次来，住的很满意，服务啊，环境啊，位置啊，都很好，这家房间还比较有特点，现在很多酒店都千篇一律 ，这家还行啊，可以考虑入手，ella退房问了体验，现在很多酒店服务都快餐了。根本没人理，这家可以",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1858751863",
+      "retrieved": true,
+      "via": "topic",
+      "text": "整体环境优越，ella经理入住的时候帮我挑选了朝向，二环视野不错，晚上一片红尾灯，看起来是真的堵，房间有点干，北京的气温大体也就这样了，房间里面也挺好的，很干净，细节做的也很好。酒店的早餐也很好。花样很多，口味也好吃。",
+      "label": "positive",
+      "quote": "房间里面也挺好的，很干净，细节做的也很好。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1858722525",
+      "retrieved": true,
+      "via": "topic",
+      "text": "ella服务很细致的哦，看我刚回来帮我延迟了一会，很人性化，房间大，有浴缸，小朋友很喜欢，北京比较干，可以多要点水，总之服务是超级满意的， 下次无脑冲",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1857923759",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住感受还不错，员工beira 提前联系我 为我安排房间，入住时办理的也很迅速，就是房间太热了 开空调热关空调冷 不是很理解",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1857448209",
+      "retrieved": true,
+      "via": "topic",
+      "text": "非常有特色的一家酒店，房间很大，床很舒适，服务非常好，尤其夸赞他们家的圆浴缸，真心推荐！景观也很不错，在房间里可以欣赏古观象台，诚挚推荐！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1857330037",
+      "retrieved": true,
+      "via": "topic",
+      "text": "下午1点多到店直接办理了，有房间ella经理就给入住了，过年都排队就没办法了，还挺人性化的，房间也很干净，帮我选的房间也是我喜欢的，必须好评",
+      "label": "positive",
+      "quote": "房间也很干净",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1856811183",
+      "retrieved": true,
+      "via": "topic",
+      "text": "房间整洁明亮，设施齐全，隔音效果好。睡得特别踏实，整体的性价比也很高。\n很感谢Sunny的服务，特别耐心，热情，详细在做完登记信息后，我想带孩子去吃北京的火锅与Sunny闲聊，她很热情详细的告诉我当地人去吃哪家火锅，然后也会告诉我每次出行都要到前台扫一下停车券。有减免优惠，很细心，一下让我感觉很感动，我觉得我还会再来北京旅游的，当然我还会预定该酒店的。\n嘘！……Sunny是位人美心善的大美妞吖。\n我有些神经衰弱，想要安静、楼层高一些的房间。Sunny很耐心、细心的帮我安排房间，并告诉有任何问题都可以随时咨询她。很暖心",
+      "label": "positive",
+      "quote": "房间整洁明亮",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1856800373",
+      "retrieved": true,
+      "via": "topic",
+      "text": "第一次体验非常喜欢！安利北京索菲特建国门店！酒店地理位置很不错哟，出门不远就是地铁1号线和2号线！去环球1号线很方便哦！\n\n酒店的各方面的服务都非常热情又非常周到，帮忙办入住漂亮耐心的Beira，帮忙拿行李的工作人员，吧台，早餐自助的工作人员等等。。。酒店环境高级又洋气，整体都太赞了，这个这个床垫子，对我的老腰太友好了，躺上去软软的巨舒服，躺上就不想起了！\n\n下次来北京还会住这家，不踩雷！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1855169047",
+      "retrieved": true,
+      "via": "topic",
+      "text": "交通方便，离天安门，国博，故宫，国贸，天坛，地坛很近，去环球1号线1小时即到。房间宽敞舒适，服务热情周到贴心，有幸升级高楼层，风景独好。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1854991189",
+      "retrieved": true,
+      "via": "topic",
+      "text": "为前台Linda的服务打call！从进门时的亲切问候，到办理入住的娴熟高效，处处体现了五星级专业水准。退房时还贴心地询问行程并送上热水，这样有温度的服务值得点赞！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1854978327",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店环境很棒，但更让我印象深刻的是前台Linda。不仅业务熟练，笑容也特别有感染力，就像回家一样温暖。因为她的出色服务，让这次旅途变得更加美好，强烈推荐！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1854265229",
+      "retrieved": true,
+      "via": "topic",
+      "text": "一如既往的满意。\n\n感谢Sunny 丁的帮忙协助。下次北京再见。\n\n房间很温馨，整体设施也很全面。\n\n最近lavin的洗护用品套房的柚味也很喜爱。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1853709711",
+      "retrieved": true,
+      "via": "topic",
+      "text": "春节去北京带家人游玩，选择入住2晚酒店，总体装修时间已久，这次出行人数较多，准备了小床，但是小床睡的不是很舒服，入住的2晚，当天晚上入住时已已经到12点，次日有早起出发去长城，次日第二天酒店给准备的早餐还是比较贴心的，让早起的我们感受温暖，总体这样的价格还是贴心的，希望下次小床的质量好一点.总体还是不错",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1850847477",
+      "retrieved": true,
+      "via": "topic",
+      "text": "卫生：打扫的很干净每天都来打扫\n环境：适合家庭出游房间面积很大\n服务：不错很贴心送了水果和甜品有机器人送外卖\n设施：智能化现代化咖啡机水壶都有",
+      "label": "positive",
+      "quote": "卫生：打扫的很干净每天都来打扫",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1849772069",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住感觉还不错，节假日期间人流量增加，但是服务质量还是非常好，有问题都及时的得到了解决，特别是 beira 服务非常好",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1848060243",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店位置非常方便，大厅很气派，灯光氛围感十足。床品干净整洁舒适，房间也很大，还给升级房型，早餐品种也非常丰富，下回还来住。",
+      "label": "positive",
+      "quote": "床品干净整洁舒适",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1843483045",
+      "retrieved": true,
+      "via": "topic",
+      "text": "环境很好，服务很好，场地很大，视野很好，设施很全，sunny 也很热情周到",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1842417685",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台礼宾的服务太贴心了！leah 办理入住全程高效，工作人员主动帮拿行李、介绍酒店设施，还耐心推荐周边打卡点和美食，态度温和又热情，细节里全是用心，入住体验超棒！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1841029923",
+      "retrieved": true,
+      "via": "topic",
+      "text": "第二次来这家酒店入住了，感觉很不错，这次是leah 办理、，不仅高效办理入住，还主动帮忙安排了安静舒适的房间。酒店卫生整洁，床品干净，环境清新。位置也很便利，周边交通方便，距离地铁站很近。整体体验超预期，下次还会选择这里，值得推荐！",
+      "label": "positive",
+      "quote": "酒店卫生整洁，床品干净，环境清新。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1839242145",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台接待Miya服务温馨周到，礼貌得体，操作熟练高效，酒店设施齐全且运作正常。周边交通也便利。性价比超高，整体感受特别舒心，下次来还会选择这家！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1835956929",
+      "retrieved": true,
+      "via": "topic",
+      "text": "第二次住这里了，交通便利，房间卫生干净，住得很舒服，前台leah 开发票很快，入住依然还有欢迎水果，空调温度很好，很舒适，满意😀",
+      "label": "positive",
+      "quote": "房间卫生干净，住得很舒服",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1835700863",
+      "retrieved": true,
+      "via": "topic",
+      "text": "带小孩来北京旅游，选择入住北京索菲特大酒店，房间很舒适，面积很大，来的时候保安帮忙拿行李🧳，早餐很棒，有北京小吃，面食特别好，食材新鲜，大堂吧下午茶也很好，我们很喜欢。服务也很好，candy 很帮忙，很照顾我们，欣赏大堂电梯总会安排工作人员帮忙按电梯，体验不错，还会再来[微笑]。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1833975493",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次入住感受还是不错的，入住时遇到了酒店beira ，服务很专业，介绍的也很详细，入住期间发生了一些问题，员工也都及时的帮我处理了。早餐也很丰富，距离地铁建国门站也很近，整体还是满意的，下次来北京还会选择索菲特。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1831851059",
+      "retrieved": true,
+      "via": "topic",
+      "text": "一次温暖的入住体验。工作人员leah  笑容亲切，有求必应。房间布置 温馨，床垫枕头舒服极了，像在家一样。离店时还赠送了小熊，很贴心.，很热情周到，在到店之前提前联系了我们，准备好了房间，真的非常棒",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1830611219",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店的地理位紧挨着北京站，距离大概300米，出行很方便。前台给我们房间做了升级；我小孩一个人去吃晚餐自助，虽然超过了身高，但是餐厅工作人员还是非常友好只收了儿童价格，酒店软硬件都很好，总之我们住的非常满意👍",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1829627023",
+      "retrieved": true,
+      "via": "topic",
+      "text": "非常好，下次还住，还升级了套房，希望下次来还能升级，商务出行位置很好也方便，出行太方便，房间足足70到80平吧.",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1828975403",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店踞建国门核心，步行可达地铁，近天安门、故宫，交通超便捷。全景窗瞰城市天际线，适配高端商务与品质出行。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1828703708",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住感受很好，入住时遇到了酒店员工beira 她的服务很专业，介绍的也很详细，有问题他都会及时的帮我解决，房间帮我安排的也很好，下次还会选择",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1823582379",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次入住感受挺好的，酒店地理位置很好去哪里都很方便，入住时beira 办理的，非常迅速，就是大堂有一些冷，不想多待",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1823567521",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店环境可以的，入住是ella经理帮我办的，很nice的小姐姐，入住期间有问必答，房间面积挺大，视野无敌了，也干净整洁，考虑的可以直接定了，不会让人失望的",
+      "label": "positive",
+      "quote": "也干净整洁",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1822973587",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次入住感觉很好，前台小姑娘 beira 服务很专业，因为我到店比较早，他得知这个诉求后，第一时间来帮我解决这个问题，退房后也询问我的入住感受，整个过程都是可以感受到这家酒店是有服务的很好",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1820969791",
+      "retrieved": true,
+      "via": "topic",
+      "text": "很推荐这家索菲特！连住两晚，小徐帮忙升级了套房。房间很大很安静，非常舒适，而且酒店位置离天安门故宫都很近，性价比非常高的酒店！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1816914499",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前厅部Sunny服务超赞，退房时帮我快速办理手续，还主动叫车，细致的服务让人觉得特别暖心。\n酒店服务很好，我订错时间了，酒店都给协调了 。还给升级了房型",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1815857765",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前厅部服务超赞，前台经理Sunny专业又热情，办理入住零等待，细心耐心体贴。酒店体验感拉满，下次还会再来住的，也会推荐给朋友",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1815724451",
+      "retrieved": true,
+      "via": "topic",
+      "text": "强烈推荐这家酒店！位置绝佳，性价比超高的宝藏酒店！房间宽敞明亮，设施齐全，菜品品类丰富味道棒，工作人员态度亲切，住得舒心又自在，下次还来！退房的前台leah问了入住感受推荐",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1815702089",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住前的Leah 提前问了入住要求房间的minibar首轮也是免费的给房间安排了很不错的位置可以看到长安街，酒店位置很好距离地铁站很近，下次过来北京还会来入住的推荐",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1815658535",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住前的Leah 提前问了入住要求房间的minibar首轮也是免费的给房间安排了很不错的位置可以看到街景，下次还会过来入住推荐景色别说还是不错的，有机器人送外卖，遇到高峰得等会，就是大堂有些冷别的都还可以。早餐质量不错，就是座位少了些",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1815624191",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次入住体验非常棒，酒店位置便利，环境安静优雅。布置温馨舒适，设施维护良好。服务人员Miya 态度亲切热情，响应及时，让人有宾至如归的感觉，强烈推荐。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1814740505",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前厅部效率超高～办理入住退房都快捷顺畅，员工主动热情，有问必答。细节处见用心，感谢Sunny的安排，为这个优秀的团队打call。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1813896033",
+      "retrieved": true,
+      "via": "topic",
+      "text": "从前台到礼宾 ，处处能感受到用心🌹 礼宾部主动帮忙提行李 前台leah 办理很快。 就是酒店大堂太冷了，房间设施有点老旧  ，总而言之除了这个，强烈推荐，因为地理位置很不错。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1813885973",
+      "retrieved": true,
+      "via": "topic",
+      "text": "真心为这家酒店的前厅部团队点赞！从进门问候到办理手续，整个流程顺畅又贴心，能明显感受到团队协作的默契。特别要夸夸Sunny，不仅主动帮我协调房型，还和同事配合着快速解决了我行李寄存的需求，分工明确又高效。这样专业的团队，真的能让住客一进门就感受到满满的暖意！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1813639033",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次入住感受还不错，就是大堂温度有点低，办入住时只想尽快上楼，退房时间上有一些问题，遇到了beira 也都合理的帮我解决好了，服务还是不错的",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1812179555",
+      "retrieved": true,
+      "via": "topic",
+      "text": "房间干净，设施齐全，阳光也不错，嗯嗯，住的很舒服，位置优越，房间干净整洁，服务人员热情周到，床品舒适，早餐丰富，性价比很高，是一次非常愉快的入住体验！",
+      "label": "positive",
+      "quote": "房间干净整洁",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1811763627",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店地理位置优越，打车很方便，工作人员服务态度很好，前台Miya 提前联系我帮忙安排好了房间，房间很大住的很舒适，有机器人送外卖真的很方便，唯一不足就是大堂有点冷，风很大，需要改进一下，整体来说还是很不错的",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1811723821",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次入住感受还可以，就是不理解大堂为什么这么冷，办入住感觉一秒钟都不想多待，前台beira 办入住很迅速，不过感觉他说话都在抖冻的",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1811580245",
+      "retrieved": true,
+      "via": "topic",
+      "text": "来出差 选择索菲特对了 果断续住，来之前前台小梁rebecca就打电话联系我们询问入住需求，在店期间有求必应 服务非常及时 大半夜也能马上回复 真的点赞，房间设施虽然有点老，但也能满足基本需求，但是！大堂也有点太冷了！手一拿出来就冰凉，前台小姑娘们手都冻通红还认真工作，真敬业，但也希望能改进一些！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1811496963",
+      "retrieved": true,
+      "via": "topic",
+      "text": "此次入住索菲特酒店，前台非常棒，快速办理了入住，退房还帮忙做了延迟退房，感谢sunny此次帮助，提一点大堂太冷啦！！！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1808238623",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台Miya 服务真的太赞了！ 办理入住退房都超高效，看我拎着大行李主动上前帮忙，还耐心推荐了本地美食和游玩路线，全程笑容满面，暖心值拉满～",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1807825521",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这家酒店服务是蛮不错的，ella提前联系的我，还问了我入住体验，超级nice的小姐姐，必须给五分，房间确实旧了点，瑕不掩瑜吧，可以回购，介意旧的话慎拍",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1806877509",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住感受还不错酒店员工beira 提前联系我，询问诉求以及到店时间，贴心的帮我安排房间，入住后对房间安排的也很满意，下次还会选择",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1806684484",
+      "retrieved": true,
+      "via": "topic",
+      "text": "非常满意对这个酒店，入住时遇到了beira ，非常专业，耐心的介绍酒店设施，以及我包含的东西，在住期间找他，恢复的也非常及时，下次还会选择\n\n比我预想的日子又延长了一天,那个要求也迅速而亲切地回应了。 托她的福，北京之行非常愉快。 谢谢。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1806683865",
+      "retrieved": true,
+      "via": "topic",
+      "text": "到店后办理入住遇到了前台小姑娘beira 看我是带着孩子出行，贴心的帮我安排离电梯远的房间，还安排了儿童洗漱用品，退房时，礼宾同事也很给力，帮我把行李送到了车上",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1805680425",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台服务效率超高， 态度也好到没话说！Miya 主动告知酒店各项设施使用时间，有问必答，这次入住真的超满意！！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1805679423",
+      "retrieved": true,
+      "via": "topic",
+      "text": "必须给前台小姐姐点赞！入住时Miya 帮我安排好了房间，又快又好，有问必答超耐心，房间很大，住的很舒服，下次还会过来住",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1804716451",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台miya 服务非常专业，入住退房高效迅速，态度亲切有礼。对周边咨询解答详细、 让人一到店就感到宾至如归。为你们点赞！！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1803204089",
+      "retrieved": true,
+      "via": "topic",
+      "text": "从拨通电话那一刻起，前台Linda专业而温暖的声音就让人印象深刻。她会细心确认到达时间，主动询问是否需要特殊协助，将关怀延伸至入住前，令人倍感重视。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1802964177",
+      "retrieved": true,
+      "via": "topic",
+      "text": "设施与服务落差大，但楼层保洁阿人员是亮点\n\n入住体验比较失望，主要问题在硬件和服务细节上。房间设施明显老旧：卫生间地漏下水缓慢；墙面有潮湿痕迹，部分家具边角脱皮；房间噪音较大，夜间影响休息。前台办理入住时效率较低，预定3间房间但提出同一楼层入住的要求后未能满足\n\n但必须重点表扬楼层保洁员，主动热情打招呼，清洁态度积极到位，并主动问询我的入住诉求 非常好！",
+      "label": "positive",
+      "quote": "但必须重点表扬楼层保洁员，主动热情打招呼，清洁态度积极到位，并主动问询我的入住诉求 非常好！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1802625767",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店整体都很好，尤其是前台的服务。前台Linda精准的预抵确认和后续的顺畅衔接，为我节省了宝贵时间，建立了坚实的信任，是可靠的出行伙伴，在索菲特这里住的很愉快，不错的选择。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1801732973",
+      "retrieved": true,
+      "via": "topic",
+      "text": "必须为前台Linda写一条好评！Linda一句温暖的问候、一个真诚的笑容，瞬间洗去了旅途的劳顿。她不仅快速办好入住，电话问候了我们的偏好，入住时依然记得，这种被记住的感觉真好。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1801543113",
+      "retrieved": true,
+      "via": "topic",
+      "text": "元旦带家人在北京索菲特大酒店团聚，真是太明智的选择！酒店的位置和景观绝佳，房间超赞，餐饮美味，服务一级棒！经过补差价升级为100㎡的双套间，超级震撼，双面落地窗俯瞰长安街与东二环，夜景璀璨如画。配备两个大床和大沙发，全家住得舒服顺心！大堂节日装饰温馨，享受了手冲金米兰咖啡的醇香浓厚，怡品堂的粤菜美味正宗，还有早餐丰富精美。最感动的是商务部的Leo先生全程协调，从房型建议到入住安排都给与周到考虑，让我们感受到宾至如归的温暖！前台和大堂吧行政酒廊的工作人员，还有怡品堂餐厅的赵营小姐姐，以及辛勤工作的三位客房人员（赵向芹、刘华菊、苏南南），都是非常亲切敬业。总之，强烈推荐北京索菲特，彰显五星级酒店的高端品质！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1801540077",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次入住最深刻的印象来自前台Linda。她专业、高效，笑容充满亲和力。办理手续迅速，对酒店设施和周边信息的介绍清晰明了，让初来乍到的我们瞬间安心。感谢她带来的完美第一印象！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1798412657",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店环境优美，服务很好，接到前台Linda给打的预抵电话，提前安排房间，全程可以沟通，房间迷你吧也免费，酒店整体都很好，很好的一次选择。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1797146671",
+      "retrieved": true,
+      "via": "topic",
+      "text": "进门即享暖心服务，前台beira超靠谱。答疑指引超高效，住得舒心又安心！酒店地理位置也很不错，出行去哪里都很方便下次还会选择",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1793181779",
+      "retrieved": true,
+      "via": "topic",
+      "text": "对这家酒店的印象很好，入住前备注了一些需求，酒店员工beira提前联系我帮我解决，入住时员工也很专业的介绍我包含的内容以及酒店设施，觉得酒店主动服务意识很好 下次还会选择",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1792945287",
+      "retrieved": true,
+      "via": "topic",
+      "text": "必须为索菲特的前台团队点赞！每次进出都有热情问候，问题咨询总能得到细致解答。前台Linda服务很好！介绍仔细认真，外卖也可以机器人送房间，住店体验感很好",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1789121351",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店位置很不错，属于闹中取静。房间装修很好，宽敞明亮，干净卫生。早餐很丰富。前台服务热情周到，特别点名表扬前厅团队！Sunny热情又专业，帮忙办理的入住，入住时耐心解答各种疑问，服务细致入微，让整个入住体验超棒，下次来还找她。",
+      "label": "positive",
+      "quote": "干净卫生。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1788877075",
+      "retrieved": true,
+      "via": "topic",
+      "text": "给前台Linda的服务五星好评！从入住到离店，体验无缝衔接。介绍酒店的营业信息及设施设备全面，服务热情发自内心，办事效率极高，让出行毫无后顾之忧。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1786981071",
+      "retrieved": true,
+      "via": "topic",
+      "text": "帮家里人订的房间，beira 提前联系我 询问到店时间，贴心的帮我安排房间，得知是家人入住后还安排同层，服务意识很好 下次还会选择",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1786030445",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店位置优越，交通便利，环境安静优雅从办理入住时的热情微笑，到耐心解答所有问题，步行5分钟就到地铁站洗护用品都是花香味的，好闻！服务很好必须再来 前台leah办理入住很快 推荐入住 。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1785919833",
+      "retrieved": true,
+      "via": "topic",
+      "text": "一次温暖的入住体验。工作人员Miya 笑容亲切，有求必应。房间布置 温馨，床垫枕头舒服极了，像在家一样。离店时还赠送了小熊，很贴心～",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1785898869",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台Sky的服务确实让人印象深刻，耐心介绍酒店设施和周边景点，酒店位置非常便利，步行几分钟就到地铁站，附近商场、便利店一应俱全。房间整洁温馨，床品舒适，晚上很安静。这次入住体验超出预期，细节处处体现着贴心，下次来还会选择这里！",
+      "label": "positive",
+      "quote": "房间整洁温馨，床品舒适，晚上很安静。",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1784289701",
+      "retrieved": true,
+      "via": "topic",
+      "text": "遗落的证件被前厅人员妥善保管，联系后很快就取回，工作人员的细心负责让人超安心～Sunny还打了回访电话，贴心询问入住体验，感到被重视。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1783043107",
+      "retrieved": true,
+      "via": "topic",
+      "text": "北京索菲特的性价比远超预期！酒店干净卫生无异味，房间宽敞明亮，设施完好可用。Miya 服务热情不敷衍，位置优越交通便利，下次出行还会选择这里！",
+      "label": "positive",
+      "quote": "酒店干净卫生无异味",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1781748591",
+      "retrieved": true,
+      "via": "topic",
+      "text": "连着两次来北京都定这个酒店 体验感满分 大厅区域蛮全的 装修很北京old money的感觉 酒店有24h送餐服务 可以点点甜品and酒水 酒店早餐很齐全 烟熏三文鱼口感很不错！好评 下次还来",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1777088777",
+      "retrieved": true,
+      "via": "topic",
+      "text": "推荐给所有要出行的朋友！索菲特大酒店Jayna服务超赞，地理位置优越～房间干净整洁，窗外景色迷人，外卖机器人超方便，安静的环境让人休息得很好，体验感拉满！",
+      "label": "positive",
+      "quote": "房间干净整洁，窗外景色迷人，外卖机器人超方便，安静的环境让人休息得很好，体验感拉满！",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1775403299",
+      "retrieved": true,
+      "via": "topic",
+      "text": "索菲特大酒店真的绝了，酒店方考虑是第一次入住，免费给升级成了套房，空间超大超敞亮，客厅卧室分开特舒服。全景落地窗视野超棒，看城市景色非常赞。床品软乎乎的，睡得巨香，卫浴宽敞干净，大浴缸泡澡超放松，洗护用品好用味道也好闻。服务热情周到，响应快，入住离店都省心。体验感拉满，真心推荐！",
+      "label": "positive",
+      "quote": "卫浴宽敞干净",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1773051921",
+      "retrieved": true,
+      "via": "topic",
+      "text": "给男友提前过生日，预定的套餐备注好，酒店的工作人员太给力了，升级了房间，还布置了一下，更好的是送了蛋糕，巨好吃！开心的我两天都在嘿嘿傻笑！真的太感谢了，男友应该也特别开心吧，又是健身房又是泡浴缸的！还是要谢谢你们的服务，以后节日庆典都来咱们酒店吧，一价全包，真的真的太值了！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1772240635",
+      "retrieved": true,
+      "via": "topic",
+      "text": "为索菲特大酒店疯狂打call！Jayna服务热情周到，让人宾至如归～房间干净无异味，屋内保险柜安全可靠，地理位置好，出门超方便，健身、游泳设施都很棒，下次还来！",
+      "label": "positive",
+      "quote": "房间干净无异味",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1770965995",
+      "retrieved": true,
+      "via": "topic",
+      "text": "服务很好入住前leah 致电问了入住的要求，并安排了高层房间就是刚进大堂有些冷，但是房间很舒适，床品也很不错打扫的干净，房间也很大，就是设施老旧，希望改善，推荐入住",
+      "label": "positive",
+      "quote": "打扫的干净",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1769328907",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这家酒店的前身是长安街W酒店，怪不得住进去后感觉房间那么熟悉，房间很大，也干净，视野一流，离地铁站也不算太远，打车也方便，热水也够，暖气也舒服，不会太热太干，就是床有点太软了，其他都挺好。",
+      "label": "positive",
+      "quote": "也干净",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1766076783",
+      "retrieved": true,
+      "via": "topic",
+      "text": "这次入住体验很好，酒店服务态度好，小姐姐leah很热气！酒店环境很好房间设施齐全，干净清爽。位置就在主街方便快捷出行，吃饭逛街都很方便，入住办理手续也快捷，推荐入住，就是酒店设施有点老旧",
+      "label": "positive",
+      "quote": "干净清爽",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1765962155",
+      "retrieved": true,
+      "via": "topic",
+      "text": "非常满意的一次住宿！环境优雅，卫生干净，设施齐全。工作人员态度亲切，有求必应。Miya 入住和退房流程都很迅速。下次来这个城市，一定还会住这家酒店，值得推荐！",
+      "label": "positive",
+      "quote": "卫生干净",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1755690399",
+      "retrieved": true,
+      "via": "topic",
+      "text": "北京索菲特大酒店服务一流，员工态度亲切专业，办理入住高效顺畅。客房宽敞舒适，清洁度极高，床品柔软助眠。酒店位置优越，周边交通便利。早餐种类丰富，品质上乘。整体入住体验非常愉快，值得再次选择与推荐。",
+      "label": "positive",
+      "quote": "清洁度极高",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1755152247",
+      "retrieved": true,
+      "via": "topic",
+      "text": "索菲特大酒店的餐厅完全超出预期！前台Jayna说餐厅菜品很赞果然没错，热菜现点现做超入味，甜品颜值口味双在线。24小时都能吃到热乎饭，食材新鲜调味绝，住店不用愁吃饭，太方便美味了！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1755119709",
+      "retrieved": true,
+      "via": "topic",
+      "text": "索菲特大酒店餐厅直接封神！前台Jayna推荐的招牌菜绝了，食材新鲜口感超赞，24小时点餐连夜宵都精致。窗外景色配美食太惬意，菜品种类丰富不踩雷，住店三餐全在这解决，幸福感拉满！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1755099863",
+      "retrieved": true,
+      "via": "topic",
+      "text": "被索菲特大酒店餐厅圈粉了！感谢前台Jayna安利的特色菜，味道正宗分量足，连早餐的点心都超精致。餐厅环境安静，窗外视野好，菜品更新快，不管是正餐还是简餐都好吃，下次来还想尝遍菜单！",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1755095899",
+      "retrieved": true,
+      "via": "topic",
+      "text": "入住体验超棒！房间布置温馨，设施齐全且崭新，卫浴干湿分离很贴心。酒店环境安静，夜景视野好。服务人员专业又亲切，Miya 办理入住及退房高效，酒店机器人送外卖很方便、 推荐给出行的朋友～～",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1750676881",
+      "retrieved": true,
+      "via": "topic",
+      "text": "前台leah . sunny    房间卫生间干湿分离，床铺柔软舒适，卫生干净整洁。迷你吧饮料免费，挺不错的一次入住，有宾至如归的感觉～小姐姐超nice，入住的时候麻利又热情 索菲特大酒店值得N刷！ 就是设施有点老旧 . 床垫有点软.",
+      "label": "positive",
+      "quote": "卫生干净整洁",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1744748803",
+      "retrieved": true,
+      "via": "topic",
+      "text": "酒店前台小梁Rebecca服务超贴心！办理入住高效快捷，还耐心推荐周边美食和路线，态度温柔又专业。细节处尽显用心，让旅途倍感温暖，酒店大堂太冷了，可能是现在还没供暖的原因，总而言之，强烈推荐～",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    },
+    {
+      "hotel": "北京索菲特大酒店",
+      "id": "1743616965",
+      "retrieved": true,
+      "via": "topic",
+      "text": "极力推荐北京索菲特大酒店！从气派的大堂到细节服务都无可挑剔，早餐也比较丰富！特别感谢前台Linda的热情帮助！真的很好！东西落在酒店了及时帮忙协调确认！地理位置便利，购物观光都方便。无论是商务出行还是度假，这里都是绝佳选择。",
+      "label": "not_mentioned",
+      "quote": "",
+      "quoteVerified": true
+    }
+  ]
+}
