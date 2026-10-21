@@ -2,8 +2,14 @@
 
 酒店**评论辅助浏览原型**：用户用自然语言说出需求 → 在样本酒店里筛出候选 → 找到相关评论并高亮 → 核对原文。**不是订房平台**，价格和订单都是模拟的。
 
-- 进度和下一步：[进度与下一步.md](进度与下一步.md)，每次开工先看第 4 节
-- 完整产品分析：[出发喽_PRD.md](出发喽_PRD.md)
+**每次开工先读 [PROJECT_STATUS.md](PROJECT_STATUS.md) 的「下次从这里开始」。**
+
+| 文件 | 回答什么 | 什么时候更新 |
+|---|---|---|
+| [PROJECT_STATUS.md](PROJECT_STATUS.md) | 现在做到哪了？ | 每次工作结束 |
+| [ISSUE_TRACKER.md](ISSUE_TRACKER.md) | 还有哪些问题？优先级？ | 发现或解决问题时 |
+| [DECISION_LOG.md](DECISION_LOG.md) | 为什么当时这么决定？ | 真正做出产品决策时 |
+| [PRD.md](PRD.md) | 产品最终应该是什么？ | 决策确定后 |
 
 ## 目标与成功指标
 
@@ -38,7 +44,8 @@ cd frontend && npm run dev     # :5173，/api 代理到 8787
 | 候选打分、排序、放宽预算 | `chatEngine.ts` 的 `scoreHotel`、`matchHotels` | `HotelCard.tsx`、`HotelWaterfall.tsx` |
 | 评论检索（给摘要用） | `services/retrieval.ts` 的 `retrieveEvidence` | — |
 | 推荐理由、摘要生成 | `ai.ts` 的 `generateRecommendationReasons`、`introduceRecommendations` | — |
-| 关键词与标签匹配 | `lib/textMatch.ts` | `lib/highlight.tsx`（前端高亮，两边逻辑要保持一致） |
+| 判断评论是否和需求相关（繁简统一、相关说法、排除按评分推导的标签） | `lib/textMatch.ts` 的 `reviewMentions`、`NEED_TERMS`、`RATING_DERIVED_TOPICS` | `lib/highlight.tsx`（前端高亮，两边逻辑要保持一致） |
+| 软需求评测（第 1 级验证） | `backend/scripts/lib/cleanliness.ts`（"干净"的标注规则，人和模型共用）；`eval-level1.ts`（全部评论 + 每家酒店结论 + 详情页排序检查，`--model`、`--out`、`--reuse`）；`eval-gold.ts`（对照标准答案、比较模型）。结果在 `eval/level1/`，标准答案在 `eval/level1/gold/` | — |
 | 评论原文弹窗 | — | `EvidenceModal.tsx` |
 | 手动筛选 | `routes/hotels.ts`（`GET /`）→ `db/repo.ts` 的 `listHotels` | `FilterScreen.tsx` |
 | 酒店详情、评论排序、高频话题 | `routes/hotels.ts`（`GET /:id`，参数 `prefer`）、`repo.ts` 的 `topReviewTopics` | `BookingSheet.tsx` |
@@ -58,8 +65,10 @@ cd frontend && npm run dev     # :5173，/api 代理到 8787
 ```
 出发喽/
 ├── CLAUDE.md                 本文件
-├── 进度与下一步.md            进度、决策、待办
-├── 出发喽_PRD.md              产品定位与分析
+├── PROJECT_STATUS.md         当前进度、下次从哪开始
+├── ISSUE_TRACKER.md          问题清单与优先级
+├── DECISION_LOG.md           产品决策记录
+├── PRD.md                    产品定位与分析
 ├── backend/                  Express + SQLite（TypeScript）
 │   ├── src/index.ts          入口，挂载 /api/* 路由
 │   ├── src/routes/           接口：chat hotels auth orders followup funnel metrics
@@ -70,6 +79,7 @@ cd frontend && npm run dev     # :5173，/api 代理到 8787
 │   └── data/chufalou.sqlite  本地数据库
 ├── frontend/                 React + Vite
 │   └── src/{App.tsx, components/, api/, lib/highlight.tsx, styles/tokens.css, types.ts}
+├── eval/level1/              第 1 级验证：v1～v3 各轮结果、gold/（标注规范、标准答案、模型对比）、评测过程记录.md
 ├── data/                     原始评论数据（csv/json、apify-data），由 seed 导入
 ├── 作品集/                    作品集截图
 ├── 视觉效果/                  配色等视觉稿
@@ -81,4 +91,5 @@ cd frontend && npm run dev     # :5173，/api 代理到 8787
 ## 协作约定
 
 - 找代码先查上面的对照表，不要全仓扫描
-- 做完一步就更新 `进度与下一步.md`；新增功能或移动文件时同步更新本文件的对照表
+- 工作结束时更新 PROJECT_STATUS.md；发现或解决问题时更新 ISSUE_TRACKER.md（用 I-xx 编号）；做出产品决策时追加到 DECISION_LOG.md（用 D-xx 编号），再同步 PRD
+- 新增功能或移动文件时，同步更新本文件的对照表

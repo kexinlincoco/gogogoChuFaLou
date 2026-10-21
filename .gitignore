@@ -10,3 +10,7 @@ backend/.env
 # 本地导出产物
 output/
 tmp/
+
+# 本地 Obsidian 笔记库与配置
+gogogo/
+.obsidian/
