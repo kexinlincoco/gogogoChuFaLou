@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import { db } from "./client.js";
 import { buildImageUrl } from "../services/images.js";
-import { keywordMatchesTag } from "../lib/textMatch.js";
+import { RATING_DERIVED_TOPICS, reviewMentions } from "../lib/textMatch.js";
 import type { Hotel, HotelRow, Review, ReviewRow, Order, OrderFeedback, BookingFunnelEvent, User } from "../types.js";
 
 function rowToHotel(row: HotelRow): Hotel {
@@ -104,13 +104,10 @@ export interface ReviewHighlight {
   pct: number;
 }
 
-/** A review really "mentions" a keyword if it either carries that exact
- * derived topic tag, or the keyword literally occurs in the review text —
- * same two-way check retrieveEvidence uses, so a soft need with no fixed
- * topic tag (e.g. "安静", which isn't in any topic vocabulary, see seed.ts)
- * still counts as a real hit whenever it's actually written in a review. */
+/** Same definition of "this review is evidence for the need" as
+ * retrieveEvidence — see reviewMentions in lib/textMatch.ts. */
 function mentionCount(reviews: Review[], keyword: string): number {
-  return reviews.filter((r) => r.topics.some((t) => keywordMatchesTag(keyword, t)) || r.text.includes(keyword)).length;
+  return reviews.filter((r) => reviewMentions(r, keyword)).length;
 }
 
 /**
@@ -140,7 +137,7 @@ export function topReviewTopics(hotelId: string, preferKeywords: string[] = []):
 
   const counts = new Map<string, number>();
   for (const r of reviews) {
-    for (const t of r.topics) counts.set(t, (counts.get(t) ?? 0) + 1);
+    for (const t of r.topics) if (!RATING_DERIVED_TOPICS.has(t)) counts.set(t, (counts.get(t) ?? 0) + 1);
   }
   if (counts.size === 0) return [];
   const [topic, count] = [...counts.entries()].sort((a, b) => b[1] - a[1])[0];

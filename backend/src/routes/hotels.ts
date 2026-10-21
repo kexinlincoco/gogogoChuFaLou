@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { listCities, listTags, listHotels, getHotel, getReviewsForHotel, topReviewTopics } from "../db/repo.js";
 import { nightlyPrice, totalPrice } from "../services/pricing.js";
-import { keywordMatchesTag } from "../lib/textMatch.js";
+import { reviewMentions } from "../lib/textMatch.js";
 
 export const hotelsRouter = Router();
 
@@ -57,16 +57,15 @@ hotelsRouter.get("/:id", (req, res) => {
 
   // When the caller knows what the user actually asked for (passed down from
   // the chat recommendation that led here), surface matching reviews first —
-  // ranked by HOW MANY of the prefer keywords each review really backs (topic
-  // tag OR literal text match, same two-way check as retrieveEvidence — a
-  // topic-less need like "安静" still counts if it's actually written), not
+  // ranked by HOW MANY of the prefer keywords each review really backs (same
+  // reviewMentions check as retrieveEvidence), not
   // just a binary match/no-match. Stable sort, so relevance re-orders without
   // scrambling recency within each same-score group. Manual-filter entry has
   // no such context, so this is a no-op there and the highlight below is the
   // only signal shown.
   const preferList = parseList(prefer);
   if (preferList && preferList.length > 0) {
-    const matchCount = (r: (typeof reviews)[number]) => preferList.filter((p) => r.topics.some((t) => keywordMatchesTag(p, t)) || r.text.includes(p)).length;
+    const matchCount = (r: (typeof reviews)[number]) => preferList.filter((p) => reviewMentions(r, p)).length;
     reviews = [...reviews].sort((a, b) => matchCount(b) - matchCount(a));
   }
 

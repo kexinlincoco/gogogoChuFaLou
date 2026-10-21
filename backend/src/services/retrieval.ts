@@ -8,7 +8,7 @@
  */
 import { getReviewsForHotel } from "../db/repo.js";
 import type { Review } from "../types.js";
-import { keywordMatchesTag } from "../lib/textMatch.js";
+import { reviewMentions } from "../lib/textMatch.js";
 
 export interface RetrievedEvidence {
   hotelId: string;
@@ -17,16 +17,19 @@ export interface RetrievedEvidence {
   matchRatio: number; // matched.length / totalReviewCount, 0 when there are no reviews at all
 }
 
-export function retrieveEvidence(hotelId: string, preferKeywords: string[]): RetrievedEvidence {
+/** Every review of the hotel backing at least one keyword (see
+ * reviewMentions in lib/textMatch.ts). Unsliced — retrieveEvidence
+ * caps it for the prompt; the offline eval (scripts/eval-level1.ts) needs all. */
+export function findMatchingReviews(hotelId: string, preferKeywords: string[]): { all: Review[]; matched: Review[] } {
   const all = getReviewsForHotel(hotelId);
   const keywords = preferKeywords.map((k) => k.trim()).filter(Boolean);
+  if (keywords.length === 0) return { all, matched: [] };
+  const matched = all.filter((r) => keywords.some((k) => reviewMentions(r, k)));
+  return { all, matched };
+}
 
-  let matched: Review[];
-  if (keywords.length === 0) {
-    matched = [];
-  } else {
-    matched = all.filter((r) => r.topics.some((t) => keywords.some((k) => keywordMatchesTag(k, t))) || keywords.some((k) => r.text.includes(k)));
-  }
+export function retrieveEvidence(hotelId: string, preferKeywords: string[]): RetrievedEvidence {
+  const { all, matched } = findMatchingReviews(hotelId, preferKeywords);
 
   return {
     hotelId,
