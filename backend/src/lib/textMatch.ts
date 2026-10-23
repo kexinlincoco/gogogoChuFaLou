@@ -118,9 +118,11 @@ export function needPatternsEn(keyword: string): string[] {
 /** Whether a review is evidence for a user's need: a non-rating-derived topic
  * matches it, or the text contains the need or one of its related wordings.
  * The single definition shared by retrieval, detail sorting and topic stats. */
-export function reviewMentions(review: { topics: string[]; text: string }, keyword: string): boolean {
+export function reviewMentions(review: { topics: string[]; text: string; translation?: string | null }, keyword: string): boolean {
   if (review.topics.some((t) => !RATING_DERIVED_TOPICS.has(t) && keywordMatchesTag(keyword, t))) return true;
-  const text = toSimplified(review.text);
+  // 非中英文评论用中文译文匹配（T2.5）
+  // "卫生间"只是在说有个卫生间，不算谈卫生——先去掉，免得"卫生"误中（T2.5 抽查发现）
+  const text = toSimplified(review.translation ? `${review.text}\n${review.translation}` : review.text).replace(/卫生间/g, "间");
   if (expandNeedTerms(keyword).some((term) => text.includes(term))) return true;
   return needPatternsEn(keyword).some((p) => new RegExp(p, "i").test(review.text));
 }

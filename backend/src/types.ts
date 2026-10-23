@@ -17,6 +17,8 @@ export interface Review {
   topics: string[];
   text: string;
   created_at: string;
+  language: string; // 原文语言：zh / en / ru / it …
+  translation: string | null; // 非中英文评论的中文机器翻译
 }
 
 export interface HotelRow {
@@ -39,6 +41,8 @@ export interface ReviewRow {
   topics: string;
   text: string;
   created_at: string;
+  language: string;
+  translation: string | null;
 }
 
 export interface User {

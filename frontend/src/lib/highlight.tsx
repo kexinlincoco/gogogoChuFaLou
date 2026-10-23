@@ -144,7 +144,8 @@ export function highlightKeywords(text: string, keywords: string[]): ReactNode {
   // Positions only carry over when conversion kept the length; otherwise
   // fall back to matching the original text directly.
   const haystack = simplified.length === text.length ? simplified : text;
-  const re = new RegExp([...kws.map(escapeRegExp), ...en].join("|"), "gi");
+  // "卫生间"里的"卫生"不高亮（和后端 reviewMentions 一致）
+  const re = new RegExp([...kws.map((k) => (k === "卫生" ? "卫生(?!间)" : escapeRegExp(k))), ...en].join("|"), "gi");
   const parts: { text: string; hit: boolean }[] = [];
   let last = 0;
   for (const m of haystack.matchAll(re)) {

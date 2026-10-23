@@ -26,7 +26,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { db } from "./client.js";
-import { APIFY_DATA_DIR, APIFY_HOTELS, apifyReviewRow, deriveApifyReviewTopics, isImportableApifyReview, type RawApifyReview } from "./apifySource.js";
+import { APIFY_DATA_DIR, APIFY_HOTELS, apifyReviewRow, deriveApifyReviewTopics, isImportableApifyReview, loadTranslations, type RawApifyReview } from "./apifySource.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, "..", "..", "..", "data");
@@ -256,7 +256,7 @@ function main() {
     `INSERT INTO hotels (id, name, city, stars, base_price, tags, amenities, photo_query, real_image_url) VALUES (@id, @name, @city, @stars, @base_price, @tags, @amenities, @photo_query, @real_image_url)`
   );
   const insertReview = db.prepare(
-    `INSERT INTO reviews (id, hotel_id, author, source, topics, text, created_at) VALUES (@id, @hotel_id, @author, @source, @topics, @text, @created_at)`
+    `INSERT INTO reviews (id, hotel_id, author, source, topics, text, created_at, language, translation) VALUES (@id, @hotel_id, @author, @source, @topics, @text, @created_at, @language, @translation)`
   );
   const insertUser = db.prepare(`INSERT OR IGNORE INTO users (id, phone, created_at) VALUES (@id, @phone, @created_at)`);
   const insertOrder = db.prepare(
@@ -299,16 +299,22 @@ function main() {
           topics: JSON.stringify(perReviewTopics[i]),
           text: r.reviewText!.trim(),
           created_at: r.submittedAt,
+          language: "zh",
+          translation: null,
         });
       });
 
       console.log(`  ${h.hotelName}: ${hotelReviews.length} 条真实中文评论, 标签=${deriveHotelTags(perReviewTopics).join("/") || "(无)"}`);
     }
 
+    const translations = loadTranslations(); // 其他语言评论的中文译文（T2.5）
     for (const entry of APIFY_HOTELS) {
       const raw: RawApifyReview[] = JSON.parse(fs.readFileSync(path.join(APIFY_DATA_DIR, entry.file), "utf-8"));
-      const hotelReviews = raw.filter(isImportableApifyReview);
-      const perReviewTopics = hotelReviews.map(deriveApifyReviewTopics);
+      const hotelReviews = raw.filter((r) => isImportableApifyReview(r, translations));
+      // 酒店标签和设施按中文关键词推导，只用中文评论算：外语评论里没有这些中文词，
+      // 算进分母会把"四合院""早餐好"这类标签稀释掉（T2.5 对照 seed 时发现）
+      const zhReviews = hotelReviews.filter((r) => r.language === "zh");
+      const perReviewTopics = zhReviews.map(deriveApifyReviewTopics);
       const textTags = deriveHotelTags(perReviewTopics);
       const qualityTags = deriveApifyHotelQualityTags(raw[0]?.aggregateReviewSubScore ?? []);
       const tags = [...textTags, ...qualityTags.filter((t) => !textTags.includes(t))].slice(0, 8);
@@ -320,15 +326,15 @@ function main() {
         stars: entry.stars,
         base_price: entry.base_price,
         tags: JSON.stringify(tags),
-        amenities: JSON.stringify(deriveAmenities(hotelReviews.map((r) => r.content ?? ""))),
+        amenities: JSON.stringify(deriveAmenities(zhReviews.map((r) => r.content ?? ""))),
         photo_query: entry.photo_query,
         real_image_url: REAL_IMAGE_URL_BY_APIFY_HOTEL_ID[entry.hotelId] ?? null,
       });
 
-      hotelReviews.forEach((r) => insertReview.run(apifyReviewRow(entry.hotelId, r)));
+      hotelReviews.forEach((r) => insertReview.run(apifyReviewRow(entry.hotelId, r, translations)));
 
       apifyReviewCount += hotelReviews.length;
-      console.log(`  ${entry.name}: ${hotelReviews.length} 条真实评论（中文+英文）, 标签=${tags.join("/") || "(无)"}`);
+      console.log(`  ${entry.name}: ${hotelReviews.length} 条真实评论（中文、英文和有译文的其他语言）, 标签=${tags.join("/") || "(无)"}`);
     }
 
     const userId = "ctrip-demo-user";

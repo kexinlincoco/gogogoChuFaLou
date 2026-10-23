@@ -4,14 +4,27 @@
  * scripts/import-english-reviews.ts（增量导入）共用这里，保证两种方式
  * 得到的评论 ID 和内容完全一致——标准答案（eval/level1/gold）按评论 ID 对应。
  */
+import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const APIFY_DATA_DIR = path.join(__dirname, "..", "..", "..", "data", "apify-data");
 
-/** 导入哪些语言。2026-10-21 起加入英文（I-26）；其他语言暂不导入，页面上用户可能看不懂。 */
+/** 不需要翻译、直接导入的语言（中文、英文；I-26）。其他语言要在译文文件里有中文译文才导入（T2.5）。 */
 export const IMPORTED_LANGUAGES = ["zh", "en"];
+
+/** 其他语言评论的中文译文（scripts/translate-reviews.ts 生成），按评论 ID 索引。 */
+export const TRANSLATIONS_FILE = path.join(__dirname, "..", "..", "..", "data", "apify-translations.json");
+export interface Translation {
+  language: string;
+  zh: string;
+  model: string;
+  translatedAt: string;
+}
+export function loadTranslations(): Record<string, Translation> {
+  return fs.existsSync(TRANSLATIONS_FILE) ? JSON.parse(fs.readFileSync(TRANSLATIONS_FILE, "utf-8")) : {};
+}
 
 // ---------------------------------------------------------------------------
 // data/apify-data/*.json — 7 more Beijing hotels, one file per hotel, no
@@ -154,12 +167,14 @@ export function cleanApifyNickname(raw: string | null): string {
   return cleaned || "匿名住客";
 }
 
-export function isImportableApifyReview(r: RawApifyReview): boolean {
-  return IMPORTED_LANGUAGES.includes(r.language) && !!r.content && r.content.trim().length >= 5;
+export function isImportableApifyReview(r: RawApifyReview, translations: Record<string, Translation> = {}): boolean {
+  if (!r.content || r.content.trim().length < 5) return false;
+  return IMPORTED_LANGUAGES.includes(r.language) || !!translations[`apify-${r.id}`];
 }
 
 /** 一条 Apify 评论写进 reviews 表的那一行（seed 和增量导入用同一个函数）。 */
-export function apifyReviewRow(hotelId: string, r: RawApifyReview) {
+export function apifyReviewRow(hotelId: string, r: RawApifyReview, translations: Record<string, Translation> = {}) {
+  const t = translations[`apify-${r.id}`];
   return {
     id: `apify-${r.id}`,
     hotel_id: hotelId,
@@ -168,5 +183,7 @@ export function apifyReviewRow(hotelId: string, r: RawApifyReview) {
     topics: JSON.stringify(deriveApifyReviewTopics(r)),
     text: r.content!.trim(),
     created_at: r.createDate.replace(" ", "T"),
+    language: r.language,
+    translation: IMPORTED_LANGUAGES.includes(r.language) ? null : (t?.zh ?? null),
   };
 }

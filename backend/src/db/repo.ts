@@ -26,6 +26,8 @@ function rowToReview(row: ReviewRow): Review {
     topics: JSON.parse(row.topics),
     text: row.text,
     created_at: row.created_at,
+    language: row.language,
+    translation: row.translation,
   };
 }
 
@@ -144,13 +146,14 @@ export function topReviewTopics(hotelId: string, preferKeywords: string[] = []):
   return [{ topic, count, total: reviews.length, pct: Math.round((count / reviews.length) * 100) }];
 }
 
-export function insertAiCollectedReview(review: Omit<Review, "id" | "created_at">): Review {
+// 演示反馈由中文界面填写，语言记为 zh（列默认值），没有译文
+export function insertAiCollectedReview(review: Omit<Review, "id" | "created_at" | "language" | "translation">): Review {
   const id = nanoid(10);
   const created_at = new Date().toISOString();
   db.prepare(
     `INSERT INTO reviews (id, hotel_id, author, source, topics, text, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)`
   ).run(id, review.hotel_id, review.author, review.source, JSON.stringify(review.topics), review.text, created_at);
-  return { ...review, id, created_at };
+  return { ...review, id, created_at, language: "zh", translation: null };
 }
 
 export function findUserByPhone(phone: string): User | null {

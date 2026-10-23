@@ -17,7 +17,9 @@ CREATE TABLE IF NOT EXISTS reviews (
   source       TEXT NOT NULL CHECK (source IN ('user','ai_collected')),
   topics       TEXT NOT NULL,       -- JSON array of keywords this sentence supports
   text         TEXT NOT NULL,
-  created_at   TEXT NOT NULL
+  created_at   TEXT NOT NULL,
+  language     TEXT NOT NULL DEFAULT 'zh',  -- 原文语言：zh / en / ru / it …
+  translation  TEXT                          -- 非中英文评论的中文机器翻译（T2.5），中文和英文为 NULL
 );
 
 -- name is the account's locked-in display name (set on first login with this
