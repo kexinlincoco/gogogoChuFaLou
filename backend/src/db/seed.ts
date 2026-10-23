@@ -26,10 +26,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { db } from "./client.js";
+import { APIFY_DATA_DIR, APIFY_HOTELS, apifyReviewRow, deriveApifyReviewTopics, isImportableApifyReview, type RawApifyReview } from "./apifySource.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, "..", "..", "..", "data");
-const APIFY_DATA_DIR = path.join(DATA_DIR, "apify-data");
 
 interface RawHotelSummary {
   hotelId: number;
@@ -182,38 +182,6 @@ function authorLabel(reviewer: RawReview["reviewer"]): string {
   return reviewer?.tier || "匿名住客";
 }
 
-// ---------------------------------------------------------------------------
-// data/apify-data/*.json — 7 more Beijing hotels, one file per hotel, no
-// hotel-level metadata file (unlike the Kaggle dataset above), so hotel
-// identity/positioning is hand-supplied here from the platform's own
-// hotelId + the filename. Field shapes differ from RawReview (this is a
-// different scraper): `content` not `reviewText`, `travelTypeText` in
-// English, `rating` on a 0–10 scale, no per-review sub-ratings (only a
-// hotel-level aggregate repeated on every row — used for tags, not
-// per-review topics, so it never overstates how many reviews actually
-// mention it).
-// ---------------------------------------------------------------------------
-interface RawApifyReview {
-  id: number;
-  language: string;
-  content: string | null;
-  createDate: string;
-  rating: number; // 0-10
-  travelTypeText: string | null;
-  roomTypeName: string | null;
-  userNickName: string | null;
-  hotelId: string;
-  aggregateReviewSubScore: { name: string; score: number }[];
-}
-
-interface ApifyHotelManifestEntry {
-  file: string;
-  hotelId: string;
-  name: string;
-  stars: number;
-  base_price: number;
-  photo_query: string;
-}
 
 // Hand-verified real photos. Checked one-by-one against each specific
 // property (fetched the actual listing page, confirmed the image genuinely
@@ -254,104 +222,6 @@ const REAL_IMAGE_URL_BY_APIFY_HOTEL_ID: Record<string, string> = {
   "822126": "https://ak-d.tripcdn.com/images/0204212000sotmz4dD32C_R_960_660_R5_D.jpg",
 };
 
-// Positioning (stars/base_price) is a placeholder judgment call from each
-// brand's known market tier — see file-level comment; the dataset itself
-// carries no stars/price. City is Beijing for all seven (source folder is
-// Beijing-only).
-const APIFY_HOTELS: ApifyHotelManifestEntry[] = [
-  {
-    file: "HanTing_Hotel_(Qianmen St).json",
-    hotelId: "130505294",
-    name: "汉庭酒店(前门店)",
-    stars: 3,
-    base_price: 320,
-    photo_query: "beijing,budget hotel room",
-  },
-  {
-    file: "Novotel_Beijing_Peace.json",
-    hotelId: "385117",
-    name: "诺富特北京和平宾馆",
-    stars: 4,
-    base_price: 680,
-    photo_query: "beijing,business hotel",
-  },
-  {
-    file: "Kerry_Hotel_Beijing(北京嘉里大酒店).json",
-    hotelId: "347422",
-    name: "北京嘉里大酒店",
-    stars: 5,
-    base_price: 1580,
-    photo_query: "beijing,luxury hotel pool",
-  },
-  {
-    file: "Renaissance_Beijing_Capital_Hotel.json",
-    hotelId: "374778",
-    name: "Renaissance Beijing Capital Hotel",
-    stars: 5,
-    base_price: 1380,
-    photo_query: "beijing,upscale hotel",
-  },
-  {
-    file: "Peking_Yard_Siheyuan.json",
-    hotelId: "5237880",
-    name: "北平大院四合院客栈",
-    stars: 3,
-    base_price: 580,
-    photo_query: "beijing,siheyuan courtyard",
-  },
-  {
-    file: "Ancient_City_Old_Courtyard(Cours et Pavillons).json",
-    hotelId: "2086765",
-    name: "古城老院子客栈",
-    stars: 3,
-    base_price: 520,
-    photo_query: "beijing,hutong courtyard",
-  },
-  {
-    file: "Forbidden_City_Hutong_Courtyard_International Hotel.json",
-    hotelId: "822126",
-    name: "皇城根胡同四合院国际酒店",
-    stars: 3,
-    base_price: 560,
-    photo_query: "beijing,hutong courtyard hotel",
-  },
-];
-
-const APIFY_TRAVEL_TYPE_TO_TAG: Record<string, string> = {
-  "Business traveler": "商务出行",
-  Family: "亲子友好",
-  Couple: "情侣推荐",
-  "Solo traveler": "独自旅行",
-  "Traveling with friends": "朋友出游",
-};
-
-// Only categories with real supporting text in this dataset (checked
-// against the actual review corpus, see PR notes) — no "安静"/"海景" here
-// because those strings simply don't occur in these 962 reviews, and this
-// codebase's whole point is to never fabricate a match.
-const APIFY_TEXT_KEYWORD_TO_TAG: [RegExp, string][] = [
-  [/四合院/, "四合院"],
-  [/胡同/, "胡同"],
-  [/游泳池|泳池/, "泳池"],
-  [/健身房/, "健身房"],
-  [/早餐/, "早餐好"],
-  [/性价比|划算/, "性价比"],
-  [/位置好|地段好|位置|地段/, "位置好"],
-  [/交通方便|交通便利|地铁/, "近地铁"],
-  [/孩子|小孩|带娃/, "亲子友好"],
-];
-
-function deriveApifyReviewTopics(review: RawApifyReview): string[] {
-  const topics = new Set<string>();
-  const text = review.content ?? "";
-  for (const [re, tag] of APIFY_TEXT_KEYWORD_TO_TAG) {
-    if (re.test(text)) topics.add(tag);
-  }
-  const travelTag = APIFY_TRAVEL_TYPE_TO_TAG[review.travelTypeText ?? ""];
-  if (travelTag) topics.add(travelTag);
-  if (review.roomTypeName && /大床|[Kk]ing/.test(review.roomTypeName)) topics.add("大床房");
-  return [...topics];
-}
 
 // Hotel-level quality tags from the dataset's own aggregate sub-scores
 // (0-10 scale, same figure repeated on every row for that hotel — a real
@@ -370,14 +240,6 @@ function deriveApifyHotelQualityTags(subScores: { name: string; score: number }[
   return tags;
 }
 
-function cleanApifyNickname(raw: string | null): string {
-  // The scraper interleaves U+200D zero-width joiners between every letter
-  // of already-public display names (anti-scraping artifact, not extra
-  // anonymization) — stripping them just recovers the plain text the
-  // platform itself displays.
-  const cleaned = (raw ?? "").replace(/‍/g, "").trim();
-  return cleaned || "匿名住客";
-}
 
 const DEMO_USER_PHONE = "13800000000";
 
@@ -445,7 +307,7 @@ function main() {
 
     for (const entry of APIFY_HOTELS) {
       const raw: RawApifyReview[] = JSON.parse(fs.readFileSync(path.join(APIFY_DATA_DIR, entry.file), "utf-8"));
-      const hotelReviews = raw.filter((r) => r.language === "zh" && r.content && r.content.trim().length >= 5);
+      const hotelReviews = raw.filter(isImportableApifyReview);
       const perReviewTopics = hotelReviews.map(deriveApifyReviewTopics);
       const textTags = deriveHotelTags(perReviewTopics);
       const qualityTags = deriveApifyHotelQualityTags(raw[0]?.aggregateReviewSubScore ?? []);
@@ -463,20 +325,10 @@ function main() {
         real_image_url: REAL_IMAGE_URL_BY_APIFY_HOTEL_ID[entry.hotelId] ?? null,
       });
 
-      hotelReviews.forEach((r, i) => {
-        insertReview.run({
-          id: `apify-${r.id}`,
-          hotel_id: entry.hotelId,
-          author: cleanApifyNickname(r.userNickName),
-          source: "user",
-          topics: JSON.stringify(perReviewTopics[i]),
-          text: r.content!.trim(),
-          created_at: r.createDate.replace(" ", "T"),
-        });
-      });
+      hotelReviews.forEach((r) => insertReview.run(apifyReviewRow(entry.hotelId, r)));
 
       apifyReviewCount += hotelReviews.length;
-      console.log(`  ${entry.name}: ${hotelReviews.length} 条真实中文评论, 标签=${tags.join("/") || "(无)"}`);
+      console.log(`  ${entry.name}: ${hotelReviews.length} 条真实评论（中文+英文）, 标签=${tags.join("/") || "(无)"}`);
     }
 
     const userId = "ctrip-demo-user";

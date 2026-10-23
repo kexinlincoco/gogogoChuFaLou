@@ -80,11 +80,38 @@ export function expandNeedTerms(keyword: string): string[] {
   return [...terms];
 }
 
+/**
+ * English wordings per need (I-26, English reviews imported 2026-10-21). Kept
+ * as regex sources, matched case-insensitively as whole words: plain
+ * substring matching would hit "hair" inside "chair", and "hair dryer" is
+ * equipment, not a hygiene remark. Shared verbatim with frontend
+ * lib/highlight.tsx — change both together.
+ */
+const NEED_PATTERNS_EN: Record<string, string[]> = {
+  干净: [
+    "\\bclean(?:s|ed|er|ing|liness|ly)?\\b", "\\bunclean(?:ed)?\\b", "\\bdirt(?:y|iness)?\\b", "\\bfilth(?:y)?\\b",
+    "\\bhygien(?:e|ic)\\b", "\\b(?:un)?tidy\\b", "\\bspotless\\b", "\\bimmaculate(?:ly)?\\b",
+    "\\bsmel(?:l|ls|ly|led|ling|t)\\b", "\\bodou?rs?\\b", "\\bstink(?:s|y|ing)?\\b", "\\bmusty\\b", "\\bmou?ldy?\\b",
+    "\\bhairs?\\b(?!\\s*-?dryer)", "\\bstain(?:s|ed)?\\b", "\\bdusty?\\b",
+    "\\b(?:cock)?roach(?:es)?\\b", "\\bbed ?bugs?\\b", "\\bbugs?\\b", "\\binsects?\\b", "\\bmosquito(?:e?s)?\\b",
+    "\\bgarbage\\b", "\\btrash\\b",
+  ],
+};
+
+/** English patterns for whatever need the keyword refers to (same need lookup as expandNeedTerms). */
+export function needPatternsEn(keyword: string): string[] {
+  const k = toSimplified(keyword.trim());
+  return Object.entries(NEED_PATTERNS_EN)
+    .filter(([need]) => keywordMatchesTag(k, need) || (NEED_TERMS[need] ?? []).some((w) => k.includes(w)))
+    .flatMap(([, patterns]) => patterns);
+}
+
 /** Whether a review is evidence for a user's need: a non-rating-derived topic
  * matches it, or the text contains the need or one of its related wordings.
  * The single definition shared by retrieval, detail sorting and topic stats. */
 export function reviewMentions(review: { topics: string[]; text: string }, keyword: string): boolean {
   if (review.topics.some((t) => !RATING_DERIVED_TOPICS.has(t) && keywordMatchesTag(keyword, t))) return true;
   const text = toSimplified(review.text);
-  return expandNeedTerms(keyword).some((term) => text.includes(term));
+  if (expandNeedTerms(keyword).some((term) => text.includes(term))) return true;
+  return needPatternsEn(keyword).some((p) => new RegExp(p, "i").test(review.text));
 }

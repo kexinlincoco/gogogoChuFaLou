@@ -19,8 +19,8 @@
 
 ## 关键限制
 
-- 数据：11 家酒店、1,382 条历史评论（北京 8 家，杭州、澳门、纽约各 1 家），不是实时数据
-- 检索用字面/标签匹配，不是语义检索，识别不了否定（"不安静"）
+- 数据：11 家酒店、1,504 条评论（北京 8 家，杭州、澳门、纽约各 1 家）。原始数据 1,762 条（Kaggle 800 + Apify 962），保留中文和北京 7 家酒店的英文，筛掉 258 条：其他语言 164 条，以及北京以外酒店的英文 94 条；是历史数据，不是实时数据
+- 产品里的检索用字面匹配（已排除按评分推导的标签；"干净"有中英文相关词表），不是语义检索，判断不了好评还是差评。模型判断目前只在评测脚本里用，还没接入产品（I-25）
 - 对话依赖 OpenAI（`gpt-5-mini`，Key 放在 `backend/.env`）；筛选和订单不依赖模型
 - 登录固定验证码 `123456`，没有真实支付和库存
 - ⚠️ **不要随手运行 `npm run seed`**：它会清空并重建整个数据库
@@ -44,7 +44,8 @@ cd frontend && npm run dev     # :5173，/api 代理到 8787
 | 候选打分、排序、放宽预算 | `chatEngine.ts` 的 `scoreHotel`、`matchHotels` | `HotelCard.tsx`、`HotelWaterfall.tsx` |
 | 评论检索（给摘要用） | `services/retrieval.ts` 的 `retrieveEvidence` | — |
 | 推荐理由、摘要生成 | `ai.ts` 的 `generateRecommendationReasons`、`introduceRecommendations` | — |
-| 判断评论是否和需求相关（繁简统一、相关说法、排除按评分推导的标签） | `lib/textMatch.ts` 的 `reviewMentions`、`NEED_TERMS`、`RATING_DERIVED_TOPICS` | `lib/highlight.tsx`（前端高亮，两边逻辑要保持一致） |
+| 判断评论是否和需求相关（繁简统一、中英文相关说法、排除按评分推导的标签） | `lib/textMatch.ts` 的 `reviewMentions`、`NEED_TERMS`（中文）、`NEED_PATTERNS_EN`（英文，整词、不分大小写）、`RATING_DERIVED_TOPICS` | `lib/highlight.tsx`（前端高亮，两边逻辑要保持一致） |
+| 导入评论数据 | `db/apifySource.ts`（北京 7 家的清单和评论处理规则，下面两个共用）、`db/seed.ts`（清空后全量重建，⚠️ 会清空数据库）、`backend/scripts/import-english-reviews.ts`（增量导入英文，默认只预览，`--apply` 才写入并先备份） | — |
 | 软需求评测（第 1 级验证） | `backend/scripts/lib/cleanliness.ts`（"干净"的标注规则，人和模型共用）；`eval-level1.ts`（全部评论 + 每家酒店结论 + 详情页排序检查，`--model`、`--out`、`--reuse`）；`eval-gold.ts`（对照标准答案、比较模型）。结果在 `eval/level1/`，标准答案在 `eval/level1/gold/` | — |
 | 评论原文弹窗 | — | `EvidenceModal.tsx` |
 | 手动筛选 | `routes/hotels.ts`（`GET /`）→ `db/repo.ts` 的 `listHotels` | `FilterScreen.tsx` |
@@ -93,3 +94,4 @@ cd frontend && npm run dev     # :5173，/api 代理到 8787
 - 找代码先查上面的对照表，不要全仓扫描
 - 工作结束时更新 PROJECT_STATUS.md；发现或解决问题时更新 ISSUE_TRACKER.md（用 I-xx 编号）；做出产品决策时追加到 DECISION_LOG.md（用 D-xx 编号），再同步 PRD
 - 新增功能或移动文件时，同步更新本文件的对照表
+- 往项目文档（STATUS、ISSUE_TRACKER、DECISION_LOG、PRD、CLAUDE.md、eval/ 下的文档）里加任何内容之前，先把要改的文件、位置和具体内容给用户确认，确认后再写入

@@ -1,0 +1,175 @@
+{
+  "model": "gpt-5-mini",
+  "run": 2,
+  "guide": "你在给酒店评论做\"干净\"这一个需求的标注。把每条评论拆成若干条观点，每条观点是（对象，态度，问题类型，原文）。\n\n【\"干净\"的范围】酒店提供给住客的环境是否干净：清洁、卫生、整洁、气味（烟味、霉味、臭味、异味都算不干净）、毛发污渍、虫害，以及公共区域有杂物、落叶、柳絮、垃圾没清理（算清洁不到位，问题类型填\"其他\"）。\n【不算\"干净\"】打扫的频率或服务态度（\"每天都来打扫\"是服务）、设施新旧（\"设施老旧\"不等于脏）、房间大小、隔音、舒适（\"床品很软\"\"住得很舒服\"\"睡得香\"）、潮湿（\"房间很潮湿\"\"床单是潮的\"，本身不算；但有霉味、潮味仍算气味·不干净）、洗护用品香不香（\"沐浴露很好闻\"）、酒店外面的街道巷子、评分高但没写原因。\n\n【对象，6 选 1】\n- 房间：房间整体、地面、桌面、窗台；\"酒店很干净\"\"卫生很好\"等没说是哪里的，也归房间\n- 床品：床单、被子、被罩、枕头（\"被子很香\"算床品·好评；\"床很软\"\"睡得香\"是舒适，不算）\n- 卫生间：马桶、淋浴、浴室、洗漱台、地漏\n- 公共区域：大堂、走廊、院子、泳池、电梯、餐厅（\"院子打理得很好\"记为 公共区域·好评）\n- 用品：毛巾、浴巾、杯具、水壶、拖鞋\n- 整体（笼统）：只有正面的环境评价（\"环境好\"\"环境也行\"\"环境安静优雅\"），全文没有具体提到卫生或任何对象干不干净时，记为 整体（笼统）·好评，generic=true\n\n【规则】\n1. 同一条评论谈到不同对象，拆成多条观点，各判各的。\n2. 补救不能抵消问题：房间有烟味、后来换了房 → 仍记\"房间，差评，气味\"；换房属于服务，不记。\n3. 否定掉负面算好评：\"没有一点异味\" → 好评。\n4. 比较句按结论判：\"卫生比我想的要好\" → 好评。\n5. 否定句是差评：\"不太干净\"\"不算干净\" → 差评。\n6. 差评填问题类型（气味 / 毛发污渍 / 虫害 / 其他），好评填\"无\"。水垢、灰尘、污渍算毛发污渍。\n7. quote 逐字摘抄原文，不要改写、不要繁简转换。\n8. 住客自己在入住期间弄脏的（如\"孩子流鼻血弄到床上\"）不算卫生问题，不记；只有酒店提供的环境本身不干净才算。\n9. 有具体说法看具体说法：评论里只要具体提到了卫生或某个对象干不干净，就按具体说法记，不再额外记\"整体（笼统）\"。例：\"環境不錯，就是衞生不太乾淨\" → 只记 房间·差评。\n10. 没有谈到干净的评论，mentions 为空数组。\n11. 笼统的正面评价也算干净，但 generic=true：\n   - 算：对环境或院子整体的正面描述，包括氛围和安静（\"环境安静\"\"院落清幽雅致\"\"小院很温馨\"\"古色古香\"）；对象的笼统好评（\"床品超赞\"\"杯具摆得整整齐齐\"\"院子打理得好\"）\n   - 归类：院子、小院、院落 → 公共区域；房间（\"房间环境很好\"）→ 房间；只说\"环境\" → 整体（笼统）\n   - 不算（不记）：设施的大小或有没有（\"巨大浴缸\"\"空间很大\"\"有天台、露台\"）、房间装饰风格（\"布置温馨\"\"简约雅致\"）、舒适（\"睡得香\"\"床很软\"）、整体满意（\"很满意\"）、酒店外面的环境（\"周边安静\"）\n   - 具体说了干净（\"床单洁白如新\"\"楼梯扶手擦得锃亮\"\"卫生很好\"）时 generic=false",
+  "calls": [
+    {
+      "requestId": "chatcmpl-EcEp3Cdp5S42RqnZYZHibqJTejNvT",
+      "requestedModel": "gpt-5-mini",
+      "returnedModel": "gpt-5-mini-2025-08-07",
+      "startedAt": "2026-10-23T19:02:29.019Z",
+      "ms": 15770,
+      "inputTokens": 2683,
+      "outputTokens": 1843,
+      "reviewIds": [
+        "apify-2080342212",
+        "apify-1997432308",
+        "apify-2028205401",
+        "apify-2013017997",
+        "apify-1810587301",
+        "apify-2003419620",
+        "apify-1994061836",
+        "apify-1815178046",
+        "apify-1800789502",
+        "apify-1832235414",
+        "apify-1963504943",
+        "apify-2028560424",
+        "apify-1986398157",
+        "apify-1862923604",
+        "apify-1817679260"
+      ]
+    },
+    {
+      "requestId": "chatcmpl-EcEp3sxAXQW4jxBNrE4GErGmB787X",
+      "requestedModel": "gpt-5-mini",
+      "returnedModel": "gpt-5-mini-2025-08-07",
+      "startedAt": "2026-10-23T19:02:29.019Z",
+      "ms": 5183,
+      "inputTokens": 2014,
+      "outputTokens": 537,
+      "reviewIds": [
+        "apify-1798518748",
+        "apify-2054668636",
+        "apify-1891391914",
+        "apify-1554972360",
+        "apify-1782094228"
+      ]
+    }
+  ],
+  "labels": {
+    "apify-1798518748": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "Amenities were good, as was the cleanliness."
+      }
+    ],
+    "apify-2054668636": [],
+    "apify-1891391914": [],
+    "apify-1554972360": [],
+    "apify-1782094228": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "The room was spacious, beautifully maintained, and offered breathtaking views that made every morning special."
+      }
+    ],
+    "apify-2080342212": [
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "气味",
+        "generic": false,
+        "quote": "Asked for a non-smoking room, but didn't get one, very smelly room of stale smoke."
+      }
+    ],
+    "apify-1997432308": [
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "气味",
+        "generic": false,
+        "quote": "Good hotel but one wing of ventilation is outdated and loud and smells dump the in the room (very strong)"
+      }
+    ],
+    "apify-2028205401": [
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "气味",
+        "generic": false,
+        "quote": "The room was small, cramped, windowless (apart from a skylight) and smelt damp."
+      }
+    ],
+    "apify-2013017997": [],
+    "apify-1810587301": [
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "其他",
+        "generic": false,
+        "quote": "They never change the dirty tea cup and never clean up the room."
+      },
+      {
+        "object": "用品",
+        "polarity": "negative",
+        "issue": "毛发污渍",
+        "generic": false,
+        "quote": "They never change the dirty tea cup and never clean up the room."
+      }
+    ],
+    "apify-2003419620": [
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "其他",
+        "generic": false,
+        "quote": "Very dirty and unpleasant stay."
+      }
+    ],
+    "apify-1994061836": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "The room is spacious, comfortable, and very clean."
+      }
+    ],
+    "apify-1815178046": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "The room was spotless, quiet, and very comfortable."
+      }
+    ],
+    "apify-1800789502": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "Great location, tidy room and friendly staff."
+      }
+    ],
+    "apify-1832235414": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "Very pretty and nice hotel, clean and smells good."
+      }
+    ],
+    "apify-1963504943": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "The hotel was very clean, and the flower decorations were amazing."
+      }
+    ],
+    "apify-2028560424": [],
+    "apify-1986398157": [],
+    "apify-1862923604": [],
+    "apify-1817679260": []
+  },
+  "failed": []
+}

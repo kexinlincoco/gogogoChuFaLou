@@ -103,7 +103,9 @@ function summarize(hotel: string, rows: Row[]): HotelSummary {
     }
     const share = withNegative / relevant.length;
     verdict = share < SPLIT_LOW ? "多数评价干净" : share > SPLIT_HIGH ? "多数评价不干净" : "评价有分歧";
-    verdict += `（${relevant.length} 条相关评论，${withNegative} 条含差评，占 ${Math.round(share * 100)}%）`;
+    // D-10：只有笼统好评（没有具体说到干净）的评论单独统计
+    const genericOnly = relevant.filter((r) => r.mentions!.every((m) => m.polarity === "positive" && (m.generic || m.object === "整体（笼统）"))).length;
+    verdict += `（${relevant.length} 条相关评论，其中 ${genericOnly} 条只是笼统好评；${withNegative} 条含差评，占 ${Math.round(share * 100)}%）`;
   }
   return { hotel, relevant: relevant.length, withNegative, byObject, flags, verdict };
 }

@@ -1,0 +1,666 @@
+{
+  "model": "gpt-5.5",
+  "run": 2,
+  "guide": "你在给酒店评论做\"干净\"这一个需求的标注。把每条评论拆成若干条观点，每条观点是（对象，态度，问题类型，原文）。\n\n【\"干净\"的范围】酒店提供给住客的环境是否干净：清洁、卫生、整洁、气味（烟味、霉味、臭味、异味都算不干净）、毛发污渍、虫害，以及公共区域有杂物、落叶、柳絮、垃圾没清理（算清洁不到位，问题类型填\"其他\"）。\n【不算\"干净\"】打扫的频率或服务态度（\"每天都来打扫\"是服务）、设施新旧（\"设施老旧\"不等于脏）、房间大小、隔音、舒适（\"床品很软\"\"住得很舒服\"\"睡得香\"）、潮湿（\"房间很潮湿\"\"床单是潮的\"，本身不算；但有霉味、潮味仍算气味·不干净）、洗护用品香不香（\"沐浴露很好闻\"）、酒店外面的街道巷子、评分高但没写原因。\n\n【对象，6 选 1】\n- 房间：房间整体、地面、桌面、窗台；\"酒店很干净\"\"卫生很好\"等没说是哪里的，也归房间\n- 床品：床单、被子、被罩、枕头（\"被子很香\"算床品·好评；\"床很软\"\"睡得香\"是舒适，不算）\n- 卫生间：马桶、淋浴、浴室、洗漱台、地漏\n- 公共区域：大堂、走廊、院子、泳池、电梯、餐厅（\"院子打理得很好\"记为 公共区域·好评）\n- 用品：毛巾、浴巾、杯具、水壶、拖鞋\n- 整体（笼统）：只有正面的环境评价（\"环境好\"\"环境也行\"\"环境安静优雅\"），全文没有具体提到卫生或任何对象干不干净时，记为 整体（笼统）·好评，generic=true\n\n【规则】\n1. 同一条评论谈到不同对象，拆成多条观点，各判各的。\n2. 补救不能抵消问题：房间有烟味、后来换了房 → 仍记\"房间，差评，气味\"；换房属于服务，不记。\n3. 否定掉负面算好评：\"没有一点异味\" → 好评。\n4. 比较句按结论判：\"卫生比我想的要好\" → 好评。\n5. 否定句是差评：\"不太干净\"\"不算干净\" → 差评。\n6. 差评填问题类型（气味 / 毛发污渍 / 虫害 / 其他），好评填\"无\"。水垢、灰尘、污渍算毛发污渍。\n7. quote 逐字摘抄原文，不要改写、不要繁简转换。\n8. 住客自己在入住期间弄脏的（如\"孩子流鼻血弄到床上\"）不算卫生问题，不记；只有酒店提供的环境本身不干净才算。\n9. 有具体说法看具体说法：评论里只要具体提到了卫生或某个对象干不干净，就按具体说法记，不再额外记\"整体（笼统）\"。例：\"環境不錯，就是衞生不太乾淨\" → 只记 房间·差评。\n10. 没有谈到干净的评论，mentions 为空数组。\n11. 笼统的正面评价也算干净，但 generic=true：\n   - 算：对环境或院子整体的正面描述，包括氛围和安静（\"环境安静\"\"院落清幽雅致\"\"小院很温馨\"\"古色古香\"）；对象的笼统好评（\"床品超赞\"\"杯具摆得整整齐齐\"\"院子打理得好\"）\n   - 归类：院子、小院、院落 → 公共区域；房间（\"房间环境很好\"）→ 房间；只说\"环境\" → 整体（笼统）\n   - 不算（不记）：设施的大小或有没有（\"巨大浴缸\"\"空间很大\"\"有天台、露台\"）、房间装饰风格（\"布置温馨\"\"简约雅致\"）、舒适（\"睡得香\"\"床很软\"）、整体满意（\"很满意\"）、酒店外面的环境（\"周边安静\"）\n   - 具体说了干净（\"床单洁白如新\"\"楼梯扶手擦得锃亮\"\"卫生很好\"）时 generic=false",
+  "calls": [
+    {
+      "requestId": "chatcmpl-Ebcudqb7VtLRio8tkFrzfLAsVZJvf",
+      "requestedModel": "gpt-5.5",
+      "returnedModel": "gpt-5.5-2026-04-23",
+      "startedAt": "2026-10-22T02:33:42.643Z",
+      "ms": 7969,
+      "inputTokens": 3287,
+      "outputTokens": 851,
+      "reviewIds": [
+        "apify-1837685479",
+        "apify-2065860889",
+        "apify-1723127141",
+        "apify-1598115443",
+        "apify-1985881229",
+        "apify-2043000699",
+        "apify-2002396377",
+        "apify-1533128057",
+        "apify-2017963503",
+        "apify-1579832943",
+        "1755095899",
+        "apify-1999862121",
+        "apify-1928601427",
+        "apify-1852575433",
+        "apify-1756090703"
+      ]
+    },
+    {
+      "requestId": "chatcmpl-EbcudJHLiriQWQP40wdPzdCjI00yl",
+      "requestedModel": "gpt-5.5",
+      "returnedModel": "gpt-5.5-2026-04-23",
+      "startedAt": "2026-10-22T02:33:42.644Z",
+      "ms": 6345,
+      "inputTokens": 3077,
+      "outputTokens": 634,
+      "reviewIds": [
+        "1841029923",
+        "apify-1717559161",
+        "apify-1996393233",
+        "1891147597",
+        "apify-1840722237",
+        "apify-2053682901",
+        "1890999121",
+        "1961529155",
+        "apify-1837833943",
+        "apify-2032209703",
+        "apify-2028681409",
+        "1805679423",
+        "apify-2082808197",
+        "apify-2064050729",
+        "1991741241"
+      ]
+    },
+    {
+      "requestId": "chatcmpl-EbcucvKsgBinuHVFs2nE6fPSUH9T2",
+      "requestedModel": "gpt-5.5",
+      "returnedModel": "gpt-5.5-2026-04-23",
+      "startedAt": "2026-10-22T02:33:42.644Z",
+      "ms": 6405,
+      "inputTokens": 2813,
+      "outputTokens": 738,
+      "reviewIds": [
+        "apify-1920457237",
+        "apify-2013592043",
+        "apify-1990539257",
+        "1965679231",
+        "apify-1837565649",
+        "1980427019",
+        "1884666665",
+        "apify-2091596951",
+        "apify-1955650101",
+        "1965067829",
+        "apify-1531079225",
+        "apify-1573502235",
+        "1915953605",
+        "apify-1647838187",
+        "apify-2042360503"
+      ]
+    },
+    {
+      "requestId": "chatcmpl-EbcucoxBHroxvwKS6Fs10RnrsmPjy",
+      "requestedModel": "gpt-5.5",
+      "returnedModel": "gpt-5.5-2026-04-23",
+      "startedAt": "2026-10-22T02:33:42.645Z",
+      "ms": 5082,
+      "inputTokens": 2811,
+      "outputTokens": 558,
+      "reviewIds": [
+        "1839242145",
+        "1786030445",
+        "1913908715",
+        "1869732511",
+        "apify-1746896797",
+        "1921364165",
+        "apify-2051175987",
+        "apify-2015917781",
+        "apify-1627024317",
+        "apify-2043037913",
+        "apify-1999764921",
+        "apify-1840710815",
+        "apify-2083324317",
+        "1921426099",
+        "1906085067"
+      ]
+    }
+  ],
+  "labels": {
+    "1755095899": [
+      {
+        "object": "整体（笼统）",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "酒店环境安静"
+      }
+    ],
+    "1786030445": [
+      {
+        "object": "整体（笼统）",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "环境安静优雅"
+      }
+    ],
+    "1805679423": [],
+    "1839242145": [],
+    "1841029923": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "酒店卫生整洁"
+      },
+      {
+        "object": "床品",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "床品干净"
+      },
+      {
+        "object": "整体（笼统）",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "环境清新"
+      }
+    ],
+    "1869732511": [],
+    "1884666665": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "房间环境很好"
+      }
+    ],
+    "1890999121": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "卫生还可以"
+      }
+    ],
+    "1891147597": [],
+    "1906085067": [],
+    "1913908715": [],
+    "1915953605": [
+      {
+        "object": "公共区域",
+        "polarity": "negative",
+        "issue": "其他",
+        "generic": false,
+        "quote": "大堂都是柳絮"
+      }
+    ],
+    "1921364165": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "房间干净舒适"
+      }
+    ],
+    "1921426099": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "房间打扫得很干净"
+      }
+    ],
+    "1961529155": [
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "气味",
+        "generic": false,
+        "quote": "房间有点烟味"
+      }
+    ],
+    "1965067829": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "环境卫生做得细致"
+      }
+    ],
+    "1965679231": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "房间整洁无异味"
+      }
+    ],
+    "1980427019": [],
+    "1991741241": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "客房干净住着舒心"
+      }
+    ],
+    "apify-1746896797": [
+      {
+        "object": "公共区域",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "小院 很温馨"
+      }
+    ],
+    "apify-2051175987": [
+      {
+        "object": "公共区域",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "小院環境安靜"
+      }
+    ],
+    "apify-2015917781": [],
+    "apify-1627024317": [
+      {
+        "object": "整体（笼统）",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "環境挺好的"
+      }
+    ],
+    "apify-2043037913": [
+      {
+        "object": "卫生间",
+        "polarity": "negative",
+        "issue": "气味",
+        "generic": false,
+        "quote": "衞生間一股尿騷味"
+      },
+      {
+        "object": "卫生间",
+        "polarity": "negative",
+        "issue": "气味",
+        "generic": false,
+        "quote": "擦了也有味道"
+      },
+      {
+        "object": "用品",
+        "polarity": "negative",
+        "issue": "毛发污渍",
+        "generic": false,
+        "quote": "水壺裡麪都是水垢"
+      },
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "其他",
+        "generic": false,
+        "quote": "這衞生環境衹能説，一言難盡啊"
+      }
+    ],
+    "apify-1999764921": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "衞生無死角"
+      }
+    ],
+    "apify-1840710815": [],
+    "apify-2083324317": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "房間很乾凈"
+      }
+    ],
+    "apify-1717559161": [],
+    "apify-1996393233": [
+      {
+        "object": "公共区域",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "院落清幽雅緻"
+      }
+    ],
+    "apify-1840722237": [],
+    "apify-2053682901": [
+      {
+        "object": "公共区域",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "鬧中取靜的寶藏小院，滿滿的古色古香韻味，青磚綠植很有氛圍感精緻感"
+      }
+    ],
+    "apify-1837833943": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "衞生做得超細緻"
+      },
+      {
+        "object": "公共区域",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "連樓梯扶手都擦得鋥亮"
+      }
+    ],
+    "apify-2032209703": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "衞生都很乾凈整潔"
+      }
+    ],
+    "apify-2028681409": [],
+    "apify-2082808197": [
+      {
+        "object": "公共区域",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "院落古雅安靜"
+      },
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "房間乾淨舒適"
+      }
+    ],
+    "apify-2064050729": [
+      {
+        "object": "整体（笼统）",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "環境安逸舒服"
+      }
+    ],
+    "apify-1920457237": [
+      {
+        "object": "床品",
+        "polarity": "negative",
+        "issue": "气味",
+        "generic": false,
+        "quote": "被子裏面一股臭味"
+      },
+      {
+        "object": "卫生间",
+        "polarity": "negative",
+        "issue": "其他",
+        "generic": false,
+        "quote": "廁所衞生也不行"
+      }
+    ],
+    "apify-2013592043": [
+      {
+        "object": "床品",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "床單被罩都是潔白如新"
+      }
+    ],
+    "apify-1990539257": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "房間乾淨舒適"
+      },
+      {
+        "object": "床品",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "床品超讚"
+      }
+    ],
+    "apify-1837565649": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "擦得乾乾淨淨"
+      }
+    ],
+    "apify-2091596951": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "酒店房間乾淨整潔"
+      }
+    ],
+    "apify-1955650101": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "衞生：不錯挺乾淨的"
+      },
+      {
+        "object": "公共区域",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "院子不太大但打理的挺好看有花花草草"
+      }
+    ],
+    "apify-1531079225": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "房間裏衞生做得特別細緻，地板、床鋪都一塵不染，連角落都清清爽爽的"
+      }
+    ],
+    "apify-1573502235": [],
+    "apify-1647838187": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "房間乾淨整潔"
+      },
+      {
+        "object": "整体（笼统）",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "環境很漂亮"
+      }
+    ],
+    "apify-2042360503": [
+      {
+        "object": "整体（笼统）",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "環境安靜"
+      }
+    ],
+    "apify-1837685479": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "木質傢俱擦得發亮"
+      },
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "衞生細節拉滿"
+      },
+      {
+        "object": "用品",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "連杯具都擺得整整齊齊"
+      }
+    ],
+    "apify-2065860889": [],
+    "apify-1723127141": [
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "其他",
+        "generic": false,
+        "quote": "衞生不是太乾淨"
+      }
+    ],
+    "apify-1598115443": [
+      {
+        "object": "床品",
+        "polarity": "negative",
+        "issue": "毛发污渍",
+        "generic": false,
+        "quote": "在枕上和枕頭上都有頭髮"
+      },
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "其他",
+        "generic": false,
+        "quote": "衛生情況實在不太好"
+      }
+    ],
+    "apify-1985881229": [
+      {
+        "object": "整体（笼统）",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "環境也行"
+      }
+    ],
+    "apify-2043000699": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "乾淨整潔"
+      }
+    ],
+    "apify-2002396377": [],
+    "apify-1533128057": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "房間衞生做得特別細緻"
+      },
+      {
+        "object": "床品",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "床單被罩潔白又平整"
+      },
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "打掃得很乾凈"
+      }
+    ],
+    "apify-2017963503": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "衞生很乾凈"
+      }
+    ],
+    "apify-1579832943": [
+      {
+        "object": "整体（笼统）",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": true,
+        "quote": "環境服務很好"
+      }
+    ],
+    "apify-1999862121": [
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "毛发污渍",
+        "generic": false,
+        "quote": "房間有頭髮"
+      },
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "虫害",
+        "generic": false,
+        "quote": "有蚊子"
+      },
+      {
+        "object": "卫生间",
+        "polarity": "negative",
+        "issue": "虫害",
+        "generic": false,
+        "quote": "水池裡跑出來蜘蛛"
+      },
+      {
+        "object": "卫生间",
+        "polarity": "negative",
+        "issue": "其他",
+        "generic": false,
+        "quote": "浴室不做衞生"
+      },
+      {
+        "object": "公共区域",
+        "polarity": "negative",
+        "issue": "虫害",
+        "generic": false,
+        "quote": "一樓喝水的地方蒼蠅蚊子亂飛"
+      }
+    ],
+    "apify-1928601427": [],
+    "apify-1852575433": [
+      {
+        "object": "房间",
+        "polarity": "negative",
+        "issue": "其他",
+        "generic": false,
+        "quote": "不太乾淨"
+      }
+    ],
+    "apify-1756090703": [
+      {
+        "object": "房间",
+        "polarity": "positive",
+        "issue": "无",
+        "generic": false,
+        "quote": "房間乾淨"
+      }
+    ]
+  },
+  "failed": []
+}

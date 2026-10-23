@@ -50,6 +50,27 @@ function expandNeedTerms(keyword: string): string[] {
   return [...terms];
 }
 
+/** Mirrors NEED_PATTERNS_EN in backend/src/lib/textMatch.ts: English
+ * wordings matched case-insensitively as whole words ("hair" must not light
+ * up inside "chair", "hair dryer" is not a hygiene remark). Change both together. */
+const NEED_PATTERNS_EN: Record<string, string[]> = {
+  干净: [
+    "\\bclean(?:s|ed|er|ing|liness|ly)?\\b", "\\bunclean(?:ed)?\\b", "\\bdirt(?:y|iness)?\\b", "\\bfilth(?:y)?\\b",
+    "\\bhygien(?:e|ic)\\b", "\\b(?:un)?tidy\\b", "\\bspotless\\b", "\\bimmaculate(?:ly)?\\b",
+    "\\bsmel(?:l|ls|ly|led|ling|t)\\b", "\\bodou?rs?\\b", "\\bstink(?:s|y|ing)?\\b", "\\bmusty\\b", "\\bmou?ldy?\\b",
+    "\\bhairs?\\b(?!\\s*-?dryer)", "\\bstain(?:s|ed)?\\b", "\\bdusty?\\b",
+    "\\b(?:cock)?roach(?:es)?\\b", "\\bbed ?bugs?\\b", "\\bbugs?\\b", "\\binsects?\\b", "\\bmosquito(?:e?s)?\\b",
+    "\\bgarbage\\b", "\\btrash\\b",
+  ],
+};
+
+function needPatternsEn(keyword: string): string[] {
+  const k = toSimplified(keyword.trim());
+  return Object.entries(NEED_PATTERNS_EN)
+    .filter(([need]) => keywordMatchesTag(k, need) || (NEED_TERMS[need] ?? []).some((w) => k.includes(w)))
+    .flatMap(([, patterns]) => patterns);
+}
+
 /** A few derived tag names are a real keyword plus a cosmetic "好" suffix
  * added for the tag pill's wording — e.g. seed.ts's
  * APIFY_TEXT_KEYWORD_TO_TAG matches literal "早餐"/"位置"/"服务好"'s "服务"
@@ -117,12 +138,13 @@ export function matchedKeywordsFor(prefer: string[], hotelTags: string[], snippe
  * inside it. */
 export function highlightKeywords(text: string, keywords: string[]): ReactNode {
   const kws = [...new Set(keywords.map((k) => toSimplified(k.trim())).filter(Boolean).flatMap(withSuffixStripped).flatMap(expandNeedTerms))].sort((a, b) => b.length - a.length);
-  if (kws.length === 0) return text;
+  const en = [...new Set(keywords.flatMap(needPatternsEn))];
+  if (kws.length === 0 && en.length === 0) return text;
   const simplified = toSimplified(text);
   // Positions only carry over when conversion kept the length; otherwise
   // fall back to matching the original text directly.
   const haystack = simplified.length === text.length ? simplified : text;
-  const re = new RegExp(kws.map(escapeRegExp).join("|"), "g");
+  const re = new RegExp([...kws.map(escapeRegExp), ...en].join("|"), "gi");
   const parts: { text: string; hit: boolean }[] = [];
   let last = 0;
   for (const m of haystack.matchAll(re)) {
