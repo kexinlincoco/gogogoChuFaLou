@@ -1,0 +1,1346 @@
+{
+ "model": "gpt-5-mini",
+ "prefix": "下周五去北京住两晚，预算 600。",
+ "runs": [
+  [
+   {
+    "cat": "直接说",
+    "phrase": "房间一定要干净",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "卫生好一点的",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "希望酒店整洁",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "干净卫生是第一位",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "要干净的",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "酒店要干净整洁一点",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "我有洁癖",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "我怕脏",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "不想有蟑螂",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "蟑螂"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "床单要干净",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "房间不要有异味",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "异味"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "讨厌房间有烟味",
+    "want": true,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [
+     "烟味"
+    ],
+    "prefer": [],
+    "got": false,
+    "ok": false
+   },
+   {
+    "cat": "间接说",
+    "phrase": "卫生间不能有头发",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "对卫生要求比较高",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "I want a clean room",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "please no bugs",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "有虫"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "hygiene is important to me",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "no smelly rooms",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "异味"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "spotless rooms please",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "卫生无所谓",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "不在意干不干净",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "干净不干净都行，主要是便宜",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "便宜"
+    ],
+    "avoid": [],
+    "prefer": [
+     "便宜"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "卫生方面没要求",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "不用太讲究卫生",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "离地铁近一点",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "近地铁"
+    ],
+    "avoid": [],
+    "prefer": [
+     "近地铁"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "要大床房",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "大床"
+    ],
+    "avoid": [],
+    "prefer": [
+     "大床"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "早餐好一点",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "早餐好"
+    ],
+    "avoid": [],
+    "prefer": [
+     "早餐好"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "安静一点",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "安静"
+    ],
+    "avoid": [],
+    "prefer": [
+     "安静"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "带孩子方便",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "亲子"
+    ],
+    "avoid": [],
+    "prefer": [
+     "亲子"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "性价比高",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "性价比"
+    ],
+    "avoid": [],
+    "prefer": [
+     "性价比"
+    ],
+    "got": false,
+    "ok": true
+   }
+  ],
+  [
+   {
+    "cat": "直接说",
+    "phrase": "房间一定要干净",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "卫生好一点的",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "希望酒店整洁",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "干净卫生是第一位",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "要干净的",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "酒店要干净整洁一点",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "我有洁癖",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "我怕脏",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "不想有蟑螂",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "蟑螂"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "床单要干净",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "房间不要有异味",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "异味"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "讨厌房间有烟味",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "烟味"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "卫生间不能有头发",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "卫生间有头发"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "对卫生要求比较高",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "I want a clean room",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "please no bugs",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "有虫"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "hygiene is important to me",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "no smelly rooms",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "异味"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "spotless rooms please",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "卫生无所谓",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "不在意干不干净",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "干净不干净都行，主要是便宜",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "便宜"
+    ],
+    "avoid": [],
+    "prefer": [
+     "便宜"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "卫生方面没要求",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "不用太讲究卫生",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "离地铁近一点",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "近地铁"
+    ],
+    "avoid": [],
+    "prefer": [
+     "近地铁"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "要大床房",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "大床"
+    ],
+    "avoid": [],
+    "prefer": [
+     "大床"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "早餐好一点",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "早餐好"
+    ],
+    "avoid": [],
+    "prefer": [
+     "早餐好"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "安静一点",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "安静"
+    ],
+    "avoid": [],
+    "prefer": [
+     "安静"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "带孩子方便",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "亲子"
+    ],
+    "avoid": [],
+    "prefer": [
+     "亲子"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "性价比高",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "性价比"
+    ],
+    "avoid": [],
+    "prefer": [
+     "性价比"
+    ],
+    "got": false,
+    "ok": true
+   }
+  ],
+  [
+   {
+    "cat": "直接说",
+    "phrase": "房间一定要干净",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "卫生好一点的",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "希望酒店整洁",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "干净卫生是第一位",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "要干净的",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "直接说",
+    "phrase": "酒店要干净整洁一点",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "我有洁癖",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "我怕脏",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "不想有蟑螂",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "蟑螂"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "床单要干净",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "房间不要有异味",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "异味"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "讨厌房间有烟味",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "烟味"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "卫生间不能有头发",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "有头发"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "间接说",
+    "phrase": "对卫生要求比较高",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "I want a clean room",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "please no bugs",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "虫子"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "hygiene is important to me",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "no smelly rooms",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [
+     "有异味"
+    ],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "英文",
+    "phrase": "spotless rooms please",
+    "want": true,
+    "needs": [
+     "干净"
+    ],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [
+     "干净"
+    ],
+    "got": true,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "卫生无所谓",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "不在意干不干净",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "干净不干净都行，主要是便宜",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "便宜"
+    ],
+    "avoid": [],
+    "prefer": [
+     "便宜"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "卫生方面没要求",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "否定",
+    "phrase": "不用太讲究卫生",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [],
+    "avoid": [],
+    "prefer": [],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "离地铁近一点",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "近地铁"
+    ],
+    "avoid": [],
+    "prefer": [
+     "近地铁"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "要大床房",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "大床"
+    ],
+    "avoid": [],
+    "prefer": [
+     "大床"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "早餐好一点",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "早餐好"
+    ],
+    "avoid": [],
+    "prefer": [
+     "早餐好"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "安静一点",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "安静"
+    ],
+    "avoid": [],
+    "prefer": [
+     "安静"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "带孩子方便",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "亲子",
+     "家庭友好"
+    ],
+    "avoid": [],
+    "prefer": [
+     "亲子",
+     "家庭友好"
+    ],
+    "got": false,
+    "ok": true
+   },
+   {
+    "cat": "不相关",
+    "phrase": "性价比高",
+    "want": false,
+    "needs": [],
+    "rawPrefer": [
+     "性价比"
+    ],
+    "avoid": [],
+    "prefer": [
+     "性价比"
+    ],
+    "got": false,
+    "ok": true
+   }
+  ]
+ ]
+}

@@ -18,6 +18,14 @@ export function hasApiKey(): boolean {
 // ---------------------------------------------------------------------------
 // Slots: what the assistant needs before it can search (PRD §6.1)
 // ---------------------------------------------------------------------------
+/** Standard needs the product can analyse reviews for (intent normalization,
+ * T1). Users phrase a need a hundred ways ("怕脏", "不想有蟑螂", "no smelly
+ * rooms"); the model maps them onto this fixed list, and the product trusts
+ * the list rather than guessing from free-text keywords. Add options here as
+ * new needs get an analysis (安静, 早餐…). */
+export const NEEDS = ["干净"] as const;
+export type Need = (typeof NEEDS)[number];
+
 export const SlotsSchema = z.object({
   city: z.string().nullable().describe("目的地城市，如未提及则为 null"),
   checkin: z.string().nullable().describe("入住日期 YYYY-MM-DD，如未提及则为 null"),
@@ -27,6 +35,7 @@ export const SlotsSchema = z.object({
   guests: z.number().nullable().describe("入住人数，如未提及默认可为 2"),
   prefer: z.array(z.string()).describe("用户在意的软性偏好关键词，如 安静/海景/亲子/性价比/泳池/近地铁"),
   avoid: z.array(z.string()).describe("用户明确排除的偏好，如 靠马路/太吵"),
+  needs: z.array(z.enum(NEEDS)).describe("用户在意的标准需求，只能从固定选项里选，规则见提示词"),
 });
 export type Slots = z.infer<typeof SlotsSchema>;
 
@@ -39,6 +48,7 @@ export const EMPTY_SLOTS: Slots = {
   guests: null,
   prefer: [],
   avoid: [],
+  needs: [],
 };
 
 const SLOT_EXTRACT_SYSTEM = `你是"出发喽"App里的酒店预订助手的信息提取模块。
@@ -49,7 +59,11 @@ const SLOT_EXTRACT_SYSTEM = `你是"出发喽"App里的酒店预订助手的信�
 - prefer/avoid 例外，不能像上面那样一直保留：这两个字段只能反映"本轮最新对话片段"（单独给出，见下）里提到的软性偏好——那是用户在拿到上一次推荐结果之后开口的新一轮，不能引用更早、已经出过推荐结果的那一轮里提到的旧偏好。如果这段最新片段没有提到任何偏好/排除项，就输出为空数组 []，即使更早的片段里提到过。
 - 日期尽量转换为 YYYY-MM-DD；如果用户说"这周末"、"下周"这类相对时间，按当前对话发生的语境合理推断一个具体日期；实在无法确定就留空。
 - prefer/avoid 是关键词数组，不要写整句话，每个词尽量简短（如"安静""海景""亲子""性价比""泳池""近地铁""不要靠马路"可以拆成 avoid:["靠马路"]）。
-- guests 没提到时不要瞎猜，返回 null（前端会展示默认值，但不要把默认值当作用户说过的话写回来）。`;
+- guests 没提到时不要瞎猜，返回 null（前端会展示默认值，但不要把默认值当作用户说过的话写回来）。
+- needs 是标准需求，只能从固定选项里选，和 prefer/avoid 一样只看"本轮最新对话片段"：
+  - "干净"：用户在意卫生、清洁，就选。包括正面说法（"要干净""卫生好""整洁""有洁癖""怕脏""对卫生要求高"）和否定式说法（"不想有蟑螂""不要有异味""讨厌烟味""不能有头发""no bugs""no smelly rooms"）——不想要脏东西，就是在意干净。
+  - 用户明确表示不在意（"卫生无所谓""不讲究卫生""干不干净都行""卫生没要求"）时，不要选，也不要把这类意思写进 prefer。
+  - 只提到别的需求（安静、早餐、近地铁……）时，不要选。`;
 
 /** `fullHistory` gives the model context for sticky trip logistics
  * (city/checkin/budget/...); `recentHistory` is just the slice since the
@@ -64,7 +78,7 @@ export async function extractSlots(fullHistory: ChatMessage[], recentHistory: Ch
   // prefer/avoid are reset before every call — they're per-ask, not sticky
   // like city/checkin/budget, so the model is never handed an old
   // preference to simply carry forward (see SLOT_EXTRACT_SYSTEM above).
-  const baseSlots: Slots = { ...currentSlots, prefer: [], avoid: [] };
+  const baseSlots: Slots = { ...currentSlots, prefer: [], avoid: [], needs: [] };
   const response = await client.chat.completions.parse({
     model: MODEL,
     reasoning_effort: "low", // simple extraction task — full reasoning is unnecessary latency
@@ -72,7 +86,7 @@ export async function extractSlots(fullHistory: ChatMessage[], recentHistory: Ch
       { role: "system", content: SLOT_EXTRACT_SYSTEM },
       {
         role: "user",
-        content: `已知slots（JSON，prefer/avoid 已重置为空——这两个字段只能从下面的"本轮最新对话片段"里提取）：\n${JSON.stringify(baseSlots)}\n\n完整对话记录（用于理解城市/日期/预算等硬性信息的上下文）：\n${toTranscript(fullHistory)}\n\n本轮最新对话片段（prefer/avoid 只能来自这里，不能引用更早、已经出过推荐结果的那一轮里的偏好）：\n${toTranscript(recentHistory)}\n\n请输出合并更新后的完整slots。`,
+        content: `已知slots（JSON，prefer/avoid/needs 已重置为空——这三个字段只能从下面的"本轮最新对话片段"里提取）：\n${JSON.stringify(baseSlots)}\n\n完整对话记录（用于理解城市/日期/预算等硬性信息的上下文）：\n${toTranscript(fullHistory)}\n\n本轮最新对话片段（prefer/avoid/needs 只能来自这里，不能引用更早、已经出过推荐结果的那一轮里的偏好）：\n${toTranscript(recentHistory)}\n\n请输出合并更新后的完整slots。`,
       },
     ],
     response_format: zodResponseFormat(SlotsSchema, "slots"),

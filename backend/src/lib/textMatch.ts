@@ -98,6 +98,15 @@ const NEED_PATTERNS_EN: Record<string, string[]> = {
   ],
 };
 
+/** Whether a free-text preference keyword refers to the given need (Chinese
+ * wording or tag containment, or an English pattern) — used to keep the
+ * keyword list in line with the model's normalized needs (chatEngine.applyNeeds). */
+export function keywordRefersToNeed(keyword: string, need: string): boolean {
+  const k = toSimplified(keyword.trim());
+  if (keywordMatchesTag(k, need) || (NEED_TERMS[need] ?? []).some((w) => k.includes(w))) return true;
+  return (NEED_PATTERNS_EN[need] ?? []).some((p) => new RegExp(p, "i").test(keyword));
+}
+
 /** English patterns for whatever need the keyword refers to (same need lookup as expandNeedTerms). */
 export function needPatternsEn(keyword: string): string[] {
   const k = toSimplified(keyword.trim());

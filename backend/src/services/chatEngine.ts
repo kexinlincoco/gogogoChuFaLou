@@ -2,9 +2,10 @@ import type { ChatMessage } from "../types.js";
 import type { Hotel } from "../types.js";
 import { listCities, listHotels } from "../db/repo.js";
 import { retrieveEvidence } from "./retrieval.js";
-import { keywordMatchesTag } from "../lib/textMatch.js";
+import { keywordMatchesTag, keywordRefersToNeed } from "../lib/textMatch.js";
 import {
   EMPTY_SLOTS,
+  NEEDS,
   Slots,
   askForMissingSlot,
   extractSlots,
@@ -115,6 +116,27 @@ function matchHotels(slots: Slots): MatchResult {
   return { hotels, cityCovered };
 }
 
+/**
+ * Intent normalization (T1): the model's `needs` list is the authority on
+ * which standard needs the user cares about. A user who says "不想有蟑螂"
+ * cares about cleanliness even though the model files 蟑螂 under avoid, and
+ * retrieval only reads prefer — so a listed need is added to prefer. And a
+ * cleanliness keyword the model put in prefer without listing the need
+ * ("不在意卫生") is the user saying they don't care — drop it, or retrieval
+ * would treat it as the need itself.
+ */
+export function applyNeeds(slots: Slots): Slots {
+  let prefer = [...slots.prefer];
+  for (const need of NEEDS) {
+    if (slots.needs.includes(need)) {
+      if (!prefer.some((k) => keywordRefersToNeed(k, need))) prefer.push(need);
+    } else {
+      prefer = prefer.filter((k) => !keywordRefersToNeed(k, need));
+    }
+  }
+  return { ...slots, prefer };
+}
+
 export async function handleTurn(sessionId: string, userText: string, userName?: string): Promise<ChatTurnResult> {
   if (!hasApiKey()) {
     return {
@@ -130,7 +152,7 @@ export async function handleTurn(sessionId: string, userText: string, userName?:
   try {
     const recentHistory = session.history.slice(session.slotsResetIndex);
     const extracted = await extractSlots(session.history, recentHistory, session.slots);
-    session.slots = fillDerivedFields(extracted);
+    session.slots = applyNeeds(fillDerivedFields(extracted));
 
     const missing = missingRequired(session.slots);
     if (missing.length > 0) {
