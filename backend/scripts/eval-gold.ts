@@ -13,6 +13,7 @@
  * 只读数据库。运行：cd backend && npx tsx scripts/eval-gold.ts [--gold zh|en] [--runs 3] [模型1 模型2 ...]
  *   --gold zh（默认）：中文标准答案 标注表.md（60 条）→ 模型对比.md、分歧明细.md
  *   --gold en：英文标准答案 标注表_英文.md（20 条）→ 模型对比_英文.md、分歧明细_英文.md
+ *   --from-db：不调用模型，直接读数据库里已入库的判断（review_aspects，T5 对照检查），报告文件名加"_入库"
  * 每次调用的原始记录在 gold/runs/<时间>/。
  */
 import "dotenv/config";
@@ -24,15 +25,29 @@ import { GUIDE, labelReviews, type Mention } from "./lib/cleanliness.js";
 
 const DEFAULT_MODELS = ["gpt-5-mini", "gpt-5.4-mini", "gpt-5.4-nano", "gpt-5.5", "gpt-4.1-mini"];
 const runsIdx = process.argv.indexOf("--runs");
-const RUNS = runsIdx >= 0 ? Number(process.argv[runsIdx + 1]) : 3;
+const FROM_DB = process.argv.includes("--from-db");
+const RUNS = FROM_DB ? 1 : runsIdx >= 0 ? Number(process.argv[runsIdx + 1]) : 3;
 const goldIdx = process.argv.indexOf("--gold");
 const LANG = goldIdx >= 0 ? process.argv[goldIdx + 1] : "zh";
 const SHEET = LANG === "en"
   ? { table: "标注表_英文.md", key: "_key_英文.json", report: "模型对比_英文.md", diffs: "分歧明细_英文.md", title: "英文标准答案", size: 20 }
   : { table: "标注表.md", key: "_key.json", report: "模型对比.md", diffs: "分歧明细.md", title: "人工标准答案", size: 60 };
+if (FROM_DB) Object.assign(SHEET, { report: SHEET.report.replace(".md", "_入库.md"), diffs: SHEET.diffs.replace(".md", "_入库.md") });
 const OPTS = new Set(["--runs", "--gold"]);
-const cliModels = process.argv.slice(2).filter((a, i, all) => !OPTS.has(a) && !OPTS.has(all[i - 1]));
-const models = cliModels.length ? cliModels : DEFAULT_MODELS;
+const cliModels = process.argv.slice(2).filter((a, i, all) => !OPTS.has(a) && !OPTS.has(all[i - 1]) && a !== "--from-db");
+const models = FROM_DB ? ["入库结果"] : cliModels.length ? cliModels : DEFAULT_MODELS;
+
+/** --from-db：把数据库里已入库的判断，组装成和模型调用一样的结果结构 */
+function resultFromDb(ids: string[]): Awaited<ReturnType<typeof labelReviews>> {
+  const res: Awaited<ReturnType<typeof labelReviews>> = { mentions: new Map(), failed: new Set(), calls: [], inputTokens: 0, outputTokens: 0, seconds: 0 };
+  const labeled = db.prepare("SELECT 1 FROM review_need_labels WHERE review_id = ? AND need = '干净'");
+  const aspects = db.prepare("SELECT object, polarity, issue, generic, quote FROM review_aspects WHERE review_id = ? AND need = '干净'");
+  for (const id of ids) {
+    if (!labeled.get(id)) { res.failed.add(id); continue; }
+    res.mentions.set(id, (aspects.all(id) as any[]).map((a) => ({ object: a.object, polarity: a.polarity, issue: a.issue, generic: !!a.generic, quote: a.quote })));
+  }
+  return res;
+}
 
 // 美元 / 100 万 tokens（标准价，非 Batch）。来源：https://developers.openai.com/api/docs/pricing ，2026-10-05 查询。
 // 价格会变，用之前请核对。推理模型的推理过程计入输出 tokens。
@@ -176,7 +191,7 @@ async function main() {
   const reviews = gold.map((g) => ({ id: g.id, text: textById.get(g.id) ?? g.text }));
   const stamp = new Date().toISOString().slice(0, 16).replace(/[-:]/g, "").replace("T", "-");
   const runDir = resolve(GOLD_DIR, "runs", stamp);
-  mkdirSync(runDir, { recursive: true });
+  if (!FROM_DB) mkdirSync(runDir, { recursive: true });
   console.log(`标准答案：${gold.length} 条（谈到干净 ${gold.filter((g) => g.relevant).length} 条，含差评 ${gold.filter((g) => hasNeg(g.pairs)).length} 条）；每个模型跑 ${RUNS} 次；原始记录 → ${runDir}`);
 
   interface ModelRuns { model: string; scores: Score[]; results: Awaited<ReturnType<typeof labelReviews>>[] }
@@ -184,10 +199,10 @@ async function main() {
     models.map(async (model) => {
       const mr: ModelRuns = { model, scores: [], results: [] };
       for (let run = 1; run <= RUNS; run++) {
-        const res = await labelReviews(model, reviews, { concurrency: 4 });
+        const res = FROM_DB ? resultFromDb(reviews.map((r) => r.id)) : await labelReviews(model, reviews, { concurrency: 4 });
         mr.results.push(res);
         mr.scores.push(score(model, res));
-        writeFileSync(
+        if (!FROM_DB) writeFileSync(
           resolve(runDir, `${model}-run${run}.json`),
           JSON.stringify({ model, run, guide: GUIDE, calls: res.calls, labels: Object.fromEntries(res.mentions), failed: [...res.failed] }, null, 2)
         );
@@ -215,6 +230,7 @@ async function main() {
   }
 
   md += `\n**笼统好评标记**（两边都判为"某对象·干净"时，"是否笼统"是否一致，D-10）：` + all.map((m) => `${m.model} ${range(m.scores.map((s) => s.genericAgree))}`).join("；") + "\n";
+  if (!FROM_DB) {
   md += `\n## 二、稳定性（同一条评论，${RUNS} 次结果是否一样）\n\n| 模型 | "是否谈到干净"${RUNS} 次一致 | 完整判断（对象 + 干净/不干净）${RUNS} 次一致 | 失败的调用 |\n|---|---|---|---|\n`;
   for (const m of all) {
     let relSame = 0, fullSame = 0;
@@ -244,6 +260,7 @@ async function main() {
     md += `| ${m.model} | ${returned} | ${calls.length} | ${calls.reduce((n, c) => n + c.inputTokens, 0).toLocaleString()} | ${calls.reduce((n, c) => n + c.outputTokens, 0).toLocaleString()} | \`${calls.find((c) => c.requestId)?.requestId ?? "—"}\` |\n`;
   }
 
+  } else md += `\n（读取的是数据库里已入库的结果，没有调用模型，所以不统计稳定性、成本和调用记录。）\n`;
   md += `\n## 五、分歧类型（第 1 次运行）\n\n| 模型 | ❗漏掉差评 | 漏掉 | 多判 | 干净/不干净不一致 | 对象归类不一致 |\n|---|---|---|---|---|---|\n`;
   for (const m of all) {
     const s = m.scores[0];

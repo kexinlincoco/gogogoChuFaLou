@@ -86,3 +86,32 @@ CREATE INDEX IF NOT EXISTS idx_reviews_hotel ON reviews(hotel_id);
 CREATE INDEX IF NOT EXISTS idx_orders_user ON orders(user_id);
 CREATE INDEX IF NOT EXISTS idx_feedback_order ON order_feedback(order_id);
 CREATE INDEX IF NOT EXISTS idx_funnel_stage ON booking_funnel_events(stage);
+
+-- 模型对评论的需求判断（T3，方面级情感分析，规则见 backend/scripts/lib/cleanliness.ts）。
+-- 一条评论可以拆成多条观点，每行一条；没谈到某需求的评论在这里没有行。
+CREATE TABLE IF NOT EXISTS review_aspects (
+  id             INTEGER PRIMARY KEY AUTOINCREMENT,
+  review_id      TEXT NOT NULL REFERENCES reviews(id),
+  need           TEXT NOT NULL,               -- 需求：干净
+  object         TEXT NOT NULL,               -- 对象：房间 / 床品 / 卫生间 / 公共区域 / 用品 / 整体（笼统）
+  polarity       TEXT NOT NULL CHECK (polarity IN ('positive','negative')),
+  issue          TEXT NOT NULL,               -- 差评的问题类型：气味 / 毛发污渍 / 虫害 / 其他；好评为 无
+  generic        INTEGER NOT NULL DEFAULT 0,  -- 1 = 笼统好评（D-10）
+  quote          TEXT NOT NULL,               -- 原文依据（逐字摘抄）
+  model          TEXT NOT NULL,
+  guide_version  TEXT NOT NULL,               -- 标注规则的版本（规则文本的哈希）
+  created_at     TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_review_aspects_review ON review_aspects(review_id);
+CREATE INDEX IF NOT EXISTS idx_review_aspects_need ON review_aspects(need);
+
+-- 每条评论对每个需求是否已经判断过。用来区分"判断过、没谈到"和"还没判断"。
+CREATE TABLE IF NOT EXISTS review_need_labels (
+  review_id      TEXT NOT NULL REFERENCES reviews(id),
+  need           TEXT NOT NULL,
+  model          TEXT NOT NULL,
+  guide_version  TEXT NOT NULL,
+  mention_count  INTEGER NOT NULL,            -- 拆出的观点条数，0 = 没谈到这个需求
+  labeled_at     TEXT NOT NULL,
+  PRIMARY KEY (review_id, need)
+);

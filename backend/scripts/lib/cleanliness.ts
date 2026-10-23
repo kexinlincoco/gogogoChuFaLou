@@ -3,9 +3,11 @@
  * eval-gold.ts（对比标准答案、比较模型）共用，保证两边用的是同一套规则。
  * 规则与 eval/level1/gold/标注规范.md（v3）、DECISION_LOG D-05～D-07 一致；改规则时三处一起改。
  */
+import { createHash } from "node:crypto";
 import { z } from "zod";
 import { zodResponseFormat } from "openai/helpers/zod";
 import { client } from "../../src/services/ai.js";
+import { toSimplified } from "../../src/lib/textMatch.js";
 
 export const NEED = "干净";
 export const OBJECTS = ["房间", "床品", "卫生间", "公共区域", "用品", "整体（笼统）"] as const;
@@ -65,6 +67,21 @@ export interface CallRecord {
   reviewIds: string[];
   error?: string;
 }
+
+/**
+ * 原文依据是否真的在评论里。模型摘抄时常有不影响内容的改动：繁体写法不同（"衞"/"衛"）、
+ * 标点换了（"。"→"."、"！"→"!"）、用省略号截断、把两句话用逗号接在一起。
+ * 所以统一成简体、去掉空白和标点后，按标点把依据切成几段，每段（≥2 个字）都要在评论里找到。
+ */
+export function quoteFound(text: string, quote: string): boolean {
+  const PUNCT = /[\s\p{P}\p{S}]+/gu;
+  const body = toSimplified(text).replace(PUNCT, "");
+  const parts = toSimplified(quote).split(PUNCT).filter((p) => p.length >= 2);
+  return parts.length > 0 && parts.every((p) => body.includes(p));
+}
+
+/** 规则版本：规则文本的哈希。规则一改，版本就变，可以找出用旧规则判断的评论。 */
+export const GUIDE_VERSION = createHash("sha1").update(GUIDE).digest("hex").slice(0, 8);
 
 export interface LabelResult {
   mentions: Map<string, Mention[]>; // 评论 id → 观点；标注失败的 id 不在里面
