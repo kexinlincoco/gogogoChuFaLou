@@ -39,14 +39,14 @@ cd frontend && npm run dev     # :5173，/api 代理到 8787
 | 功能 | 后端 | 前端 |
 |---|---|---|
 | 对话入口、多轮流程 | `routes/chat.ts` → `services/chatEngine.ts` 的 `handleTurn` | `components/ChatScreen.tsx` |
-| 从对话提取条件（城市/日期/预算/偏好） | `services/ai.ts` 的 `extractSlots`，缺字段时用 `askForMissingSlot` 追问 | — |
+| 从对话提取条件（城市/日期/预算/偏好/标准需求） | `services/ai.ts` 的 `extractSlots`（`needs` 是固定选项的标准需求，目前只有"干净"），缺字段时用 `askForMissingSlot` 追问；`chatEngine.ts` 的 `applyNeeds` 以 `needs` 为准，修正偏好列表 | — |
 | 必填字段 | `chatEngine.ts` 的 `REQUIRED_FIELDS` | — |
 | 候选打分、排序、放宽预算 | `chatEngine.ts` 的 `scoreHotel`、`matchHotels` | `HotelCard.tsx`、`HotelWaterfall.tsx` |
 | 评论检索（给摘要用） | `services/retrieval.ts` 的 `retrieveEvidence` | — |
 | 推荐理由、摘要生成 | `ai.ts` 的 `generateRecommendationReasons`、`introduceRecommendations` | — |
 | 判断评论是否和需求相关（繁简统一、中英文相关说法、排除按评分推导的标签） | `lib/textMatch.ts` 的 `reviewMentions`、`NEED_TERMS`（中文）、`NEED_PATTERNS_EN`（英文，整词、不分大小写）、`RATING_DERIVED_TOPICS` | `lib/highlight.tsx`（前端高亮，两边逻辑要保持一致） |
 | 导入评论数据 | `db/apifySource.ts`（北京 7 家的清单和评论处理规则，下面两个共用）、`db/seed.ts`（清空后全量重建，⚠️ 会清空数据库）、`backend/scripts/import-english-reviews.ts`（增量导入英文，默认只预览，`--apply` 才写入并先备份） | — |
-| 软需求评测（第 1 级验证） | `backend/scripts/lib/cleanliness.ts`（"干净"的标注规则，人和模型共用）；`eval-level1.ts`（全部评论 + 每家酒店结论 + 详情页排序检查，`--model`、`--out`、`--reuse`）；`eval-gold.ts`（对照标准答案、比较模型）。结果在 `eval/level1/`，标准答案在 `eval/level1/gold/` | — |
+| 软需求评测（第 1 级验证） | `backend/scripts/lib/cleanliness.ts`（"干净"的标注规则，人和模型共用）；`eval-level1.ts`（全部评论 + 每家酒店结论 + 详情页排序检查，`--model`、`--out`、`--reuse`）；`eval-gold.ts`（对照标准答案、比较模型）。结果在 `eval/level1/`，标准答案在 `eval/level1/gold/`；`eval-intent.ts`（需求识别测试，结果在 `eval/level1/需求识别/`） | — |
 | 评论原文弹窗 | — | `EvidenceModal.tsx` |
 | 手动筛选 | `routes/hotels.ts`（`GET /`）→ `db/repo.ts` 的 `listHotels` | `FilterScreen.tsx` |
 | 酒店详情、评论排序、高频话题 | `routes/hotels.ts`（`GET /:id`，参数 `prefer`）、`repo.ts` 的 `topReviewTopics` | `BookingSheet.tsx` |
